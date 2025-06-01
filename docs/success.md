@@ -1,6 +1,6 @@
 ---
-slug: greetings
-title: Greetings!
+slug: poluchilos
+title: Ура получилось!
 authors:
   - name: Joel Marcey
     title: Co-creator of Docusaurus 1
@@ -10,7 +10,8 @@ authors:
     title: Docusaurus maintainer
     url: https://sebastienlorber.com
     image_url: https://github.com/slorber.png
-tags: [greetings]
+tags:
+  - greetings
 ---
 Хехехехехехехе
 
