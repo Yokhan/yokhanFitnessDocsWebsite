@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SUCCESS!.md",
+                "file": "success.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SUCCESS!"
+              "title": "success"
             }
           }
         ],
@@ -193,6 +193,6 @@
     "tutorial-basics/create-a-document.md",
     "tutorial-basics/create-a-blog-post.md",
     "intro.md",
-    "SUCCESS!.md"
+    "success.md"
   ]
 }
