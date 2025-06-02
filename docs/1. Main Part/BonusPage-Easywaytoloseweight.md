@@ -2,7 +2,7 @@
 slug: easy-lose-weight
 sidebar_position: 7
 title: Бонус — Снижение веса без стресса
-description: 
+description: Небольшая подсказка по тому, как можно худеть просто без заморочек
 image: media/images/bendpress.jpg
 animation: media/videos/bendpress.mp4
 obsIMG: " " # paste obsidian image here
