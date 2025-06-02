@@ -1,3 +1,18 @@
+---
+slug: easy-lose-weight
+sidebar_position: 7
+title: Бонус — Снижение веса без стресса
+description: 
+image: media/images/bendpress.jpg
+animation: media/videos/bendpress.mp4
+obsIMG: " " # paste obsidian image here
+free: true
+
+---
+
+
+
+
 Тупо качайтесь. Снизьте стресс. Увеличьте уровень активность за счет приятных вещей — прогулки, катание на велосипеде, игровые виды спорта, танцы. 
 
 Вес уйдет, но это будет долго, потому придется подождать пока мышцы вырастут и начнут потреблять больше энергии.
