@@ -34,6 +34,7 @@ article h1 {
 }
 
 
-.theme-doc-markdown {
-  max-width: 800px;
+article {
+  max-width: 600px; /* Установите нужную ширину */
+
 }
