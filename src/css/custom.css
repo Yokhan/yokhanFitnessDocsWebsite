@@ -55,3 +55,7 @@ article h1 {
     font-style: normal;
     font-display: swap;
 }
+
+h1 {
+    letter-spacing: 0.2rem
+}
