@@ -69,12 +69,14 @@ p {
     margin-bottom: 0.5rem; /* Замените значение на нужное */
 }
 
-
+strong, b {
+    font-weight: 900; /* Доступные значения: 700 (обычный bold), 800, 900 */
+}
 
 /* Все списки */
 ol {
     --line-height: 1.4; /* Кастомное межстрочное расстояние */
-    padding-left: 1.6rem;
+    padding-left: 1.2rem;
     line-height: var(--line-height);
 }
 
