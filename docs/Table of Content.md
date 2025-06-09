@@ -11,7 +11,5 @@ free: true
 
 
 
-[Об авторе](./WarmingUp/introduction)
+[Об авторе](./0. WarmingUp/0. Introduction.md)
 
-
-[Об авторе](./WarmingUp/introduction.md)
