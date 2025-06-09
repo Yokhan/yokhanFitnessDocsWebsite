@@ -69,8 +69,8 @@ h1,h2,h3,h4,h5,h6 {
 
 /* Все списки */
 ul, ol {
-    --line-height: 1.2; /* Кастомное межстрочное расстояние */
-    padding-left: 1rem;
+    --line-height: 1.4; /* Кастомное межстрочное расстояние */
+    padding-left: 0.8rem;
     line-height: var(--line-height);
 }
 
@@ -82,6 +82,6 @@ li {
 
 /* Для вложенных списков */
 ul ul, ol ol, ul ol, ol ul {
-    --line-height: 1.2; /* Другое значение для вложенных */
-    padding-left: 1rem;
+    --line-height: 1.4; /* Другое значение для вложенных */
+    padding-left: 0.8rem;
 }
