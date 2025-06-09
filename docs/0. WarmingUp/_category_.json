@@ -2,7 +2,7 @@
   "label": "Введение в тренировки",
   "position": 1,
   "link": {
-    "type": "category",
+    "type": "doc",
     "description": "5 minutes to learn the most important Docusaurus concepts.",
     "id": "Introduction"
   }
