@@ -81,6 +81,7 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Гайд по тренировкам',
+            to: '/', // Теперь ведет на документацию
           },
           
           {
@@ -98,7 +99,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/',
+                to: '/',
               },
             ],
           },
