@@ -65,12 +65,22 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.02rem
 }
 
+p {
+    margin-bottom: 0.5rem; /* Замените значение на нужное */
+}
+
 
 
 /* Все списки */
-ul, ol {
+ol {
     --line-height: 1.4; /* Кастомное межстрочное расстояние */
     padding-left: 0.8rem;
+    line-height: var(--line-height);
+}
+
+ul {
+    --line-height: 1.4; /* Кастомное межстрочное расстояние */
+    padding-left: 1.6rem;
     line-height: var(--line-height);
 }
 
