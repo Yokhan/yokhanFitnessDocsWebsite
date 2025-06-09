@@ -9,4 +9,4 @@ obsIMG: " " # paste obsidian image here
 free: true
 ---
 
-[Об авторе](/0. WarmingUp/1. Author.md)
+[Об авторе](./0. WarmingUp/1. Author.md)
