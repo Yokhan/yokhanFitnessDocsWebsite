@@ -64,3 +64,24 @@ h4, h5, h6 {
 h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.02rem
 }
+
+
+
+/* Все списки */
+ul, ol {
+    --line-height: 1.8; /* Кастомное межстрочное расстояние */
+    padding-left: 2rem;
+    line-height: var(--line-height);
+}
+
+/* Элементы списка */
+li {
+    line-height: var(--line-height);
+    margin-bottom: 0.5rem; /* Дополнительный отступ между пунктами */
+}
+
+/* Для вложенных списков */
+ul ul, ol ol, ul ol, ol ul {
+    --line-height: 1.6; /* Другое значение для вложенных */
+    padding-left: 1.5rem;
+}
