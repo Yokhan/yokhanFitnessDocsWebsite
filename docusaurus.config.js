@@ -140,4 +140,13 @@ const config = {
     }),
 };
 
+
+
 export default config;
+
+
+export default {
+  title: 'My site',
+  staticDirectories: ['static', 'docs/media/img','docs/media/video'],
+  // ...
+};
