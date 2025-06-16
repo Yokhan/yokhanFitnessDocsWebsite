@@ -71,6 +71,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'My Site',
+        staticDirectories: ['static', 'docs/media/img','docs/media/video'],
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -142,11 +143,8 @@ const config = {
 
 
 
-/// export default config;
+export default config;
 
 
-export default {
-  title: 'My site',
-  staticDirectories: ['static', 'docs/media/img','docs/media/video'],
-  // ...
-};
+
+
