@@ -10,9 +10,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Новая физичиская культура',
   tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logoSVG.ico',
   staticDirectories: ['static', 'docs/media/img','docs/media/video'],
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -70,7 +70,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',        
+        title: 'Новая физичиская культура',        
         logo: {
           alt: 'My Site Logo',
           src: 'img/logoSVG.svg',
