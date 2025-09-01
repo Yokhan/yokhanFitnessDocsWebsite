@@ -21,7 +21,7 @@ const config = {
   tableofcontents: {
     minHeadingLevel: 0,
     maxHeadingLevel: 0,
-  }
+  },
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
