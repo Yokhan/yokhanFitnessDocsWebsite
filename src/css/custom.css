@@ -101,3 +101,7 @@ ul ul, ol ol, ul ol, ol ul {
     --line-height: 1.4; /* Другое значение для вложенных */
     padding-left: 0.8rem;
 }
+
+.table-of-contents {
+  display: none !important;
+}

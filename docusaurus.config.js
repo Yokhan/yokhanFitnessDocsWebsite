@@ -18,11 +18,7 @@ const config = {
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
-  tableofcontents: {
-    minHeadingLevel: 0,
-    maxHeadingLevel: 0,
-  },
-
+ 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
   // Set the /<baseUrl>/ pathname under which your site is served
