@@ -85,13 +85,12 @@ const config = {
           },
           
           {
-            href: '',
+            href: 'https://github.com/facebook/docusaurus',
             label: 'Игорь Назаров',
             position: 'right',
           },
         ],
       },
-      // Убераем футер
       // footer: {
       //   style: 'dark',
       //   links: [
