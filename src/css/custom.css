@@ -17,9 +17,9 @@
     --ifm-code-font-size: 95%;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
     /* Шрифт для заголовков h1-h6 */
-    --ifm-heading-font-family: 'IBMPlexSans-Regular', system-ui, -apple-system, sans-serif;
+    --ifm-heading-font-family: 'nauriz', system-ui, -apple-system, sans-serif;
     /* Основной шрифт для текста (2 начертания) */
-    --ifm-font-family-base: 'nauriz', system-ui, -apple-system, sans-serif;
+    --ifm-font-family-base: 'IBMPlexSans-Regular', system-ui, -apple-system, sans-serif;
     /* Для всех заголовков */
     --ifm-heading-font-weight: 400; /* Нормальное начертание */
 }
@@ -51,8 +51,8 @@ h4, h5, h6 {
 
 /* Объявление шрифтов */
 @font-face {
-    font-family: 'IBMPlexSans-Regular';
-    src: url('/fonts/IBMPlexSans-Regular.ttf') format('treuetype');
+    font-family: 'nauriz.ttf';
+    src: url('/fonts/nauriz.ttf') format('treuetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -60,7 +60,7 @@ h4, h5, h6 {
 
 @font-face {
     font-family: 'nauriz';
-    src: url('/fonts/nauriz.ttf') format('truetype');
+    src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
