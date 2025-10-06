@@ -25,6 +25,8 @@
 }
 h2, h3, h4, h5, h6 {
   font-family: 'DelaGothicOne-Regular', sans-serif !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
