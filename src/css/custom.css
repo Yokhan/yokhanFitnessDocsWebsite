@@ -105,11 +105,27 @@ ul ul, ol ol, ul ol, ol ul {
 .table-of-contents {
   display: none !important;
 }
+:root {
+  /* Задаем черный фон для шапки */
+  --ifm-background-surface-color: #111111;
+
+  /* Белый цвет для текста и иконок */
+  --ifm-color-content-inverse: #ffffff;
+  --ifm-navbar-link-color: var(--ifm-color-content-inverse);
+  --ifm-navbar-link-hover-color: #cccccc;
+}
+
+/* Применяем фон и текст к навбару */
 .navbar {
-  background-color: #111111 !important;
+  background-color: var(--ifm-background-surface-color) !important;
+  color: var(--ifm-color-content-inverse) !important;
 }
 
 .navbar__brand,
 .navbar__link {
-  color: #ffffff !important;
+  color: var(--ifm-color-content-inverse) !important;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-navbar-link-hover-color) !important;
 }
