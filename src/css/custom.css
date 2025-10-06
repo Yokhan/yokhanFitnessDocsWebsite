@@ -19,9 +19,12 @@
     /* Шрифт для заголовков h1-h6 */
     --ifm-heading-font-family: 'nauriz', system-ui, -apple-system, sans-serif;
     /* Основной шрифт для текста (2 начертания) */
-    --ifm-font-family-base: 'IBMPlexSans-Regular', system-ui, -apple-system, sans-serif;
+    --ifm-font-family-base: 'IBMPlexSans-VariableFont_wdth,wght', system-ui, -apple-system, sans-serif;
     /* Для всех заголовков */
     --ifm-heading-font-weight: 400; /* Нормальное начертание */
+}
+h2, h3, h4, h5, h6 {
+  font-family: 'DelaGothicOne-Regular', sans-serif !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -62,8 +65,16 @@ h4, h5, h6 {
 }
 
 @font-face {
-    font-family: 'IBMPlexSans-Regular';
-    src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
+    font-family: 'IBMPlexSans-VariableFont_wdth,wght';
+    src: url('/fonts/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DelaGothicOne-Regular';
+    src: url('/fonts/DelaGothicOne-Regular.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -179,4 +190,8 @@ ul ul, ol ol, ul ol, ol ul {
 .cardContainer_fWXF:hover .cardTitle_rnsV,
 .cardContainer_fWXF:hover .cardDescription_PWke {
   color: #ffffff !important;
+}
+
+.token.tag.namespace {
+  color: #C8EA6A !important;
 }
