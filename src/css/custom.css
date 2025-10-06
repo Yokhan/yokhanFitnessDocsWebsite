@@ -158,3 +158,25 @@ ul ul, ol ol, ul ol, ol ul {
 .navbar-sidebar__back {
   display: none !important;
 }
+
+/* Карточка */
+.cardContainer_fWXF {
+  background-color: #000 !important; /* если хочешь тёмный фон */
+  color: #ffffff !important;
+}
+
+/* Заголовок */
+.cardContainer_fWXF .cardTitle_rnsV {
+  color: #ffffff !important;
+}
+
+/* Описание */
+.cardContainer_fWXF .cardDescription_PWke {
+  color: #dddddd !important;
+}
+
+/* При наведении — немного ярче */
+.cardContainer_fWXF:hover .cardTitle_rnsV,
+.cardContainer_fWXF:hover .cardDescription_PWke {
+  color: #ffffff !important;
+}
