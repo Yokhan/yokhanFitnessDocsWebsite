@@ -5,6 +5,7 @@
  */
 
 /* You can override the default Infima variables here. */
+
 :root {
     --ifm-color-primary: #2e8555;
     --ifm-color-primary-dark: #29784c;
@@ -16,9 +17,9 @@
     --ifm-code-font-size: 95%;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
     /* Шрифт для заголовков h1-h6 */
-    --ifm-heading-font-family: 'DelaGothicOne-Regular', system-ui, -apple-system, sans-serif;
+    --ifm-heading-font-family: 'IBMPlexSans-Regular', system-ui, -apple-system, sans-serif;
     /* Основной шрифт для текста (2 начертания) */
-    --ifm-font-family-base: 'Golos_variable', system-ui, -apple-system, sans-serif;
+    --ifm-font-family-base: 'nauriz', system-ui, -apple-system, sans-serif;
     /* Для всех заголовков */
     --ifm-heading-font-weight: 400; /* Нормальное начертание */
 }
@@ -50,16 +51,16 @@ h4, h5, h6 {
 
 /* Объявление шрифтов */
 @font-face {
-    font-family: 'DelaGothicOne-Regular';
-    src: url('/fonts/DelaGothicOne-Regular.woff2') format('woff2');
+    font-family: 'IBMPlexSans-Regular';
+    src: url('/fonts/IBMPlexSans-Regular.ttf') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Golos_variable';
-    src: url('/fonts/GolosText-VariableFont_wght.ttf') format('truetype');
+    font-family: 'nauriz';
+    src: url('/fonts/nauriz') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
