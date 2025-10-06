@@ -140,11 +140,6 @@ ul ul, ol ol, ul ol, ol ul {
   color: var(--ifm-color-content-inverse) !important;
 }
 
-.navbar__brand,
-.navbar__link {
-  color: var(--ifm-color-content-inverse) !important;
-}
-
 .navbar__link:hover {
   color: var(--ifm-navbar-link-hover-color) !important;
 }
