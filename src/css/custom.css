@@ -140,6 +140,11 @@ ul ul, ol ol, ul ol, ol ul {
   color: var(--ifm-color-content-inverse) !important;
 }
 
+.navbar__brand,
+.navbar__link {
+  color: var(--ifm-color-content-inverse) !important;
+}
+
 .navbar__link:hover {
   color: var(--ifm-navbar-link-hover-color) !important;
 }
@@ -147,4 +152,9 @@ ul ul, ol ol, ul ol, ol ul {
 .theme-dark {
   --ifm-color-primary: #C8EA6A;
   --ifm-menu-color-active: var(--ifm-color-primary);
+}
+
+/* Убираем кнопку "Back to main menu" */
+.navbar-sidebar__back {
+  display: none !important;
 }
