@@ -105,3 +105,11 @@ ul ul, ol ol, ul ol, ol ul {
 .table-of-contents {
   display: none !important;
 }
+.navbar {
+  background-color: #111111 !important;
+}
+
+.navbar__brand,
+.navbar__link {
+  color: #ffffff !important;
+}
