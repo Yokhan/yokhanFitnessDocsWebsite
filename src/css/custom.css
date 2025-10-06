@@ -113,6 +113,21 @@ ul ul, ol ol, ul ol, ol ul {
   --ifm-color-content-inverse: #ffffff;
   --ifm-navbar-link-color: var(--ifm-color-content-inverse);
   --ifm-navbar-link-hover-color: #cccccc;
+  --ifm-color-primary: #C8EA6A;
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  --ifm-menu-color-background-active: rgba(200, 234, 106, 0.15); /* легкий фон */
+}
+
+.menu__link--active {
+  color: var(--ifm-color-primary) !important;
+}
+
+.theme-doc-sidebar-menu .menu__link--active::before {
+  background-color: var(--ifm-color-primary) !important;
+}
+
+.menu__link:hover {
+  color: #e3ffa0 !important;
 }
 
 /* Применяем фон и текст к навбару */
