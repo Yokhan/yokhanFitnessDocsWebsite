@@ -114,9 +114,13 @@ ul ul, ol ol, ul ol, ol ul {
   --ifm-navbar-link-color: var(--ifm-color-content-inverse);
   --ifm-navbar-link-hover-color: #cccccc;
   --ifm-color-primary: #C8EA6A;
+  --ifm-menu-color-active: var(--ifm-color-primary);
   --ifm-menu-color-background-active: rgba(200, 234, 106, 0.15); /* легкий фон */
 }
 
+.menu__link--active {
+  color: var(--ifm-color-primary) !important;
+}
 
 .theme-doc-sidebar-menu .menu__link--active::before {
   background-color: var(--ifm-color-primary) !important;
@@ -139,4 +143,9 @@ ul ul, ol ol, ul ol, ol ul {
 
 .navbar__link:hover {
   color: var(--ifm-navbar-link-hover-color) !important;
+}
+
+.theme-dark {
+  --ifm-color-primary: #C8EA6A;
+  --ifm-menu-color-active: var(--ifm-color-primary);
 }
