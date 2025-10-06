@@ -51,7 +51,7 @@ h4, h5, h6 {
 
 /* Объявление шрифтов */
 @font-face {
-    font-family: 'nauriz.ttf';
+    font-family: 'nauriz';
     src: url('/fonts/nauriz.ttf') format('treuetype');
     font-weight: 400;
     font-style: normal;
@@ -75,7 +75,7 @@ p {
 }
 
 strong, b {
-    font-weight: 900; /* Доступные значения: 700 (обычный bold), 800, 900 */
+    font-weight: 600; /* Доступные значения: 700 (обычный bold), 800, 900 */
 }
 
 /* Все списки */
