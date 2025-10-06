@@ -59,7 +59,7 @@ h4, h5, h6 {
 }
 
 @font-face {
-    font-family: 'nauriz';
+    font-family: 'IBMPlexSans-Regular';
     src: url('/fonts/IBMPlexSans-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
