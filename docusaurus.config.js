@@ -49,10 +49,7 @@ const config = {
           docs: {
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/',
         },
           blog: false, // Optional: disable the blog plugin
 
@@ -117,9 +114,20 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        language: ['ru'],
+        docsRouteBasePath: '/',
+        blogRouteBasePath: false,
+        searchBarShortcutHint: false,
+      }),
+    ],
+  ],
 };
-
-
 
 export default config;
 
