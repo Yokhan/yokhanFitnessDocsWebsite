@@ -4,59 +4,6 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
-
-:root {
-    --ifm-color-primary: #C8EA6A;
-    --ifm-color-primary-dark: #C8EA6A;
-    --ifm-color-primary-darker: #C8EA6A;
-    --ifm-color-primary-darkest: #C8EA6A;
-    --ifm-color-primary-light: #C8EA6A;
-    --ifm-color-primary-lighter: #C8EA6A;
-    --ifm-color-primary-lightest: #C8EA6A;
-    --ifm-code-font-size: 95%;
-    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-    /* Шрифт для заголовков h1-h6 */
-    --ifm-heading-font-family: 'nauriz', system-ui, -apple-system, sans-serif;
-    /* Основной шрифт для текста (2 начертания) */
-    --ifm-font-family-base: 'IBMPlexSans-VariableFont_wdth,wght', system-ui, -apple-system, sans-serif;
-    /* Для всех заголовков */
-    --ifm-heading-font-weight: 400; /* Нормальное начертание */
-}
-h2, h3, h4, h5, h6 {
-  font-family: 'DelaGothicOne-Regular', sans-serif !important;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #C8EA6A;
-  --ifm-color-primary-dark: #C8EA6A;
-  --ifm-color-primary-darker: #C8EA6A;
-  --ifm-color-primary-darkest: #C8EA6A;
-  --ifm-color-primary-light: #C8EA6A;
-  --ifm-color-primary-lighter: #C8EA6A;
-  --ifm-color-primary-lightest: #C8EA6A;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-  font-size: 3rem !important; /* Размер по вашему выбору */
-}
-h2,h3 {
-    font-size: 1.8rem !important; /* Размер по вашему выбору */
-}
-
-h2,h3 {
-    margin-bottom: 0.7rem !important;
-}
-
-h4, h5, h6 {
-    font-size: 1rem !important; /* Размер по вашему выбору */
-}
-
-
 /* Объявление шрифтов */
 @font-face {
     font-family: 'nauriz';
@@ -82,118 +29,158 @@ h4, h5, h6 {
     font-display: swap;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    letter-spacing: 0.02rem
+/* Infima variables — палитра #C8EA6A с оттенками */
+:root {
+    --ifm-color-primary: #C8EA6A;
+    --ifm-color-primary-dark: #BCDF4F;
+    --ifm-color-primary-darker: #B5DA42;
+    --ifm-color-primary-darkest: #99C126;
+    --ifm-color-primary-light: #D1ED80;
+    --ifm-color-primary-lighter: #D5EF8D;
+    --ifm-color-primary-lightest: #E3F5B0;
+    --ifm-code-font-size: 95%;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+    /* Шрифт для заголовков h1-h6 */
+    --ifm-heading-font-family: 'nauriz', system-ui, -apple-system, sans-serif;
+    /* Основной шрифт для текста */
+    --ifm-font-family-base: 'IBMPlexSans-VariableFont_wdth,wght', system-ui, -apple-system, sans-serif;
+    /* Для всех заголовков */
+    --ifm-heading-font-weight: 400;
+
+    /* Навбар */
+    --ifm-background-surface-color: #111111;
+    --ifm-color-content-inverse: #ffffff;
+    --ifm-navbar-link-color: var(--ifm-color-content-inverse);
+    --ifm-navbar-link-hover-color: #cccccc;
+    --ifm-menu-color-active: var(--ifm-color-primary);
+    --ifm-menu-color-background-active: rgba(200, 234, 106, 0.15);
+}
+
+/* Тёмная тема */
+[data-theme='dark'] {
+    --ifm-color-primary: #C8EA6A;
+    --ifm-color-primary-dark: #BCDF4F;
+    --ifm-color-primary-darker: #B5DA42;
+    --ifm-color-primary-darkest: #99C126;
+    --ifm-color-primary-light: #D1ED80;
+    --ifm-color-primary-lighter: #D5EF8D;
+    --ifm-color-primary-lightest: #E3F5B0;
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+    --ifm-menu-color-active: var(--ifm-color-primary);
+}
+
+/* === Типографика === */
+
+h1 {
+    font-size: 3rem !important;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'DelaGothicOne-Regular', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+h2, h3 {
+    font-size: 1.8rem !important;
+    margin-bottom: 0.7rem !important;
+}
+
+h4, h5, h6 {
+    font-size: 1rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 0.02rem;
 }
 
 p {
-    margin-bottom: 0.7rem; /* Замените значение на нужное */
+    margin-bottom: 0.7rem;
 }
 
 strong, b {
-    font-weight: 600; /* Доступные значения: 700 (обычный bold), 800, 900 */
+    font-weight: 600;
 }
 
-/* Все списки */
+/* === Списки === */
+
 ol {
-    --line-height: 1.4; /* Кастомное межстрочное расстояние */
+    --line-height: 1.4;
     padding-left: 1.2rem;
     line-height: var(--line-height);
 }
 
 ul {
-    --line-height: 1.4; /* Кастомное межстрочное расстояние */
+    --line-height: 1.4;
     padding-left: 0.8rem;
     line-height: var(--line-height);
 }
 
-/* Элементы списка */
 li {
     line-height: var(--line-height);
-    margin-bottom: 0.2rem; /* Дополнительный отступ между пунктами */
+    margin-bottom: 0.2rem;
 }
 
-/* Для вложенных списков */
 ul ul, ol ol, ul ol, ol ul {
-    --line-height: 1.4; /* Другое значение для вложенных */
+    --line-height: 1.4;
     padding-left: 0.8rem;
 }
 
-.table-of-contents {
-  display: none !important;
-}
-:root {
-  /* Задаем черный фон для шапки */
-  --ifm-background-surface-color: #111111;
-
-  /* Белый цвет для текста и иконок */
-  --ifm-color-content-inverse: #ffffff;
-  --ifm-navbar-link-color: var(--ifm-color-content-inverse);
-  --ifm-navbar-link-hover-color: #cccccc;
-  --ifm-color-primary: #C8EA6A;
-  --ifm-menu-color-active: var(--ifm-color-primary);
-  --ifm-menu-color-background-active: rgba(200, 234, 106, 0.15); /* легкий фон */
-}
+/* === Навигация === */
 
 .menu__link--active {
-  color: var(--ifm-color-primary) !important;
+    color: var(--ifm-color-primary) !important;
 }
 
 .theme-doc-sidebar-menu .menu__link--active::before {
-  background-color: var(--ifm-color-primary) !important;
+    background-color: var(--ifm-color-primary) !important;
 }
 
 .menu__link:hover {
-  color: #e3ffa0 !important;
+    color: #e3ffa0 !important;
 }
 
-/* Применяем фон и текст к навбару */
 .navbar {
-  background-color: var(--ifm-background-surface-color) !important;
-  color: var(--ifm-color-content-inverse) !important;
+    background-color: var(--ifm-background-surface-color) !important;
+    color: var(--ifm-color-content-inverse) !important;
 }
 
 .navbar__brand,
 .navbar__link {
-  color: var(--ifm-color-content-inverse) !important;
+    color: var(--ifm-color-content-inverse) !important;
 }
 
 .navbar__link:hover {
-  color: var(--ifm-navbar-link-hover-color) !important;
+    color: var(--ifm-navbar-link-hover-color) !important;
 }
 
-.theme-dark {
-  --ifm-color-primary: #C8EA6A;
-  --ifm-menu-color-active: var(--ifm-color-primary);
-}
-
-/* Убираем кнопку "Back to main menu" */
 .navbar-sidebar__back {
-  display: none !important;
+    display: none !important;
 }
 
-/* Карточка */
-.cardContainer_fWXF {
-  background-color: #111111 !important; /* если хочешь тёмный фон */
-  color: #ffffff !important;
+/* === Карточки категорий === */
+
+[class*='cardContainer'] {
+    background-color: #111111 !important;
+    color: #ffffff !important;
 }
 
-/* Заголовок */
-.cardContainer_fWXF .cardTitle_rnsV {
-  color: #ffffff !important;
+[class*='cardContainer'] [class*='cardTitle'] {
+    color: #ffffff !important;
 }
 
-/* Описание */
-.cardContainer_fWXF .cardDescription_PWke {
-  color: #dddddd !important;
+[class*='cardContainer'] [class*='cardDescription'] {
+    color: #dddddd !important;
 }
 
-/* При наведении — немного ярче */
-.cardContainer_fWXF:hover .cardTitle_rnsV,
-.cardContainer_fWXF:hover .cardDescription_PWke {
-  color: #ffffff !important;
+[class*='cardContainer']:hover [class*='cardTitle'],
+[class*='cardContainer']:hover [class*='cardDescription'] {
+    color: #ffffff !important;
 }
+
+/* === Прочее === */
 
 .token.tag.namespace {
-  color: #C8EA6A !important;
+    color: #C8EA6A !important;
 }
