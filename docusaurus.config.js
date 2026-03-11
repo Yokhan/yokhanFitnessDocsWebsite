@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Новая физическая культура',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Гайд по фитнесу для IT-специалистов',
   favicon: 'img/logoSVG.ico',
   staticDirectories: ['static', 'docs/media/img','docs/media/video'],
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -27,8 +27,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Yokhan', // Usually your GitHub org/user name.
+  projectName: 'yokhanFitnessDocsWebsite', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,8 +37,8 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ru',
+    locales: ['ru'],
   },
 
   presets: [
@@ -49,10 +49,7 @@ const config = {
           docs: {
           routeBasePath: '/', // Serve the docs at the site's root
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/',
         },
           blog: false, // Optional: disable the blog plugin
 
@@ -67,12 +64,16 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logoSVG.svg',
+      metadata: [
+        {name: 'description', content: 'Гайд по фитнесу для IT-специалистов от Игоря Назарова (Yokhan Gym)'},
+        {property: 'og:description', content: 'Гайд по фитнесу для IT-специалистов'},
+        {name: 'twitter:card', content: 'summary'},
+      ],
       navbar: {
         title: 'Новая физическая культура',        
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Новая физическая культура',
           src: 'img/logoSVG.svg',
             width: 44,
             height: 44,
@@ -93,56 +94,39 @@ const config = {
           },
         ],
       },
-      // footer: {
-      //   style: 'dark',
-      //   links: [
-      //     {
-      //       title: 'Docs',
-      //       items: [
-      //         {
-      //           label: 'Tutorial',
-      //           to: '/',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'Community',
-      //       items: [
-      //         {
-      //           label: 'Stack Overflow',
-      //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //         },
-      //         {
-      //           label: 'Discord',
-      //           href: 'https://discordapp.com/invite/docusaurus',
-      //         },
-      //         {
-      //           label: 'X',
-      //           href: 'https://x.com/docusaurus',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'More',
-      //       items: [
-              
-      //         {
-      //           label: 'GitHub',
-      //           href: 'https://github.com/facebook/docusaurus',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      // },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Автор',
+            items: [
+              {
+                label: 'Telegram-бот',
+                href: 'https://t.me/YokhanGym_bot',
+              },
+            ],
+          },
+        ],
+        copyright: `© ${new Date().getFullYear()} Игорь Назаров (Yokhan Gym)`,
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        hashed: true,
+        language: ['ru'],
+        docsRouteBasePath: '/',
+        searchBarShortcutHint: false,
+      }),
+    ],
+  ],
 };
-
-
 
 export default config;
 
