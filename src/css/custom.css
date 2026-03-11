@@ -7,7 +7,7 @@
 /* Объявление шрифтов */
 @font-face {
     font-family: 'nauriz';
-    src: url('/fonts/nauriz.ttf') format('truetype');
+    src: url('/fonts/nauriz.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'IBMPlexSans-VariableFont_wdth,wght';
-    src: url('/fonts/IBMPlexSans-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('/fonts/IBMPlexSans-VariableFont_wdth,wght.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: 'DelaGothicOne-Regular';
-    src: url('/fonts/DelaGothicOne-Regular.ttf') format('truetype');
+    src: url('/fonts/DelaGothicOne-Regular.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;

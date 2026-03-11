@@ -122,7 +122,6 @@ const config = {
         hashed: true,
         language: ['ru'],
         docsRouteBasePath: '/',
-        blogRouteBasePath: false,
         searchBarShortcutHint: false,
       }),
     ],
