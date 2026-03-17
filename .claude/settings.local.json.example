@@ -1,0 +1,25 @@
+{
+  "NOTE": "Copy this to settings.local.json and configure. This file is gitignored.",
+  "mcpServers": {
+    "engram": {
+      "NOTE": "Zero-dependency Go binary memory. Download from https://github.com/Gentleman-Programming/engram",
+      "command": "engram",
+      "args": ["mcp"]
+    },
+    "claude-memory": {
+      "NOTE": "Alternative: hybrid search memory. npm i -g claude-memory-mcp",
+      "command": "claude-memory-mcp",
+      "args": []
+    },
+    "memcp": {
+      "NOTE": "Alternative: 5-tier search, 20x token savings. npm i -g memcp",
+      "command": "memcp",
+      "args": ["serve"]
+    },
+    "obsidian": {
+      "NOTE": "Direct vault access. npm i -g @stevenstav/obsidian-mcp",
+      "command": "obsidian-mcp",
+      "args": ["--vault", "./brain"]
+    }
+  }
+}

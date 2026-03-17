@@ -1,0 +1,110 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx prettier --write \"$FILE_PATH\" 2>/dev/null || black \"$FILE_PATH\" 2>/dev/null || rustfmt \"$FILE_PATH\" 2>/dev/null || gofmt -w \"$FILE_PATH\" 2>/dev/null || true",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "lines=$(wc -l < \"$FILE_PATH\" 2>/dev/null || echo 0); [ \"$lines\" -le 250 ] || echo \"WARNING: $FILE_PATH has $lines lines (limit 250, Working Memory Cliff). Consider splitting.\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "case \"$FILE_PATH\" in *.py) python -m py_compile \"$FILE_PATH\" 2>&1;; *.json) python -m json.tool \"$FILE_PATH\" > /dev/null 2>&1;; *.sh) bash -n \"$FILE_PATH\" 2>&1;; esac || true",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if git rev-parse --git-dir > /dev/null 2>&1; then branch=$(git branch --show-current 2>/dev/null); if [ \"$branch\" = \"main\" ] || [ \"$branch\" = \"master\" ]; then echo '{\"block\":true,\"message\":\"Cannot edit on main/master. Create a feature branch first.\"}' >&2; exit 2; fi; fi",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -f \"$FILE_PATH\" ] && grep -qE '(sk-[a-zA-Z0-9]{20,}|ghp_[a-zA-Z0-9]{36}|PRIVATE.KEY|-----BEGIN.*(RSA|EC|DSA|OPENSSH))' \"$FILE_PATH\" 2>/dev/null; then echo '{\"block\":true,\"message\":\"Potential secret/key detected in file! Remove before writing.\"}' >&2; exit 2; fi",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"$COMMAND\" | grep -qE '(rm -rf /|git reset --hard|git push.*--force|DROP TABLE|TRUNCATE)' && { echo '{\"block\":true,\"message\":\"Destructive command blocked. Use with explicit user approval only.\"}' >&2; exit 2; } || true",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -d brain/01-daily ]; then d=$(date +%Y-%m-%d); f=\"brain/01-daily/${d}.md\"; [ -f \"$f\" ] || echo \"# Session Log: ${d}\" > \"$f\"; echo \"\" >> \"$f\"; echo \"## Session ended: $(date +%H:%M)\" >> \"$f\"; echo \"\" >> \"$f\"; fi",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -d brain/01-daily ]; then d=$(date +%Y-%m-%d); f=\"brain/01-daily/${d}.md\"; [ -f \"$f\" ] || echo \"# Session Log: ${d}\" > \"$f\"; echo \"\" >> \"$f\"; echo \"## Session started: $(date +%H:%M)\" >> \"$f\"; echo \"\" >> \"$f\"; fi; if [ -f tasks/lessons.md ]; then echo 'REMINDER: Read tasks/lessons.md for past learnings'; fi; if [ -f tasks/current.md ]; then echo 'REMINDER: Read tasks/current.md for handoff context'; fi",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -d brain/01-daily ]; then d=$(date +%Y-%m-%d); echo \"\" >> \"brain/01-daily/${d}.md\"; echo \"## Pre-compaction save: $(date +%H:%M)\" >> \"brain/01-daily/${d}.md\"; echo 'IMPORTANT: Save current task state to tasks/current.md before compaction'; fi",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebSearch",
+      "WebFetch"
+    ]
+  }
+}
