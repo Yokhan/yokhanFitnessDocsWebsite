@@ -13,6 +13,7 @@ TEMPLATE_PATH=""
 DRY_RUN=false
 FORCE=false
 FROM_GIT=false
+BOOTSTRAP=false
 
 # --- Parse args ---
 for arg in "$@"; do
@@ -20,17 +21,19 @@ for arg in "$@"; do
     --dry-run) DRY_RUN=true ;;
     --force) FORCE=true ;;
     --from-git) FROM_GIT=true ;;
+    --bootstrap) BOOTSTRAP=true ;;
     --help|-h)
-      echo "Usage: $0 [/path/to/template] [--dry-run] [--force] [--from-git]"
+      echo "Usage: $0 [/path/to/template] [--dry-run] [--force] [--from-git] [--bootstrap]"
       echo ""
       echo "Syncs this project with a newer version of agent-project-template."
       echo "Template files (tracked in .template-manifest.json) are updated."
       echo "Project files (project-* prefix) are preserved."
       echo ""
       echo "Options:"
-      echo "  --dry-run   Show what would change without modifying files"
-      echo "  --force     Skip backup step"
-      echo "  --from-git  Fetch template from the 'template' git remote instead of a local path"
+      echo "  --dry-run    Show what would change without modifying files"
+      echo "  --force      Skip backup step"
+      echo "  --from-git   Fetch template from the 'template' git remote instead of a local path"
+      echo "  --bootstrap  Generate .template-manifest.json for a project created before sync support"
       exit 0
       ;;
     *) TEMPLATE_PATH="$arg" ;;
@@ -130,9 +133,77 @@ fi
 # --- Read manifest ---
 MANIFEST=".template-manifest.json"
 if [ ! -f "$MANIFEST" ]; then
-  echo "WARNING: No $MANIFEST found. This project was created before sync support."
-  echo "Run setup again or create manifest manually."
-  exit 1
+  if [ "$BOOTSTRAP" = true ]; then
+    echo "=== Bootstrap: Generating $MANIFEST for existing project ==="
+    echo "Scanning project files and computing hashes..."
+
+    # Determine category for a file path
+    get_category() {
+      case "$1" in
+        CLAUDE.md|tasks/*|brain/*) echo "project" ;;
+        .gitignore|.vscode/*) echo "hybrid" ;;
+        *) echo "template" ;;
+      esac
+    }
+
+    # Build manifest from current project state
+    echo '{' > "$MANIFEST"
+    echo '  "template_version": "unknown",' >> "$MANIFEST"
+    echo "  \"created\": \"$(date +%Y-%m-%d)\"," >> "$MANIFEST"
+    echo "  \"updated\": \"$(date +%Y-%m-%d)\"," >> "$MANIFEST"
+
+    # Detect template remote if exists
+    TMPL_REMOTE=$(git remote get-url template 2>/dev/null || echo "")
+    echo "  \"template_remote\": \"$TMPL_REMOTE\"," >> "$MANIFEST"
+    echo '  "files": {' >> "$MANIFEST"
+
+    first=true
+    for pattern in \
+      ".claude/settings.json" \
+      ".claude/rules/*.md" \
+      ".claude/agents/*.md" \
+      ".claude/skills/*/SKILL.md" \
+      ".claude/commands/*.md" \
+      "scripts/*.sh" \
+      ".editorconfig" "Makefile" "SECURITY.md" "CONTRIBUTING.md" \
+      "CLAUDE.md" ".gitignore" ".vscode/extensions.json"; do
+      for f in $pattern; do
+        [ -f "$f" ] || continue
+        # Skip project-* files (agent-created)
+        basename_f=$(basename "$f")
+        case "$basename_f" in project-*) continue ;; esac
+
+        hash=$(get_hash "$f")
+        cat=$(get_category "$f")
+        $first || echo ',' >> "$MANIFEST"
+        printf '    "%s": {"category": "%s", "hash": "%s"}' "$f" "$cat" "$hash" >> "$MANIFEST"
+        first=false
+      done
+    done
+
+    echo '' >> "$MANIFEST"
+    echo '  }' >> "$MANIFEST"
+    echo '}' >> "$MANIFEST"
+
+    echo "Generated $MANIFEST with $(grep -c '"hash"' "$MANIFEST") files."
+    echo ""
+    echo "Now run again WITHOUT --bootstrap to sync:"
+    echo "  $0 $TEMPLATE_PATH"
+    exit 0
+  else
+    echo "ERROR: No $MANIFEST found. This project was created before sync support."
+    echo ""
+    echo "To bootstrap (one-time setup):"
+    echo "  1. Copy this script to your project:  cp /path/to/template/scripts/sync-template.sh scripts/"
+    echo "  2. Generate manifest:                  bash scripts/sync-template.sh /path/to/template --bootstrap"
+    echo "  3. Sync:                               bash scripts/sync-template.sh /path/to/template"
+    echo ""
+    echo "Or with git remote:"
+    echo "  1. git remote add template https://github.com/Yokhan/agent-project-template.git"
+    echo "  2. bash scripts/sync-template.sh --from-git --bootstrap"
+    echo "  3. bash scripts/sync-template.sh --from-git"
+    exit 1
+  fi
 fi
 
 # Get current and new template versions (C1: use env vars for Python)

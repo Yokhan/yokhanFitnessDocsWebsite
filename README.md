@@ -38,6 +38,23 @@ bash scripts/sync-template.sh --from-git
 ```
 Projects created from a git-hosted template automatically have a `template` remote configured. The SessionStart hook reminds you when updates haven't been checked in 7+ days.
 
+### Updating older projects (created before v2.2.0)
+```bash
+# 1. Copy sync script into your project
+cp /path/to/agent-project-template/scripts/sync-template.sh my-project/scripts/
+
+# 2. Bootstrap — generates .template-manifest.json from current state
+cd my-project
+bash scripts/sync-template.sh /path/to/agent-project-template --bootstrap
+
+# 3. Sync — applies template updates
+bash scripts/sync-template.sh /path/to/agent-project-template
+
+# Optional: add git remote for future auto-updates
+git remote add template https://github.com/Yokhan/agent-project-template.git
+bash scripts/sync-template.sh --from-git
+```
+
 **What gets updated**: Template infrastructure (.claude/rules, agents, skills, commands, settings.json, scripts)
 **What's preserved**: Your code (src/), docs, brain/, tasks/, CLAUDE.md, and all `project-*` files
 **Convention**: Template files are read-only baseline. Project customizations go to `project-*` prefixed files (e.g., `rules/project-no-mock-db.md`).

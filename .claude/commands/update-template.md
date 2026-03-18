@@ -50,4 +50,8 @@ bash scripts/sync-template.sh "$TEMPLATE_PATH"
 - Template files (without project- prefix) are READ-ONLY baseline — sync overwrites them
 - Project files (project-* prefix) are NEVER touched by sync
 - CLAUDE.md is NEVER touched (it's project-specific configuration)
-- If .template-manifest.json doesn't exist, advise running setup again or creating it manually
+- If .template-manifest.json doesn't exist, run bootstrap first:
+  ```bash
+  bash scripts/sync-template.sh /path/to/template --bootstrap
+  bash scripts/sync-template.sh /path/to/template
+  ```
