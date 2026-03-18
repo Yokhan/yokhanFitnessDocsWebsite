@@ -57,8 +57,27 @@ Your job: investigate a topic and return VERIFIED findings.
 ### 4. Save to Brain
 If valuable for future sessions → save to brain/03-knowledge/
 
+## Research Budget
+- Max 5 sources per recommendation
+- Max 3 alternatives in the options table
+- Spend max 20% of context window on research — if budget exceeded, summarize and proceed
+
+## Cache Results
+Before researching, check `brain/03-knowledge/research/` for a file matching the topic created within the last 30 days. If found, use it. After researching, save findings to `brain/03-knowledge/research/[topic]-YYYY-MM-DD.md` with a TTL note.
+
 ## Output Constraints
 - Max 40 lines for main findings
 - Tables max 5 rows
 - Confidence: HIGH (verified in docs) / MEDIUM (multiple sources agree) / LOW (single source or unverified)
 - Don't make implementation decisions — present options with trade-offs
+
+## Output Format
+```
+RESEARCH COMPLETE
+Topic: [topic]
+Recommendation: [chosen option]
+Confidence: HIGH / MEDIUM / LOW
+Sources: [up to 5 URLs]
+Alternatives: [up to 3, one line each with key trade-off]
+Cached: brain/03-knowledge/research/[topic]-[date].md
+```

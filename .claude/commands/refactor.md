@@ -5,6 +5,20 @@ You are performing a safe refactoring via git worktree isolation.
 
 ## Process
 
+### Phase 0: Capture Baseline Metrics
+Before creating the worktree, record:
+```bash
+# Lines of code
+find src -type f \( -name "*.ts" -o -name "*.py" -o -name "*.go" -o -name "*.rs" \) 2>/dev/null | xargs wc -l 2>/dev/null | tail -1
+
+# File count
+find src -type f 2>/dev/null | wc -l
+
+# Test count
+grep -r "it(\|test(\|def test_\|#\[test\]" src/ 2>/dev/null | wc -l
+```
+Save to `brain/03-knowledge/refactor-YYYY-MM-DD.md` as "Before" metrics.
+
 ### Phase 1: Isolate
 1. `git worktree add ../refactor-temp -b refactor/[description]`
 2. Switch to worktree directory
@@ -28,8 +42,9 @@ You are performing a safe refactoring via git worktree isolation.
 1. Switch back to main worktree
 2. `git merge refactor/[description]`
 3. `git worktree remove ../refactor-temp`
-4. Log success to `tasks/lessons.md`
-5. Commit: `refactor: [description]`
+4. Capture "After" metrics (same commands as Phase 0) and add to refactor report
+5. Log success to `tasks/lessons.md`
+6. Commit: `refactor: [description]`
 
 **If any red:**
 1. Analyze what broke

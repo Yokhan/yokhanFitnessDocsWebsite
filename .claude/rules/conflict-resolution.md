@@ -29,6 +29,6 @@ When the correct approach is unclear:
 ## Circuit Breaker
 
 If you find yourself:
-- Editing the same file > 5 times → STOP. Re-read the requirements.
+- Editing the same file > 3 times for production code, > 5 times for test/config files → STOP. Re-read the requirements.
 - Getting the same test failure > 3 times → STOP. Log the issue to `tasks/lessons.md` and ask for help.
 - Unsure about a destructive operation → ALWAYS ask first.

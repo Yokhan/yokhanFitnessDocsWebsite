@@ -30,3 +30,16 @@
 - ALWAYS run relevant tests after making changes
 - Fix failing tests before committing
 - Never commit with known test failures
+
+## Coverage Thresholds
+- `core/` — 90% minimum.
+- `features/` — 80% minimum.
+- `adapters/` — 60% minimum (IO is hard to unit test).
+- `shared/` utilities — 95% minimum.
+- Property-based tests for pure functions with >3 parameters.
+
+## Snapshot Tests
+- Use ONLY for serialized outputs (JSON responses, HTML templates, CLI output).
+- Never for business logic.
+- Always review snapshot diffs — never run `--update-all` blindly.
+- Snapshots must be deterministic (no dates, UUIDs, random values).

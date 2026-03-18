@@ -14,6 +14,7 @@ When this file exceeds 50 entries, run `/weekly` to promote recurring patterns i
 **Root cause**: Why it happened (the actual underlying issue)
 **Rule**: Concrete, actionable prevention rule for the future
 **Applies to**: [agent name / skill name / general]
+**Category**: [security | architecture | testing | workflow | tooling | general]
 ```
 
 ---
@@ -25,3 +26,4 @@ When this file exceeds 50 entries, run `/weekly` to promote recurring patterns i
 **Root cause**: Generated a plausible-sounding package name from training data without verifying it exists. No verification step was performed before recommending.
 **Rule**: Before recommending ANY external package, verify it exists by running `npm view <package>` or checking the official registry. If unable to verify, state confidence as LOW and flag it explicitly.
 **Applies to**: researcher, implementer, general
+**Category**: tooling

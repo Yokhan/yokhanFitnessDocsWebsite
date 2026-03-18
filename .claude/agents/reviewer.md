@@ -39,6 +39,13 @@ You focus on: intent, impact, failure modes, rollback safety.
 - Are there irreversible changes? (DB migrations, data deletion)
 - Is there a feature flag for gradual rollout?
 
+### 5. Performance Check
+- O(n²) or worse loops over large/unbounded datasets?
+- Unnecessary re-renders or redundant recomputations (React)?
+- Missing DB indexes for filtered/sorted queries?
+- N+1 query patterns (queries inside loops)?
+- Synchronous blocking operations that should be async?
+
 ## Architecture Checks
 - Module boundaries respected? (imports only through entry points)
 - Dependency direction correct? (shared ← core ← features)
@@ -63,6 +70,9 @@ You focus on: intent, impact, failure modes, rollback safety.
 
 ### Rollback: [SAFE / CAUTION / RISKY]
 [Details]
+
+### Performance: [OK / CONCERN]
+[Details if concern]
 
 ### Action Items
 - [Specific things to fix/verify before merge]

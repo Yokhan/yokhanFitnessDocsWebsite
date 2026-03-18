@@ -52,9 +52,17 @@ Search for patterns:
 
 ### 6. Configuration
 - Debug mode disabled in production configs?
-- CORS properly configured (not `*`)?
-- Rate limiting configured?
-- Security headers set (CSP, HSTS, X-Frame-Options)?
+- CORS properly configured (not `*` in production)?
+- Rate limiting on auth and sensitive endpoints?
+- Security headers set (CSP, HSTS, X-Frame-Options, X-Content-Type-Options)?
+- CSRF tokens for all state-changing requests (POST/PUT/DELETE)?
+- SameSite attribute on session/auth cookies (Strict or Lax)?
+
+### 7. Container Security (if Dockerfile exists)
+- Non-root USER instruction present?
+- Minimal base image (alpine/distroless, not `latest`)?
+- No secrets in ENV or COPY layers?
+- Multi-stage build to minimize final image?
 
 ## Output Format
 

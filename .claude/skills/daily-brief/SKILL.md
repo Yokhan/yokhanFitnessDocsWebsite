@@ -42,8 +42,15 @@ Create a brief in `brain/01-daily/[today]-brief.md` using the template from `bra
 - [Things that need user input]
 ```
 
-### 3. Present to User
+### 3. Technical Metrics
+Include in every brief:
+- Files > 250 lines: `find src -type f \( -name "*.ts" -o -name "*.py" -o -name "*.go" -o -name "*.rs" \) 2>/dev/null | xargs wc -l 2>/dev/null | awk '$1>250 && $2!="total"' | wc -l` files
+- Open TODOs: `grep -r "TODO" src/ 2>/dev/null | wc -l`
+- Lessons entries: `grep -c "^###" tasks/lessons.md 2>/dev/null` (flag if >40, promote if >50)
+
+### 4. Present to User
 Summarize the brief concisely. Highlight:
 - What's blocking
 - What needs a decision
 - Suggested first task for today
+- Any health warnings (large files, growing TODO count)

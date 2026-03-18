@@ -1,4 +1,5 @@
 # Agent-Ready Project
+<!-- Template Version: 2.2.0 -->
 
 AI-agent optimized project with persistent memory, autonomous hooks, and self-improving context infrastructure.
 
@@ -32,6 +33,10 @@ Not configured yet.
 - `/sprint` — autonomous work loop (Ralph Loop + circuit breaker)
 - `/brain-sync` — sync knowledge to Obsidian vault
 - `/weekly` — retrospective + self-improvement promotion
+- `/status` — Project status dashboard
+- `/rollback` — Safe git revert workflow
+- `/onboard` — New developer onboarding
+- `/update-template` — Sync project with newer template version
 
 ## Build & Test
 
@@ -46,6 +51,7 @@ Not configured yet.
 - Tests colocated: module.test.ts / test_module.py
 - ALWAYS: typecheck + lint + tests after changes
 - Files < 250 lines (Working Memory Cliff)
+- Template files (.claude/rules, agents, skills, commands without `project-` prefix) are read-only. Project customizations → `project-*` files.
 
 ## Context on demand
 
@@ -78,6 +84,9 @@ After each mistake: add to `tasks/lessons.md`. Read it at session start. When >5
 - No editing main/master directly
 - No skipping tests before commit
 - No committing secrets (.env, API keys)
+
+## Template Version
+2.2.0 — Run `bash scripts/check-drift.sh` to verify template health.
 
 ## Compaction
 

@@ -105,6 +105,13 @@ For Rust: use `mod.rs` as entry points.
 ### Update hooks in .claude/settings.json
 Replace the placeholder auto-format hook with the real formatter command for the chosen stack.
 
+### Git Hooks Setup
+Configure pre-commit hooks to enforce typecheck + lint + test before every commit:
+- **Node.js**: `npm install --save-dev husky && npx husky init` → add pre-commit hook
+- **Python**: `pip install pre-commit` → create `.pre-commit-config.yaml` with ruff + mypy
+- **Go**: Add `pre-commit` target to Makefile that runs `go vet ./... && golangci-lint run`
+- **Rust**: Add `pre-commit` target to Makefile that runs `cargo clippy && cargo test`
+
 ## Phase 5: Create Scaffolding Templates
 
 Create `templates/` with stack-appropriate templates:

@@ -3,13 +3,22 @@
 # Run before major sessions or weekly to catch stale docs and violations
 # Usage: bash scripts/check-drift.sh
 
+# Template version check
+TEMPLATE_VERSION="2.2.0"
+CLAUDE_VERSION=$(grep -oP '(?<=Template Version: )[\d.]+' CLAUDE.md 2>/dev/null || echo "unknown")
+if [ "$CLAUDE_VERSION" = "unknown" ]; then
+    echo "INFO: Template version not found in CLAUDE.md"
+elif [ "$CLAUDE_VERSION" != "$TEMPLATE_VERSION" ]; then
+    echo "WARNING: Template version mismatch. CLAUDE.md=$CLAUDE_VERSION, script expects=$TEMPLATE_VERSION"
+fi
+
 echo "=== Drift Detection ==="
 echo ""
 WARNINGS=0
 ERRORS=0
 
 # 1. Check if docs are stale (>30 days)
-echo "[1/7] Checking document freshness..."
+echo "[1/8] Checking document freshness..."
 if [ -d docs ]; then
   for doc in docs/*.md; do
     [ -f "$doc" ] || continue
@@ -25,8 +34,17 @@ if [ -d docs ]; then
   done
 fi
 
+if [ -d src ] && [ -d docs ]; then
+    echo "Checking src/ vs docs/ freshness..."
+    # Check if src has files newer than docs (simplified check)
+    newest_src=$(find src -name "*.ts" -o -name "*.py" -o -name "*.go" -o -name "*.rs" 2>/dev/null | head -1)
+    if [ -n "$newest_src" ] && [ -d docs ]; then
+        echo "  INFO: Remember to update docs/ when src/ changes significantly"
+    fi
+fi
+
 # 2. Check CLAUDE.md size
-echo "[2/7] Checking CLAUDE.md size..."
+echo "[2/8] Checking CLAUDE.md size..."
 if [ -f CLAUDE.md ]; then
   lines=$(wc -l < CLAUDE.md)
   if [ "$lines" -gt 200 ]; then
@@ -38,7 +56,7 @@ if [ -f CLAUDE.md ]; then
 fi
 
 # 3. Check lessons.md size (>50 = time to promote)
-echo "[3/7] Checking lessons.md..."
+echo "[3/8] Checking lessons.md..."
 if [ -f tasks/lessons.md ]; then
   entries=$(grep -c "^### " tasks/lessons.md 2>/dev/null || echo 0)
   if [ "$entries" -gt 50 ]; then
@@ -50,7 +68,7 @@ if [ -f tasks/lessons.md ]; then
 fi
 
 # 4. Check for files > 250 lines in src/
-echo "[4/7] Checking file sizes in src/..."
+echo "[4/8] Checking file sizes in src/..."
 if [ -d src ]; then
   find src -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.py" -o -name "*.rs" -o -name "*.go" -o -name "*.js" -o -name "*.jsx" \) | while read -r file; do
     lines=$(wc -l < "$file")
@@ -61,7 +79,7 @@ if [ -d src ]; then
 fi
 
 # 5. Check module entry points exist
-echo "[5/7] Checking module entry points..."
+echo "[5/8] Checking module entry points..."
 if [ -d src/features ]; then
   find src/features -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
     found=0
@@ -75,7 +93,7 @@ if [ -d src/features ]; then
 fi
 
 # 6. Check architecture boundaries
-echo "[6/7] Checking architecture boundaries..."
+echo "[6/8] Checking architecture boundaries..."
 if command -v npx &> /dev/null && [ -f .dependency-cruiser.js ]; then
   npx dependency-cruiser src --output-type err 2>/dev/null || echo "  ⚠️  Boundary violations detected"
 else
@@ -83,7 +101,7 @@ else
 fi
 
 # 7. Check for secrets in tracked files
-echo "[7/7] Scanning for potential secrets..."
+echo "[7/8] Scanning for potential secrets..."
 if git rev-parse --git-dir > /dev/null 2>&1; then
   secrets=$(grep -rlE '(sk-[a-zA-Z0-9]{20,}|ghp_[a-zA-Z0-9]{36}|-----BEGIN.*(RSA|EC|DSA))' src/ 2>/dev/null || true)
   if [ -n "$secrets" ]; then
@@ -92,6 +110,66 @@ if git rev-parse --git-dir > /dev/null 2>&1; then
   else
     echo "  ✅ No secrets detected"
   fi
+fi
+
+# 8. Check template manifest integrity
+echo "[8/8] Checking template manifest..."
+MANIFEST=".template-manifest.json"
+if [ -f "$MANIFEST" ]; then
+  # Validate JSON
+  if python3 -m json.tool "$MANIFEST" > /dev/null 2>&1; then
+    echo "  ✅ $MANIFEST: valid JSON"
+  else
+    echo "  ❌ $MANIFEST: invalid JSON"
+    ERRORS=$((ERRORS + 1))
+  fi
+
+  # Report template version
+  tpl_ver=$(python3 -c "import json; print(json.load(open('$MANIFEST')).get('template_version', 'unknown'))" 2>/dev/null || echo "unknown")
+  echo "  Template version (manifest): $tpl_ver"
+
+  # Count drifted template files
+  drift_count=0
+  drift_total=0
+
+  # Cross-platform SHA-256
+  _get_hash() {
+    if command -v sha256sum &>/dev/null; then
+      sha256sum "$1" | cut -d' ' -f1
+    elif command -v shasum &>/dev/null; then
+      shasum -a 256 "$1" | cut -d' ' -f1
+    else
+      certutil -hashfile "$1" SHA256 2>/dev/null | sed -n '2p' | tr -d ' ' | tr 'A-F' 'a-f'
+    fi
+  }
+
+  while IFS='|' read -r fpath expected_hash; do
+    [ -z "$fpath" ] && continue
+    drift_total=$((drift_total + 1))
+    if [ -f "$fpath" ]; then
+      actual_hash=$(_get_hash "$fpath")
+      if [ "$actual_hash" != "$expected_hash" ]; then
+        drift_count=$((drift_count + 1))
+      fi
+    else
+      drift_count=$((drift_count + 1))
+    fi
+  done <<< "$(python3 -c "
+import json
+m = json.load(open('$MANIFEST'))
+for path, info in m.get('files', {}).items():
+    if info.get('category') != 'project':
+        print(f\"{path}|{info.get('hash', '')}\")
+" 2>/dev/null)"
+
+  if [ "$drift_count" -gt 0 ]; then
+    echo "  ⚠️  $drift_count/$drift_total template files have drifted from manifest hashes"
+    WARNINGS=$((WARNINGS + 1))
+  else
+    echo "  ✅ All $drift_total template files match manifest hashes"
+  fi
+else
+  echo "  ℹ️  No $MANIFEST found (sync not configured)"
 fi
 
 echo ""

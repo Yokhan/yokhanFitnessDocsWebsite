@@ -18,8 +18,13 @@ Detect stack and run appropriate coverage tool:
 
 ### Phase 2: Analyze Gaps
 1. Parse coverage report
-2. Identify modules below threshold (default: 80%)
-3. Prioritize by:
+2. Identify modules below threshold by layer:
+   - `core/` — 90% minimum
+   - `features/` — 80% minimum
+   - `adapters/` — 60% minimum (IO is hard to unit test)
+   - `shared/` utilities — 95% minimum
+3. Report each layer separately
+4. Prioritize by:
    - Business criticality (core/ > features/ > shared/)
    - Complexity (more branches = higher priority)
    - Recent changes (recently modified = higher priority)

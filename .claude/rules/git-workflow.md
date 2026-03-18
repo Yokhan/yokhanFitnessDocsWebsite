@@ -25,6 +25,17 @@
 - Link related issues
 - Keep PRs small (< 400 lines changed)
 
+## Merge Strategy
+- `git pull --rebase` by default (keeps history linear).
+- Merge commits only for feature branch → main merges.
+- Never rebase published commits (pushed to remote).
+
+## Dependency Management
+- Always commit lock files (package-lock.json, Pipfile.lock, go.sum, Cargo.lock).
+- Pin exact versions for production dependencies.
+- Run `npm audit` / `pip audit` / `cargo audit` in CI.
+- Never use `*` or `latest` as version.
+
 ## Never
 - Force push to main
 - Commit secrets, API keys, .env files

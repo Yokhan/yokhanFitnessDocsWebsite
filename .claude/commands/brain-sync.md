@@ -2,6 +2,13 @@ You are synchronizing session knowledge to the Obsidian vault (brain/).
 
 ## Process
 
+### Step 0: Vault Integrity Check
+Before syncing, verify the vault is healthy:
+1. Check for empty directories in brain/ (`find brain -type d -empty`)
+2. Check brain/00-inbox/ for notes older than 7 days (should be triaged)
+3. Check brain/03-knowledge/ for INDEX.md — update it if stale
+Report any issues found.
+
 ### Step 1: Gather Current Session Context
 Collect from this session:
 - What tasks were worked on

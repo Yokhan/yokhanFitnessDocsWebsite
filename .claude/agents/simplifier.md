@@ -38,6 +38,14 @@ You eliminate unnecessary complexity. Priority targets: files > 250 lines (Worki
 - Commented-out code (git has history)
 - Exported functions nobody imports
 
+## Measure Before & After
+Before starting any simplification, record:
+- **Line count**: `wc -l [file]`
+- **Cyclomatic complexity**: count of decision points (if/else/case/loop/&&/||) + 1
+- **Export count**: number of exported symbols from the module
+
+A change is accepted only if at least one metric improves without worsening the others. Report delta in output.
+
 ## Rules
 - Only suggest changes that REDUCE complexity
 - Don't add new abstractions to replace old ones
@@ -54,6 +62,10 @@ You eliminate unnecessary complexity. Priority targets: files > 250 lines (Worki
 ### Priority Splits (files > 250 lines)
 | File | Lines | Suggested Split |
 |------|-------|----------------|
+
+### Metrics Delta
+| File | Lines before→after | Complexity before→after | Exports before→after |
+|------|-------------------|------------------------|---------------------|
 
 ### Simplifications
 #### [File:line] — [Type]

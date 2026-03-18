@@ -6,6 +6,13 @@ You are performing a change review (Ian Bull: review CHANGES, not CODE).
 
 ## Process
 
+### Step 0: Change Size Check
+```bash
+git diff --stat | tail -1
+```
+- If > 400 lines changed: warn "Large change — consider splitting into smaller PRs for safer review"
+- If > 1000 lines: ask user to split before proceeding with review
+
 1. **Collect diff**: `git diff` for uncommitted, or `git diff main...[branch]` for branch
 2. **Launch reviewer agent** in isolated subagent context
 3. **For each changed file**, reviewer evaluates:

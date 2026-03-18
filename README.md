@@ -1,13 +1,46 @@
 # Agent Project Template v2
 
+[![Template Version](https://img.shields.io/badge/template-v2.2.0-blue)](.)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
+
 Self-deploying AI-agent optimized project template with persistent memory, autonomous work loops, self-improvement, and production-proven hooks.
 
 ## Quick Start
 
-1. **Run `setup.bat`** — enter project name → full agent-ready structure created
+1. **Run `setup.bat` (Windows) or `./setup.sh` (Linux/macOS)** — enter project name → full agent-ready structure created
 2. **Open the project** in Claude Code or Zed
 3. **Tell Claude:** "Set up my project" or run `/setup-project`
 4. Claude configures everything for your stack automatically
+
+## Updating Existing Projects
+
+When the template improves (new rules, agents, skills, hooks), update your project:
+
+```bash
+# Preview changes (no modifications)
+bash scripts/sync-template.sh /path/to/agent-project-template --dry-run
+
+# Apply updates
+bash scripts/sync-template.sh /path/to/agent-project-template
+```
+
+Or use the Claude Code command: `/update-template /path/to/template`
+
+### Automatic updates (git-based)
+If the template is hosted in a git repository, projects automatically track it:
+```bash
+# Check for updates (no changes made)
+bash scripts/sync-template.sh --from-git --dry-run
+
+# Apply updates
+bash scripts/sync-template.sh --from-git
+```
+Projects created from a git-hosted template automatically have a `template` remote configured. The SessionStart hook reminds you when updates haven't been checked in 7+ days.
+
+**What gets updated**: Template infrastructure (.claude/rules, agents, skills, commands, settings.json, scripts)
+**What's preserved**: Your code (src/), docs, brain/, tasks/, CLAUDE.md, and all `project-*` files
+**Convention**: Template files are read-only baseline. Project customizations go to `project-*` prefixed files (e.g., `rules/project-no-mock-db.md`).
 
 ## What's Included
 
@@ -15,11 +48,11 @@ Self-deploying AI-agent optimized project template with persistent memory, auton
 
 | Category | Count | Details |
 |----------|-------|---------|
-| **Rules** | 6 | architecture, code-style, testing, git-workflow, self-improvement, conflict-resolution |
-| **Hooks** | 8 | auto-format, protect main, file size guard, secret scanner, syntax check, destructive cmd block, session log, context save |
-| **Skills** | 10 | setup-project, add-feature, debug, security-audit, daily-brief, self-update, api-contract, sprint, setup-integrations, coverage |
-| **Agents** | 7 | reviewer, simplifier, researcher, implementer, test-engineer, security-auditor, devops |
-| **Commands** | 8 | /setup-project, /implement, /commit, /review, /refactor, /sprint, /brain-sync, /weekly |
+| **Rules** | 7 | architecture, code-style, testing, git-workflow, self-improvement, conflict-resolution, error-handling |
+| **Hooks** | 12 | 12 hooks across 5 event types (6 PostToolUse, 3 PreToolUse, 1 Stop, 1 SessionStart, 1 PreCompact) |
+| **Skills** | 15 | setup-project, add-feature, debug, security-audit, daily-brief, self-update, api-contract, sprint, setup-integrations, coverage, health-check, migrate, modify-api, setup-telegram, update-deps |
+| **Agents** | 9 | reviewer, simplifier, researcher, implementer, test-engineer, security-auditor, devops |
+| **Commands** | 12 | /setup-project, /implement, /commit, /review, /refactor, /sprint, /brain-sync, /weekly |
 | **Brain** | Obsidian vault | session logs, decisions, knowledge base, note templates |
 | **Memory** | tasks/ | lessons.md (self-improvement loop) + current.md (handoff) |
 
@@ -103,4 +136,4 @@ Built on research from 20+ repositories and papers:
 - Vasilopoulos — Codified Context Infrastructure (108K-line project)
 - Steve Yegge — Beads (git-native agent memory)
 - Anthropic official docs — skills, rules, hooks, memory
-- [ai-agent-spec-v3-final.md](https://example.com) — foundation specification
+- ai-agent-spec-v3-final.md — foundation specification

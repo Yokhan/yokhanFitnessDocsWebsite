@@ -19,6 +19,16 @@ description: "Safely modify an existing API endpoint: update contract, implement
 - Read existing tests
 - Check who calls this endpoint (use CodeGraphContext if available)
 
+### 2b. Backward Compatibility Check
+Before any changes, list all fields/parameters being removed or renamed:
+1. Search codebase for all usages: `grep -r "fieldName" src/`
+2. Check if any external clients may use this (check docs, CHANGELOG)
+3. If used externally:
+   - Keep old field/parameter for at least 1 version
+   - Add deprecation warning in response/logs
+   - Document removal timeline in API_CONTRACTS.md
+   - Create entry in brain/templates/api-changelog.md
+
 ### 3. Update Contract First
 - Update types/interfaces FIRST
 - If breaking change: discuss migration strategy with user

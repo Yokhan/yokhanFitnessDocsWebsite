@@ -48,4 +48,12 @@ Read `integrations/obsidian-mcp/README.md` for full details.
 ## After Setup
 - Update `CLAUDE.md` with active integrations
 - Update `.claude/settings.local.json` with MCP server configs
-- Test each integration works
+
+## Verify Installation
+After each integration, verify it actually works:
+- **Memory MCP**: Save a test memory, then retrieve it by keyword — confirm match returned
+- **Telegram**: Send `/start` to the bot — confirm response received within 10s
+- **Beads**: Run `bd list` — confirm no errors and project is initialized
+- **Obsidian MCP**: Query a known note title — confirm content returned correctly
+
+If verification fails: check logs, re-read the integration README, and troubleshoot before proceeding.

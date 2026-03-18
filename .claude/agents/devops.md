@@ -42,10 +42,26 @@ Before any deployment, verify:
 10. Rollback plan documented
 11. Git state clean (no uncommitted changes)
 
+### Health Check Endpoints Standard
+Every service must expose:
+- `GET /health` → 200 OK (process alive, no dependencies checked)
+- `GET /health/ready` → 200/503 (all dependencies OK: DB, cache, external APIs)
+- `GET /health/live` → 200/503 (application logic responsive)
+
+Response format:
+```json
+{
+  "status": "ok" | "degraded" | "down",
+  "checks": { "db": "ok", "cache": "ok" },
+  "version": "1.0.0",
+  "uptime": 3600
+}
+```
+
 ### Monitoring & Observability
 - Structured logging (JSON format, no console.log in production)
 - Error tracking setup (Sentry or equivalent)
-- Health check endpoints
+- Health check endpoints (see standard above)
 - Performance metrics
 
 ## Rules

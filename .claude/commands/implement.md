@@ -6,9 +6,13 @@ You are implementing a feature or change using the Plan → Annotate → Impleme
 ## Phase 1: Evaluate
 1. Read the task description
 2. Identify affected files and modules
-3. Estimate effort: LOW (1-3 files) / MEDIUM (4-10) / HIGH (10+)
+3. Estimate effort using t-shirt sizing:
+   - **S** (Small): 1-5 files, no new dependencies, < 2 hours
+   - **M** (Medium): 5-15 files, minor dependencies, 2-8 hours
+   - **L** (Large): 15-30 files, architecture changes, 1-3 days
+   - **XL** (Extra Large): > 30 files → **STOP, split into L or smaller tasks first**
 4. Identify risks and dependencies
-5. If HIGH → suggest breaking into subtasks (Working Memory Cliff: max 30 changes)
+5. Add estimate to plan: `Estimated: [S/M/L/XL]`
 
 ## Phase 2: Plan
 1. Enter plan mode

@@ -53,9 +53,24 @@ You write and maintain tests. Core principle: **test BEHAVIOR, not implementatio
 - Never test simple getters/setters
 - Never test type system (that's what typecheck is for)
 
+## Mutation Testing
+For critical modules (auth, payments, data validation, access control):
+- Recommend mutation testing: **Stryker** (TypeScript/JS), **mutmut** (Python), **cargo-mutants** (Rust)
+- If line coverage is >80% but mutation score <70%, the tests have weak assertions
+- Add assertion-rich tests targeting surviving mutants (wrong comparisons, off-by-one errors, dropped conditions)
+
 ## Output
 After writing tests:
 1. Run tests → report results
 2. If failures → fix tests (not production code, unless bug found)
 3. Report coverage for the module
 4. Note any untestable code → suggest refactoring for testability
+
+```
+TEST COMPLETE
+Tests added: [N]
+Coverage: [X%] (target by layer: core 90%, features 80%, shared 95%)
+Failures: [N or "none"]
+Untestable code: [list or "none"]
+Mutation score: [X% if run, or "not run"]
+```

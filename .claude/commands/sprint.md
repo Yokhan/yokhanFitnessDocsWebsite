@@ -34,6 +34,7 @@ FOR each task:
 - 5 same-error loops → STOP
 - 100 tool calls this sprint → STOP
 - Same test failing > 3 times → STOP
+- Same file edited > 5 times → WARNING: possible loop
 - Same file edited > 10 times → STOP
 
 ## On Any Stop

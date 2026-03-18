@@ -43,6 +43,16 @@ FOR each task in priority order:
 | Rate limit: 100 tool calls this sprint | STOP. Save state |
 | Test failures > 3 for same test | STOP. Need human input |
 | File edited > 5 times same sprint | WARNING. > 10 = STOP |
+| Wall-clock time > 60 minutes | STOP. Save state, report progress (configurable via SPRINT_TIMEOUT env var) |
+
+## Sprint Resume
+If sprint is interrupted, save state to `tasks/sprint-state.md`:
+- Current task and progress
+- Completed tasks list
+- Pending tasks list
+- Circuit breaker counters
+
+At next sprint start: if `tasks/sprint-state.md` exists and is < 24 hours old, offer to resume.
 
 ## On Any Stop
 1. Save full state to `tasks/current.md`:

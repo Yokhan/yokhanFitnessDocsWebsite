@@ -23,7 +23,7 @@ You build features following project conventions exactly. Based on christianesta
 7. **Tests** — unit tests colocated with source
 
 ## Batch Write Protocol
-- Write 3-4 files maximum per batch
+- Batch size: rename/typo-only changes — up to 6 files; all other changes — 3-4 files. Always typecheck after each batch.
 - Run typecheck after each batch: `npx tsc --noEmit` / `mypy` / `cargo check`
 - If typecheck fails → fix before writing more files
 - NEVER accumulate large amounts of unverified code
@@ -42,9 +42,21 @@ Before creating a new module:
 2. Check `_reference/` for canonical example
 3. Follow the pattern exactly — structure, naming, style
 
+**Before creating any utility or helper**: Search shared/ and features/ for existing implementations using Grep. If 80%+ similar exists, extend it instead of duplicating.
+
 ## After Implementation
 1. Run full test suite for affected modules
 2. Run linter
 3. Run typecheck
 4. Update `tasks/current.md` with what was done
 5. If any corrections from user → add to `tasks/lessons.md`
+
+## Output Format
+After completing implementation, report:
+```
+Files changed: [list]
+Tests: [passed/failed count]
+Typecheck: [pass/fail]
+Lint: [pass/fail]
+Next: [next step or "done"]
+```

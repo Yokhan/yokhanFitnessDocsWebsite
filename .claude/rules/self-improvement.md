@@ -25,10 +25,12 @@ After EVERY user correction or discovered mistake:
 
 When `tasks/lessons.md` exceeds 50 entries:
 - Identify recurring patterns (3+ similar errors)
-- Promote to `.claude/rules/` as permanent rules
-- Extract reusable solutions into `.claude/skills/`
+- Promote to `.claude/rules/project-[topic].md` as permanent rules (ALWAYS create new `project-` prefixed files)
+- Extract reusable solutions into `.claude/skills/project-[name]/SKILL.md`
+- NEVER modify template rules (files without `project-` prefix) — they are the read-only baseline updated via `/update-template`
 - Archive promoted entries (move to `brain/03-knowledge/lessons-archive.md`)
 - Use `/weekly` command to trigger this process
+- Project rules overlay and complement template rules. Claude Code loads ALL files from `rules/`.
 
 ## Anti-Patterns to Track
 

@@ -1,3 +1,12 @@
+---
+status: idle
+current_task: ""
+branch: ""
+blockers: []
+next_steps: []
+last_updated: ""
+---
+
 # Current Task — Session Handoff
 
 This file maintains continuity between agent sessions. Before starting work, read this file to understand what was in progress. Before ending a session, update this file with current state so the next session can pick up seamlessly.

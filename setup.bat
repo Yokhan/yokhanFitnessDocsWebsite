@@ -6,7 +6,7 @@ echo.
 echo  ========================================================
 echo    Agent Project Template v2 - Setup
 echo    Autonomous AI agents + persistent memory + self-improvement
-echo    8 hooks, 7 agents, 10 skills, 8 commands
+echo    7 rules, 9 agents, 15 skills, 12 commands
 echo  ========================================================
 echo.
 
@@ -15,6 +15,12 @@ set /p "PROJECT_NAME=Enter project name: "
 if "%PROJECT_NAME%"=="" (
     echo ERROR: Project name cannot be empty.
     pause
+    exit /b 1
+)
+
+where git >nul 2>nul
+if errorlevel 1 (
+    echo ERROR: git is not installed or not in PATH. Please install git first.
     exit /b 1
 )
 
@@ -49,75 +55,118 @@ xcopy "%TEMPLATE_DIR%integrations" "%PROJECT_NAME%\integrations\" /E /Y /Q >nul 
 xcopy "%TEMPLATE_DIR%scripts" "%PROJECT_NAME%\scripts\" /E /Y /Q >nul 2>&1
 xcopy "%TEMPLATE_DIR%tasks" "%PROJECT_NAME%\tasks\" /E /Y /Q >nul 2>&1
 xcopy "%TEMPLATE_DIR%.github" "%PROJECT_NAME%\.github\" /E /Y /Q >nul 2>&1
+xcopy "%TEMPLATE_DIR%SECURITY.md" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
+xcopy "%TEMPLATE_DIR%CONTRIBUTING.md" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
+xcopy "%TEMPLATE_DIR%Makefile" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
+xcopy "%TEMPLATE_DIR%.editorconfig" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
+xcopy "%TEMPLATE_DIR%.vscode\" "%PROJECT_NAME%\.vscode\" /E /I /Y /Q >nul 2>&1
 
 :: Don't copy setup.bat itself into the new project
 if exist "%PROJECT_NAME%\setup.bat" del "%PROJECT_NAME%\setup.bat" >nul 2>&1
 
 :: Create .gitignore
 echo [2/5] Creating .gitignore...
-(
-echo # Dependencies
-echo node_modules/
-echo .venv/
-echo venv/
-echo __pycache__/
-echo target/
-echo.
-echo # IDE
-echo .vscode/
-echo .idea/
-echo *.swp
-echo *.swo
-echo.
-echo # OS
-echo .DS_Store
-echo Thumbs.db
-echo.
-echo # Environment - NEVER commit these
-echo .env
-echo .env.local
-echo .env.*.local
-echo.
-echo # Build
-echo dist/
-echo build/
-echo *.egg-info/
-echo.
-echo # Claude Code local settings
-echo .claude/settings.local.json
-echo.
-echo # Memory MCP local state
-echo .memory/
-echo .engram/
-echo .memcp/
-echo .anima/
-echo.
-echo # Beads local DB
-echo .beads/beads.db
-echo.
-echo # Logs
-echo *.log
-echo npm-debug.log*
-) > "%PROJECT_NAME%\.gitignore"
+xcopy "%TEMPLATE_DIR%.gitignore" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
 
 :: Create empty directories that git needs
 echo [3/5] Creating directory structure...
 mkdir "%PROJECT_NAME%\src" >nul 2>&1
 
-:: Initialize git
-echo [4/5] Initializing git repository...
+:: Generate template manifest
+echo [4/6] Generating template manifest...
 cd "%PROJECT_NAME%"
+powershell -NoProfile -Command ^
+  "$today = (Get-Date -Format 'yyyy-MM-dd');" ^
+  "$templateFiles = @(" ^
+  "  '.claude/settings.json'," ^
+  "  '.editorconfig'," ^
+  "  'Makefile'," ^
+  "  'SECURITY.md'," ^
+  "  'CONTRIBUTING.md'," ^
+  "  'CLAUDE.md'," ^
+  "  '.gitignore'," ^
+  "  '.vscode/extensions.json'" ^
+  ");" ^
+  "$templatePatterns = @(" ^
+  "  '.claude/rules/*.md'," ^
+  "  '.claude/agents/*.md'," ^
+  "  '.claude/skills/*/SKILL.md'," ^
+  "  '.claude/commands/*.md'," ^
+  "  'scripts/*.sh'" ^
+  ");" ^
+  "$projectPatterns = @(" ^
+  "  'tasks/*'," ^
+  "  'brain/*'" ^
+  ");" ^
+  "$files = @{};" ^
+  "foreach ($f in $templateFiles) {" ^
+  "  if (Test-Path $f) {" ^
+  "    $h = (Get-FileHash $f -Algorithm SHA256).Hash.ToLower();" ^
+  "    $cat = 'template';" ^
+  "    if ($f -eq 'CLAUDE.md') { $cat = 'project' };" ^
+  "    if ($f -eq '.gitignore' -or $f -eq '.vscode/extensions.json') { $cat = 'hybrid' };" ^
+  "    $files[$f] = @{ category = $cat; hash = $h };" ^
+  "  }" ^
+  "};" ^
+  "foreach ($p in $templatePatterns) {" ^
+  "  foreach ($item in (Get-ChildItem -Path $p -ErrorAction SilentlyContinue)) {" ^
+  "    $rel = $item.FullName.Substring((Get-Location).Path.Length + 1).Replace('\','/');" ^
+  "    $h = (Get-FileHash $item.FullName -Algorithm SHA256).Hash.ToLower();" ^
+  "    $files[$rel] = @{ category = 'template'; hash = $h };" ^
+  "  }" ^
+  "};" ^
+  "foreach ($p in $projectPatterns) {" ^
+  "  $dir = $p.Replace('/*','');" ^
+  "  if (Test-Path $dir) {" ^
+  "    foreach ($item in (Get-ChildItem -Path $dir -Recurse -File -ErrorAction SilentlyContinue)) {" ^
+  "      $rel = $item.FullName.Substring((Get-Location).Path.Length + 1).Replace('\','/');" ^
+  "      $h = (Get-FileHash $item.FullName -Algorithm SHA256).Hash.ToLower();" ^
+  "      $files[$rel] = @{ category = 'project'; hash = $h };" ^
+  "    }" ^
+  "  }" ^
+  "};" ^
+  "$entries = @();" ^
+  "foreach ($key in ($files.Keys | Sort-Object)) {" ^
+  "  $v = $files[$key];" ^
+  "  $entries += ('    \"' + $key + '\": { \"category\": \"' + $v.category + '\", \"hash\": \"' + $v.hash + '\" }');" ^
+  "};" ^
+  "$templateRemote = '';" ^
+  "try { $templateRemote = (& git -C '%TEMPLATE_DIR%' remote get-url origin 2>$null) } catch {};" ^
+  "$json = '{' + [Environment]::NewLine;" ^
+  "$json += '  \"template_version\": \"2.2.0\",' + [Environment]::NewLine;" ^
+  "$json += '  \"template_remote\": \"' + $templateRemote + '\",' + [Environment]::NewLine;" ^
+  "$json += '  \"created\": \"' + $today + '\",' + [Environment]::NewLine;" ^
+  "$json += '  \"updated\": \"' + $today + '\",' + [Environment]::NewLine;" ^
+  "$json += '  \"files\": {' + [Environment]::NewLine;" ^
+  "$json += ($entries -join (',' + [Environment]::NewLine));" ^
+  "$json += [Environment]::NewLine + '  }' + [Environment]::NewLine + '}';" ^
+  "[System.IO.File]::WriteAllText('.template-manifest.json', $json, [System.Text.UTF8Encoding]::new($false));" ^
+  "Write-Host 'Generated .template-manifest.json'"
+
+:: Initialize git
+echo [5/6] Initializing git repository...
 git init >nul 2>&1
 if errorlevel 1 (
     echo WARNING: git not found. Skipping git init.
 ) else (
+    git update-index --chmod=+x scripts/check-drift.sh 2>nul || true
     git add -A >nul 2>&1
     git commit -m "feat: initialize agent-ready project from template v2" >nul 2>&1
     echo Git repository initialized with initial commit.
 )
+
+REM Store template origin for future updates
+for /f "tokens=*" %%r in ('cd /d "%TEMPLATE_DIR%" ^&^& git remote get-url origin 2^>nul') do set TEMPLATE_REMOTE=%%r
+if defined TEMPLATE_REMOTE (
+    cd /d "%PROJECT_NAME%"
+    git remote add template "%TEMPLATE_REMOTE%" 2>nul
+    echo Template remote added: %TEMPLATE_REMOTE%
+    cd ..
+)
+
 cd ..
 
-echo [5/5] Done!
+echo [6/6] Done!
 echo.
 echo  ========================================================
 echo    Project "%PROJECT_NAME%" created successfully!
@@ -128,10 +177,10 @@ echo    2. Tell Claude: "Set up my project" or /setup-project
 echo    3. Claude asks about your stack and configures everything
 echo.
 echo    What's ready:
-echo    - 8 production hooks (format, protect main, secrets, etc.)
-echo    - 7 agents (reviewer, implementer, security, etc.)
-echo    - 10 skills (sprint, add-feature, security-audit, etc.)
-echo    - 8 commands (/implement, /sprint, /review, etc.)
+echo    - 7 rules (architecture, git-workflow, testing, etc.)
+echo    - 9 agents (reviewer, implementer, security, etc.)
+echo    - 15 skills (sprint, add-feature, security-audit, etc.)
+echo    - 12 commands (/implement, /sprint, /review, etc.)
 echo    - Obsidian brain vault (open brain/ in Obsidian)
 echo    - Self-improvement loop (tasks/lessons.md)
 echo.

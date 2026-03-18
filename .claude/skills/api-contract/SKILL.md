@@ -36,6 +36,12 @@ If implementation exists but no contract:
 2. Generate contract entry for docs/API_CONTRACTS.md
 3. Include: method, path, request/response schemas, status codes
 
+### Phase 6: Generate OpenAPI Spec
+If `docs/openapi.yaml` doesn't exist:
+1. Use contracts from `docs/API_CONTRACTS.md` as source of truth
+2. Generate `docs/openapi.yaml` with: paths, methods, request/response schemas, status codes, auth requirements
+3. Validate generated spec against implementation
+
 ## Sync with Tests
 After contract changes:
 1. Check if integration tests exist for the endpoint

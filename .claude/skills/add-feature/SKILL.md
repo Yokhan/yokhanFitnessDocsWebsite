@@ -7,6 +7,12 @@ description: "Create a new feature module using vertical slice architecture. 9-s
 
 9-step workflow based on christianestay/claude-code-base-project.
 
+## Step 0: Naming Conflict Check
+Before anything else, verify the feature name is available:
+- Check `src/features/` for existing modules with the same name
+- Check `src/shared/` and `src/core/` for name conflicts
+- If conflict found: suggest an alternative name and stop until user confirms
+
 ## Step 1: Explore Existing Patterns
 1. Read `_reference/README.md` — find canonical implementation
 2. Read the referenced feature to understand conventions

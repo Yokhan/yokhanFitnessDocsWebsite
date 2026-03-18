@@ -9,6 +9,14 @@
 ### Accomplished
 -
 
+## Metrics
+- Files changed:
+- Lines added:
+- Lines removed:
+- Tests added:
+- Commits made:
+- Duration:
+
 ### Decisions Made
 - **Decision**:
   - **Why**:

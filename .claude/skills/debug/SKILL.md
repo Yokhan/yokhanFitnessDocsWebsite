@@ -39,6 +39,13 @@ description: "Systematic debugging approach: reproduce, isolate, fix, verify, do
 - Run full test suite — no regressions
 - Run typecheck and linter
 
+### 5b. Regression Check
+After fixing the immediate module, also run integration tests:
+- `npm test -- --testPathPattern=integration` (Node)
+- `pytest tests/integration/` (Python)
+- `go test ./tests/integration/...` (Go)
+If integration tests fail, the fix may have introduced a regression — investigate before committing.
+
 ### 6. Document
 - Log the bug and fix in `brain/03-knowledge/` for future reference
 - If this is a pattern that could recur, consider:
