@@ -1,6 +1,6 @@
 # Agent Project Template v2
 
-[![Template Version](https://img.shields.io/badge/template-v2.2.1-blue)](.)
+[![Template Version](https://img.shields.io/badge/template-v2.3.0-blue)](.)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
@@ -65,9 +65,9 @@ bash scripts/sync-template.sh --from-git
 
 | Category | Count | Details |
 |----------|-------|---------|
-| **Rules** | 7 | architecture, code-style, testing, git-workflow, self-improvement, conflict-resolution, error-handling |
+| **Rules** | 16 | 7 core (architecture, code-style, testing, git-workflow, self-improvement, conflict-resolution, error-handling) + 8 domain guards + critical-thinking |
 | **Hooks** | 6 hook scripts | 6 hook scripts across 5 event types (PostToolUse, PreToolUse, Stop, SessionStart, PreCompact) |
-| **Skills** | 15 | setup-project, add-feature, debug, security-audit, daily-brief, self-update, api-contract, sprint, setup-integrations, coverage, health-check, migrate, modify-api, setup-telegram, update-deps |
+| **Skills** | 21 | 15 core (setup-project, add-feature, debug, security-audit, daily-brief, self-update, api-contract, sprint, setup-integrations, coverage, health-check, migrate, modify-api, setup-telegram, update-deps) + 6 domain review skills |
 | **Agents** | 9 | reviewer, simplifier, researcher, implementer, test-engineer, security-auditor, devops |
 | **Commands** | 12 | /setup-project, /implement, /commit, /review, /refactor, /sprint, /brain-sync, /weekly |
 | **Brain** | Obsidian vault | session logs, decisions, knowledge base, note templates |
