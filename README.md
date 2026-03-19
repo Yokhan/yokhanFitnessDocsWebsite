@@ -1,6 +1,6 @@
 # Agent Project Template v2
 
-[![Template Version](https://img.shields.io/badge/template-v2.3.0-blue)](.)
+[![Template Version](https://img.shields.io/badge/template-v2.4.0-blue)](.)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 

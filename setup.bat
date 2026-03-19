@@ -140,7 +140,7 @@ powershell -NoProfile -Command ^
   "$templateRemote = '';" ^
   "try { $templateRemote = (& git -C '%TEMPLATE_DIR%' remote get-url origin 2>$null) } catch {};" ^
   "$json = '{' + [Environment]::NewLine;" ^
-  "$json += '  \"template_version\": \"2.3.0\",' + [Environment]::NewLine;" ^
+  "$json += '  \"template_version\": \"2.4.0\",' + [Environment]::NewLine;" ^
   "$json += '  \"template_remote\": \"' + $templateRemote + '\",' + [Environment]::NewLine;" ^
   "$json += '  \"created\": \"' + $today + '\",' + [Environment]::NewLine;" ^
   "$json += '  \"updated\": \"' + $today + '\",' + [Environment]::NewLine;" ^

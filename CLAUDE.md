@@ -1,5 +1,5 @@
 # Agent-Ready Project
-<!-- Template Version: 2.3.0 -->
+<!-- Template Version: 2.4.0 -->
 
 AI-agent optimized project with persistent memory, autonomous hooks, and self-improving context infrastructure.
 
@@ -50,7 +50,7 @@ Not configured yet.
 - Data (config/tables) separated from logic (processors)
 - Tests colocated: module.test.ts / test_module.py
 - ALWAYS: typecheck + lint + tests after changes
-- Files < 250 lines (Working Memory Cliff)
+- Code files < 375 lines (Working Memory Cliff, 1M context). Skills < 800 lines.
 - Template files (.claude/rules, agents, skills, commands without `project-` prefix) are read-only. Project customizations → `project-*` files.
 
 ## Hooks
@@ -102,7 +102,7 @@ After each mistake: add to `tasks/lessons.md`. Read it at session start. When >5
 
 ## DON'T
 
-- Files > 250 lines — split them
+- Code files > 375 lines — split them
 - No `any` — use `unknown` + type guards
 - No mutations — return new objects
 - No editing main/master directly
@@ -110,7 +110,7 @@ After each mistake: add to `tasks/lessons.md`. Read it at session start. When >5
 - No committing secrets (.env, API keys)
 
 ## Template Version
-2.3.0 — Run `bash scripts/check-drift.sh` to verify template health.
+2.4.0 — Run `bash scripts/check-drift.sh` to verify template health.
 
 ## Compaction
 

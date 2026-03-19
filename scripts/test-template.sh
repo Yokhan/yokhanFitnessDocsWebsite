@@ -50,7 +50,7 @@ check ">=3 brain templates" bash -c '[ $(ls brain/templates/*.md 2>/dev/null | w
 
 echo ""
 echo "File sizes:"
-check "CLAUDE.md <=200 lines" bash -c '[ $(wc -l < CLAUDE.md) -le 200 ]'
+check "CLAUDE.md <=300 lines" bash -c '[ $(wc -l < CLAUDE.md) -le 300 ]'
 
 echo ""
 echo "Results: $((CHECKS-ERRORS))/$CHECKS passed"

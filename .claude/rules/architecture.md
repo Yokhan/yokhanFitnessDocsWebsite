@@ -14,8 +14,10 @@
 - Never create circular dependencies.
 
 ## File Size
-- Maximum 250 lines per file. This is a cognitive limit for AI agents, not just style.
-- If a file grows beyond 250 lines, split it by responsibility.
+- Maximum 375 lines per file (1M context models). For smaller context models, keep at 250.
+- This is a cognitive limit for AI agents (Working Memory Cliff), not just style.
+- If a file grows beyond 375 lines, split it by responsibility.
+- Instruction files (skills, agents, rules) can be longer — up to 800 lines for domain-heavy skills.
 
 ## Module Structure (Vertical Slices)
 Each feature is a self-contained module with all layers:
