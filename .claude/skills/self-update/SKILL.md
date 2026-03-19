@@ -39,8 +39,8 @@ For solutions used 3+ times:
 
 ## Constraints
 - `tasks/lessons.md` should stay under 200 lines (promote aggressively when over 50 entries)
-- Each rule file should stay under 50 lines
-- CLAUDE.md must stay under 200 lines total
+- Rule files: core guards 28-50 lines, strategic/domain-heavy up to 150 lines
+- CLAUDE.md must stay under 300 lines total (1M context limit)
 - ALWAYS create new `project-*` files for promotions -- never edit template files
 - Every promotion must be logged in brain/03-knowledge/
 
