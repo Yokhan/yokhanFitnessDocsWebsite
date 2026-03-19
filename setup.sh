@@ -130,7 +130,7 @@ generate_manifest() {
   # Build JSON
   {
     printf '{\n'
-    printf '  "template_version": "2.2.0",\n'
+    printf '  "template_version": "2.3.0",\n'
     printf '  "template_remote": "%s",\n' "$TEMPLATE_REMOTE"
     printf '  "created": "%s",\n' "$today"
     printf '  "updated": "%s",\n' "$today"

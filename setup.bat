@@ -42,7 +42,7 @@ set "TEMPLATE_DIR=%~dp0"
 mkdir "%PROJECT_NAME%"
 
 :: Copy entire template structure
-echo [1/5] Copying template files...
+echo [1/7] Copying template files...
 xcopy "%TEMPLATE_DIR%CLAUDE.md" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
 xcopy "%TEMPLATE_DIR%README.md" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
 xcopy "%TEMPLATE_DIR%.env.example" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
@@ -65,11 +65,11 @@ xcopy "%TEMPLATE_DIR%.vscode\" "%PROJECT_NAME%\.vscode\" /E /I /Y /Q >nul 2>&1
 if exist "%PROJECT_NAME%\setup.bat" del "%PROJECT_NAME%\setup.bat" >nul 2>&1
 
 :: Create .gitignore
-echo [2/5] Creating .gitignore...
+echo [2/7] Creating .gitignore...
 xcopy "%TEMPLATE_DIR%.gitignore" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
 
 :: Create empty directories that git needs
-echo [3/5] Creating directory structure...
+echo [3/7] Creating directory structure...
 mkdir "%PROJECT_NAME%\src" >nul 2>&1
 
 :: Generate template manifest
@@ -140,7 +140,7 @@ powershell -NoProfile -Command ^
   "$templateRemote = '';" ^
   "try { $templateRemote = (& git -C '%TEMPLATE_DIR%' remote get-url origin 2>$null) } catch {};" ^
   "$json = '{' + [Environment]::NewLine;" ^
-  "$json += '  \"template_version\": \"2.2.0\",' + [Environment]::NewLine;" ^
+  "$json += '  \"template_version\": \"2.3.0\",' + [Environment]::NewLine;" ^
   "$json += '  \"template_remote\": \"' + $templateRemote + '\",' + [Environment]::NewLine;" ^
   "$json += '  \"created\": \"' + $today + '\",' + [Environment]::NewLine;" ^
   "$json += '  \"updated\": \"' + $today + '\",' + [Environment]::NewLine;" ^
