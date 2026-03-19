@@ -132,6 +132,19 @@ fi
 
 # --- Read manifest ---
 MANIFEST=".template-manifest.json"
+
+# Fix Windows backslash paths in manifest
+if grep -q '\\\\' .template-manifest.json 2>/dev/null; then
+  echo "Fixing Windows backslash paths in manifest..."
+  sed -i 's/\\\\/\//g' .template-manifest.json
+fi
+
+# Warn if manifest version is unknown
+manifest_ver=$(python3 -c "import json; print(json.load(open('.template-manifest.json')).get('template_version','unknown'))" 2>/dev/null || echo "unknown")
+if [ "$manifest_ver" = "unknown" ] || [ -z "$manifest_ver" ]; then
+  echo "WARNING: Manifest version is '$manifest_ver'. Will be updated after sync."
+fi
+
 if [ ! -f "$MANIFEST" ]; then
   if [ "$BOOTSTRAP" = true ]; then
     echo "=== Bootstrap: Generating $MANIFEST for existing project ==="
@@ -259,6 +272,15 @@ fi
 
 while IFS='|' read -r filepath old_hash category; do
   [ -z "$filepath" ] && continue
+
+  # Skip project-local files
+  case "$filepath" in
+    .claude/settings.local.json|core/*)
+      SKIPPED=$((SKIPPED + 1))
+      continue
+      ;;
+  esac
+
   template_file="$TEMPLATE_PATH/$filepath"
 
   if [ ! -f "$template_file" ]; then
@@ -296,6 +318,13 @@ for pattern in ".claude/settings.json" ".claude/rules/*.md" ".claude/agents/*.md
     [ -f "$template_file" ] || continue
     # Get relative path
     rel_path="${template_file#$TEMPLATE_PATH/}"
+
+    # Skip project-local files
+    case "$rel_path" in
+      .claude/settings.local.json|core/*)
+        continue
+        ;;
+    esac
 
     # Check if already in manifest (C1: use env vars for Python)
     in_manifest=$(MANIFEST_PATH="$MANIFEST" REL_PATH="$rel_path" python3 -c "

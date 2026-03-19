@@ -68,6 +68,11 @@ if exist "%PROJECT_NAME%\setup.bat" del "%PROJECT_NAME%\setup.bat" >nul 2>&1
 echo [2/7] Creating .gitignore...
 xcopy "%TEMPLATE_DIR%.gitignore" "%PROJECT_NAME%\" /Y /Q >nul 2>&1
 
+:: Create project-local settings (never touched by template sync)
+if not exist "%PROJECT_NAME%\.claude\settings.local.json" (
+    xcopy "%TEMPLATE_DIR%.claude\settings.local.json.example" "%PROJECT_NAME%\.claude\settings.local.json*" /Y /Q >nul 2>&1
+)
+
 :: Create empty directories that git needs
 echo [3/7] Creating directory structure...
 mkdir "%PROJECT_NAME%\src" >nul 2>&1

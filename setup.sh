@@ -42,6 +42,11 @@ cp -r "$(dirname "$0")" "$PROJECT_DIR"
 
 cd "$PROJECT_DIR"
 
+# Create project-local settings (never touched by template sync)
+if [ ! -f .claude/settings.local.json ]; then
+  cp .claude/settings.local.json.example .claude/settings.local.json 2>/dev/null || true
+fi
+
 # Remove template git history
 rm -rf .git
 

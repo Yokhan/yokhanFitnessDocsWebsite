@@ -1,25 +1,20 @@
 {
-  "NOTE": "Copy this to settings.local.json and configure. This file is gitignored.",
-  "mcpServers": {
-    "engram": {
-      "NOTE": "Zero-dependency Go binary memory. Download from https://github.com/Gentleman-Programming/engram",
-      "command": "engram",
-      "args": ["mcp"]
-    },
-    "claude-memory": {
-      "NOTE": "Alternative: hybrid search memory. npm i -g claude-memory-mcp",
-      "command": "claude-memory-mcp",
-      "args": []
-    },
-    "memcp": {
-      "NOTE": "Alternative: 5-tier search, 20x token savings. npm i -g memcp",
-      "command": "memcp",
-      "args": ["serve"]
-    },
-    "obsidian": {
-      "NOTE": "Direct vault access. npm i -g @stevenstav/obsidian-mcp",
-      "command": "obsidian-mcp",
-      "args": ["--vault", "./brain"]
-    }
+  "_comment": "Project-specific overrides. This file is NEVER touched by template sync.",
+  "_comment2": "Claude Code merges this with settings.json. Local settings take priority.",
+  "_comment3": "Add your project-specific hooks, permissions, and MCP servers here.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [{
+          "type": "command",
+          "command": "echo 'Add your project-specific pre-edit hooks here'",
+          "timeout": 5
+        }]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": []
   }
 }

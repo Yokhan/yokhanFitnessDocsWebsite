@@ -18,6 +18,10 @@ PROJECT_PATH="${1:-}"
 DRY_RUN=false
 [ "${2:-}" = "--dry-run" ] && DRY_RUN=true
 
+MIGRATE=false
+[ "${2:-}" = "--migrate" ] && MIGRATE=true
+[ "${3:-}" = "--migrate" ] && MIGRATE=true
+
 # --- Validate ---
 if [ -z "$PROJECT_PATH" ]; then
     echo "Usage: $0 /path/to/your-project [--dry-run]"
@@ -61,8 +65,70 @@ echo "[2/4] Copying sync-template.sh..."
 cp "$TEMPLATE_DIR/scripts/sync-template.sh" "$PROJECT_PATH/scripts/sync-template.sh"
 chmod +x "$PROJECT_PATH/scripts/sync-template.sh" 2>/dev/null || true
 
-# --- Step 3: Bootstrap manifest if missing ---
-if [ ! -f "$PROJECT_PATH/.template-manifest.json" ]; then
+# --- Step 3: Bootstrap manifest if missing (or migrate) ---
+if [ "$MIGRATE" = true ]; then
+    echo "[3/4] Migration mode: preserving existing project files..."
+    cd "$PROJECT_PATH"
+
+    # Copy only template infrastructure (not project files)
+    # Copy scripts/ (template utilities)
+    cp -r "$TEMPLATE_DIR/scripts/"* scripts/ 2>/dev/null || mkdir -p scripts && cp -r "$TEMPLATE_DIR/scripts/"* scripts/
+
+    # Copy hooks (if missing)
+    if [ ! -d .claude/hooks ]; then
+        mkdir -p .claude/hooks
+        cp -r "$TEMPLATE_DIR/.claude/hooks/"* .claude/hooks/ 2>/dev/null || true
+    fi
+
+    # Copy template rules (not project-* rules)
+    mkdir -p .claude/rules
+    for f in "$TEMPLATE_DIR/.claude/rules/"*.md; do
+        [ -f "$f" ] || continue
+        fname=$(basename "$f")
+        case "$fname" in project-*) continue ;; esac
+        cp "$f" .claude/rules/ 2>/dev/null || true
+    done
+
+    # Copy template agents (not project-* agents)
+    if [ -d "$TEMPLATE_DIR/.claude/agents" ]; then
+        mkdir -p .claude/agents
+        for f in "$TEMPLATE_DIR/.claude/agents/"*.md; do
+            [ -f "$f" ] || continue
+            fname=$(basename "$f")
+            case "$fname" in project-*) continue ;; esac
+            cp "$f" .claude/agents/ 2>/dev/null || true
+        done
+    fi
+
+    # Copy template skills (not project-* skills)
+    if [ -d "$TEMPLATE_DIR/.claude/skills" ]; then
+        mkdir -p .claude/skills
+        for d in "$TEMPLATE_DIR/.claude/skills/"*/; do
+            [ -d "$d" ] || continue
+            skill_name=$(basename "$d")
+            case "$skill_name" in project-*) continue ;; esac
+            mkdir -p ".claude/skills/$skill_name"
+            cp -r "$d"* ".claude/skills/$skill_name/" 2>/dev/null || true
+        done
+    fi
+
+    # Copy template commands (not project-* commands)
+    if [ -d "$TEMPLATE_DIR/.claude/commands" ]; then
+        mkdir -p .claude/commands
+        for f in "$TEMPLATE_DIR/.claude/commands/"*.md; do
+            [ -f "$f" ] || continue
+            fname=$(basename "$f")
+            case "$fname" in project-*) continue ;; esac
+            cp "$f" .claude/commands/ 2>/dev/null || true
+        done
+    fi
+
+    # Generate manifest from current state
+    bash scripts/sync-template.sh "$TEMPLATE_DIR" --bootstrap
+
+    echo "Migration complete. Run 'bash scripts/test-hooks.sh' to verify."
+    cd "$TEMPLATE_DIR"
+elif [ ! -f "$PROJECT_PATH/.template-manifest.json" ]; then
     echo "[3/4] Generating .template-manifest.json (first-time bootstrap)..."
     cd "$PROJECT_PATH"
     bash scripts/sync-template.sh "$TEMPLATE_DIR" --bootstrap

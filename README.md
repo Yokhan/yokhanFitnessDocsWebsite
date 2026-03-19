@@ -59,6 +59,66 @@ bash scripts/sync-template.sh --from-git
 **What's preserved**: Your code (src/), docs, brain/, tasks/, CLAUDE.md, and all `project-*` files
 **Convention**: Template files are read-only baseline. Project customizations go to `project-*` prefixed files (e.g., `rules/project-no-mock-db.md`).
 
+## Extending the Template for Your Domain
+
+The template is a **baseline**. Every project adds domain-specific infrastructure on top.
+
+### Convention: `project-*` prefix
+
+All project-specific files use the `project-` prefix. Template sync **never touches** these files.
+
+| Type | Template (synced) | Project (preserved) |
+|------|-------------------|---------------------|
+| Rules | `rules/architecture.md` | `rules/project-kiro-system.md` |
+| Commands | `commands/implement.md` | `commands/project-00-research.md` |
+| Skills | `skills/debug/SKILL.md` | `skills/project-kiro-drafting/SKILL.md` |
+| Agents | `agents/reviewer.md` | `agents/project-kiro-writer.md` |
+| Hooks | `settings.json` (template) | `settings.local.json` (project) |
+
+### Adding project hooks
+
+Put project-specific hooks in `.claude/settings.local.json` (not `settings.json`):
+```json
+{
+  "hooks": {
+    "PreToolUse": [{
+      "matcher": "Edit",
+      "hooks": [{"type": "command", "command": "bash core/scripts/validate.sh", "timeout": 10}]
+    }]
+  }
+}
+```
+Claude Code merges both files. Project hooks run alongside template hooks.
+
+### Adding a domain pipeline
+
+For complex domain workflows (literary production, game design, data science):
+
+1. **Domain rules** → `.claude/rules/project-[domain]-*.md` (enforcement, methodology)
+2. **Domain commands** → `.claude/commands/project-[phase]-*.md` (pipeline steps)
+3. **Domain skills** → `.claude/skills/project-[domain]-*/SKILL.md` (specialist knowledge)
+4. **Domain agents** → `.claude/agents/project-[domain]-*.md` (sub-agents)
+5. **Domain scripts** → `core/scripts/` (validators, generators — NOT in template's `scripts/`)
+6. **Domain docs** → `core/docs/` (methodology, reference material)
+7. **Domain config** → `core/config.yaml` (universal project configuration)
+
+### Progressive disclosure for domain docs
+
+Follow the 5-level loading pattern:
+1. **Critical** (every session): `.claude/rules/project-*.md`
+2. **Project** (once per project): `core/config.yaml`, status dashboard
+3. **Task** (per task): relevant domain docs from `core/docs/`
+4. **Methodology** (on demand): methodology files, editorial boards
+5. **Reference** (deep search): cheat sheets, examples, full indices
+
+### Template updates preserve your extensions
+
+When you run `/update-template` or `bash scripts/sync-template.sh`:
+- Template files → **updated** to latest version
+- `project-*` files → **untouched**
+- `settings.local.json` → **untouched**
+- `core/` directory → **untouched** (not tracked by template)
+
 ## What's Included
 
 ### Out of the box (setup.bat creates these)

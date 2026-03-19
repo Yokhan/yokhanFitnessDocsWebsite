@@ -3,8 +3,8 @@
 .env.local
 .env.*.local
 
-# Claude Code local settings
-.claude/settings.local.json
+# Project-local Claude Code settings (not synced with template)
+# .claude/settings.local.json
 
 # Memory MCP local state
 .memory/
