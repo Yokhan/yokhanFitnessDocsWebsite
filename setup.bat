@@ -73,12 +73,18 @@ echo [3/5] Creating directory structure...
 mkdir "%PROJECT_NAME%\src" >nul 2>&1
 
 :: Generate template manifest
-echo [4/6] Generating template manifest...
+echo [4/7] Generating template manifest...
 cd "%PROJECT_NAME%"
 powershell -NoProfile -Command ^
   "$today = (Get-Date -Format 'yyyy-MM-dd');" ^
   "$templateFiles = @(" ^
   "  '.claude/settings.json'," ^
+  "  '.claude/hooks/session-start.sh'," ^
+  "  '.claude/hooks/session-stop.sh'," ^
+  "  '.claude/hooks/pre-compact.sh'," ^
+  "  '.claude/hooks/format.sh'," ^
+  "  '.claude/hooks/post-edit.sh'," ^
+  "  '.claude/hooks/pre-edit-safety.sh'," ^
   "  '.editorconfig'," ^
   "  'Makefile'," ^
   "  'SECURITY.md'," ^
@@ -92,6 +98,7 @@ powershell -NoProfile -Command ^
   "  '.claude/agents/*.md'," ^
   "  '.claude/skills/*/SKILL.md'," ^
   "  '.claude/commands/*.md'," ^
+  "  '.claude/hooks/*.sh'," ^
   "  'scripts/*.sh'" ^
   ");" ^
   "$projectPatterns = @(" ^
@@ -144,7 +151,7 @@ powershell -NoProfile -Command ^
   "Write-Host 'Generated .template-manifest.json'"
 
 :: Initialize git
-echo [5/6] Initializing git repository...
+echo [5/7] Initializing git repository...
 git init >nul 2>&1
 if errorlevel 1 (
     echo WARNING: git not found. Skipping git init.
@@ -154,6 +161,10 @@ if errorlevel 1 (
     git commit -m "feat: initialize agent-ready project from template v2" >nul 2>&1
     echo Git repository initialized with initial commit.
 )
+
+:: Test hooks compatibility
+echo [6/7] Testing hooks compatibility...
+bash scripts/test-hooks.sh 2>nul && echo Hooks OK || echo WARNING: Some hooks may need adjustment. See .claude/hooks/
 
 REM Store template origin for future updates
 for /f "tokens=*" %%r in ('cd /d "%TEMPLATE_DIR%" ^&^& git remote get-url origin 2^>nul') do set TEMPLATE_REMOTE=%%r
@@ -166,7 +177,7 @@ if defined TEMPLATE_REMOTE (
 
 cd ..
 
-echo [6/6] Done!
+echo [7/7] Done!
 echo.
 echo  ========================================================
 echo    Project "%PROJECT_NAME%" created successfully!

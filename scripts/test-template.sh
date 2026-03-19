@@ -34,6 +34,8 @@ check ">=6 rule files" bash -c '[ $(ls .claude/rules/*.md 2>/dev/null | wc -l) -
 check ">=7 agent files" bash -c '[ $(ls .claude/agents/*.md 2>/dev/null | wc -l) -ge 7 ]'
 check ">=10 skill dirs" bash -c '[ $(ls -d .claude/skills/*/ 2>/dev/null | wc -l) -ge 10 ]'
 check ">=8 command files" bash -c '[ $(ls .claude/commands/*.md 2>/dev/null | wc -l) -ge 8 ]'
+check ">=6 hook files" bash -c '[ $(ls .claude/hooks/*.sh 2>/dev/null | wc -l) -ge 6 ]'
+check "scripts/test-hooks.sh" test -f scripts/test-hooks.sh
 
 echo ""
 echo "Brain vault:"

@@ -1,5 +1,5 @@
 # Agent-Ready Project
-<!-- Template Version: 2.2.0 -->
+<!-- Template Version: 2.2.1 -->
 
 AI-agent optimized project with persistent memory, autonomous hooks, and self-improving context infrastructure.
 
@@ -53,6 +53,22 @@ Not configured yet.
 - Files < 250 lines (Working Memory Cliff)
 - Template files (.claude/rules, agents, skills, commands without `project-` prefix) are read-only. Project customizations → `project-*` files.
 
+## Hooks
+
+Claude Code hooks live in `.claude/hooks/`. Each hook is a bash script called by settings.json.
+
+| Hook | Trigger | What it does |
+|------|---------|-------------|
+| session-start.sh | Session begins | Creates session log, shows reminders |
+| session-stop.sh | Session ends | Logs end time and commit stats |
+| pre-compact.sh | Before context compression | Saves changed files list |
+| format.sh | After Edit/Write | Runs appropriate formatter |
+| post-edit.sh | After Edit/Write | Checks file size, validates syntax |
+| pre-edit-safety.sh | Before Edit/Write | Blocks main branch, detects secrets |
+
+If a hook fails: check `.claude/hooks/` scripts manually with `bash .claude/hooks/<name>.sh`.
+Never put complex bash in settings.json "command" field — always use script files.
+
 ## Context on demand
 
 - `docs/ARCHITECTURE.md` — modules and dependencies
@@ -86,7 +102,7 @@ After each mistake: add to `tasks/lessons.md`. Read it at session start. When >5
 - No committing secrets (.env, API keys)
 
 ## Template Version
-2.2.0 — Run `bash scripts/check-drift.sh` to verify template health.
+2.2.1 — Run `bash scripts/check-drift.sh` to verify template health.
 
 ## Compaction
 

@@ -5,7 +5,7 @@
 set -euo pipefail
 
 # Check dependencies
-if ! command -v git &>/dev/null; then
+if ! command -v git >/dev/null 2>&1; then
     echo "ERROR: git is not installed. Please install git first."
     exit 1
 fi
@@ -53,9 +53,9 @@ generate_manifest() {
 
   # Determine hash command
   local hash_cmd
-  if command -v sha256sum &>/dev/null; then
+  if command -v sha256sum >/dev/null 2>&1; then
     hash_cmd="sha256sum"
-  elif command -v shasum &>/dev/null; then
+  elif command -v shasum >/dev/null 2>&1; then
     hash_cmd="shasum -a 256"
   else
     echo "WARNING: No SHA-256 tool found. Skipping manifest generation."
@@ -74,6 +74,7 @@ generate_manifest() {
       .claude/agents/*.md) echo "template" ;;
       .claude/skills/*/SKILL.md) echo "template" ;;
       .claude/commands/*.md) echo "template" ;;
+      .claude/hooks/*.sh) echo "template" ;;
       scripts/*.sh) echo "template" ;;
       .editorconfig) echo "template" ;;
       Makefile) echo "template" ;;
@@ -96,6 +97,7 @@ generate_manifest() {
     ".claude/agents/"*.md
     ".claude/skills/"*/SKILL.md
     ".claude/commands/"*.md
+    ".claude/hooks/"*.sh
     "scripts/"*.sh
     ".editorconfig"
     "Makefile"
@@ -168,6 +170,12 @@ git update-index --chmod=+x scripts/check-drift.sh 2>/dev/null || true
 # Create initial commit
 git add -A
 git commit -m "chore: initialize project from agent-project-template v2"
+
+# Test hooks compatibility
+if [ -f scripts/test-hooks.sh ]; then
+  echo "Testing hooks compatibility..."
+  bash scripts/test-hooks.sh || echo "WARNING: Some hooks may need adjustment."
+fi
 
 # Store template origin for future updates
 if [ -n "$TEMPLATE_REMOTE" ]; then

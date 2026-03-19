@@ -1,6 +1,6 @@
 # Agent Project Template v2
 
-[![Template Version](https://img.shields.io/badge/template-v2.2.0-blue)](.)
+[![Template Version](https://img.shields.io/badge/template-v2.2.1-blue)](.)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
 
@@ -66,7 +66,7 @@ bash scripts/sync-template.sh --from-git
 | Category | Count | Details |
 |----------|-------|---------|
 | **Rules** | 7 | architecture, code-style, testing, git-workflow, self-improvement, conflict-resolution, error-handling |
-| **Hooks** | 12 | 12 hooks across 5 event types (6 PostToolUse, 3 PreToolUse, 1 Stop, 1 SessionStart, 1 PreCompact) |
+| **Hooks** | 6 hook scripts | 6 hook scripts across 5 event types (PostToolUse, PreToolUse, Stop, SessionStart, PreCompact) |
 | **Skills** | 15 | setup-project, add-feature, debug, security-audit, daily-brief, self-update, api-contract, sprint, setup-integrations, coverage, health-check, migrate, modify-api, setup-telegram, update-deps |
 | **Agents** | 9 | reviewer, simplifier, researcher, implementer, test-engineer, security-auditor, devops |
 | **Commands** | 12 | /setup-project, /implement, /commit, /review, /refactor, /sprint, /brain-sync, /weekly |
