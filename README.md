@@ -69,7 +69,7 @@ bash scripts/sync-template.sh --from-git
 | **Hooks** | 6 hook scripts | 6 hook scripts across 5 event types (PostToolUse, PreToolUse, Stop, SessionStart, PreCompact) |
 | **Skills** | 22 | 15 core (setup-project, add-feature, debug, security-audit, daily-brief, self-update, api-contract, sprint, setup-integrations, coverage, health-check, migrate, modify-api, setup-telegram, update-deps) + 6 domain review + strategic-review |
 | **Agents** | 9 | reviewer, simplifier, researcher, implementer, test-engineer, security-auditor, devops |
-| **Commands** | 12 | /setup-project, /implement, /commit, /review, /refactor, /sprint, /brain-sync, /weekly |
+| **Commands** | 12 | /setup-project, /implement, /commit, /review, /refactor, /sprint, /brain-sync, /weekly, /status, /rollback, /onboard, /update-template |
 | **Brain** | Obsidian vault | session logs, decisions, knowledge base, note templates |
 | **Memory** | tasks/ | lessons.md (self-improvement loop) + current.md (handoff) |
 
@@ -112,6 +112,10 @@ Tier 3 (Cold Memory)    — docs/ + brain/                                    (b
 | `/sprint` | Autonomous work loop with circuit breaker |
 | `/brain-sync` | Sync knowledge to Obsidian vault |
 | `/weekly` | Retrospective + self-improvement promotion |
+| `/status` | Project health dashboard |
+| `/rollback` | Safe git revert workflow |
+| `/onboard` | New developer onboarding |
+| `/update-template` | Sync project with newer template version |
 
 ## Obsidian Brain
 
