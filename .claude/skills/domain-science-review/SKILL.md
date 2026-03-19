@@ -34,7 +34,7 @@ decision quality underpin all other domains.
 
 10. **Ecological Fallacy** — Applying group-level findings to individuals. WHY: group averages hide enormous individual variation; what is true of a group may not be true of any member. INSTEAD: multi-level modeling; state level of analysis explicitly. EVIDENCE: B
 
-11. **Base Rate Neglect** — Ignoring prior probability when evaluating evidence. WHY: even a 99% accurate test produces mostly false positives for a 1% prevalence condition (Bayes' theorem). INSTEAD: always incorporate base rates; use Bayesian reasoning. EVIDENCE: A
+11. **Base Rate Neglect** — Ignoring prior probability when evaluating evidence. WHY: even a 99% accurate test produces mostly false positives for a 1% prevalence condition (Bayes' theorem). INSTEAD: always incorporate base rates; use Bayesian reasoning. EXAMPLE: 99% accurate test with 1% prevalence yields only 50% PPV. EVIDENCE: A
 
 12. **Regression to the Mean Ignored** — Attributing normal statistical regression to interventions. WHY: extreme values naturally move toward mean on retesting, regardless of treatment. INSTEAD: use control groups to distinguish treatment from regression. EVIDENCE: A
 
@@ -46,9 +46,9 @@ decision quality underpin all other domains.
 
 ### Cognitive Biases in Decision-Making
 
-16. **Confirmation Bias** — Seeking, interpreting, and remembering evidence that confirms existing beliefs. WHY: most pervasive cognitive bias; affects experts equally. INSTEAD: actively seek disconfirming evidence; ask "what would change my mind?" EVIDENCE: A
+16. **Confirmation Bias** — Seeking, interpreting, and remembering evidence that confirms existing beliefs. WHY: most pervasive cognitive bias; affects experts equally. DEBIASING: consider-the-opposite; assign devil advocate; decision journal. INSTEAD: actively seek disconfirming evidence; ask "what would change my mind?" EVIDENCE: A
 
-17. **Anchoring Effect** — Over-relying on first piece of information received. WHY: affects numerical estimates by 30-50% even with arbitrary, random anchors. INSTEAD: generate independent estimate before seeing any anchor value. EVIDENCE: A
+17. **Anchoring Effect** — Over-relying on first piece of information received. WHY: affects numerical estimates by 30-50% even with arbitrary, random anchors. DEBIASING: generate own estimate BEFORE seeing anchor; use multiple independent anchors. INSTEAD: generate independent estimate before seeing any anchor value. EVIDENCE: A
 
 18. **Availability Heuristic** — Judging probability by ease of recall rather than actual frequency. WHY: vivid, recent, or emotional events feel more likely than base rates suggest. INSTEAD: use actual statistics and base rates, not gut feeling. EVIDENCE: A
 
@@ -60,7 +60,7 @@ decision quality underpin all other domains.
 
 22. **Framing Effects** — Different conclusions from identical data presented differently. WHY: "90% survival" and "10% mortality" produce measurably different decisions despite being identical. INSTEAD: deliberately reframe problems multiple ways before deciding. EVIDENCE: A
 
-23. **Overconfidence Bias** — Systematically overestimating accuracy of own beliefs. WHY: calibration studies show people saying "95% confident" are right only ~75% of the time. INSTEAD: calibration training; reference class forecasting; track prediction accuracy. EVIDENCE: A
+23. **Overconfidence Bias** — Systematically overestimating accuracy of own beliefs. WHY: calibration studies show people saying "95% confident" are right only ~75% of the time. INSTEAD: calibration training; reference class forecasting; track prediction accuracy. DEBIASING: track accuracy over time; widen intervals; reference class. EVIDENCE: A
 
 24. **Planning Fallacy** — Underestimating time, cost, and risk for future tasks. WHY: people focus on unique aspects of current task while ignoring base rates from similar past tasks. INSTEAD: reference class forecasting -- how long did similar projects actually take? EVIDENCE: A
 
@@ -202,6 +202,37 @@ decision quality underpin all other domains.
 
 35. **Margin of Safety** — Build buffers into all plans for unexpected events. WHY: plans always encounter reality; buffers prevent catastrophic failure from inevitable surprises. EVIDENCE: C
 
+36. **Fermi Estimation** — Break unknowns into estimable components. WHY: rough decomposition beats gut feeling. EVIDENCE: C
+
+37. **Dialectical Thinking** — Hold thesis and antithesis; seek synthesis. WHY: prevents premature closure; surfaces hidden assumptions. EVIDENCE: C
+
+38. **Distinguish Risk from Uncertainty** — Risk has known probabilities; uncertainty unknown. WHY: different tools needed -- insurance for risk, optionality for uncertainty. EVIDENCE: B
+
+39. **Occam's Razor (With Nuance)** — Prefer simpler explanations that fit data. WHY: simpler models generalize better; but oversimplification misses real complexity. EVIDENCE: B
+
+40. **Adversarial Collaboration** — Disagreeing researchers design studies together. WHY: prevents each side from biasing methodology. EVIDENCE: B
+
+41. **Track Base Rates** — Maintain personal database of base rates for common claims. WHY: base rate neglect is most common reasoning error. EVIDENCE: B
+
+42. **Absence of Evidence vs Evidence of Absence** — No studies found X differs from studies found no X. WHY: critical distinction for medical and policy decisions. EVIDENCE: B
+
+43. **Multiple Competing Hypotheses** — Generate 3+ explanations before testing. WHY: prevents anchoring on first theory. EVIDENCE: B
+
+44. **Specify Effect Size Benchmarks** — Small d=0.2, medium d=0.5, large d=0.8. WHY: without benchmarks, effect sizes are uninterpretable. EVIDENCE: A
+
+45. **Demand Mechanism Not Just Correlation** — Ask HOW X causes Y, not just IF they co-occur. WHY: mechanism strengthens causal inference; implausible mechanism suggests confounding. EVIDENCE: B
+
+46. **Weighted Evidence Aggregation** — Weight findings by sample size, replication status, and study quality. WHY: all findings are not created equal; a meta-analysis of 50 studies trumps one n=30. EVIDENCE: A
+
+47. **Scope Conditions for Every Finding** — State population, context, and time when finding applies. WHY: all findings have boundaries; overgeneralization is default failure mode. EVIDENCE: B
+
+48. **Quantify Uncertainty Explicitly** — State confidence level, interval width, or probability range. WHY: point estimates without uncertainty create false precision. EVIDENCE: A
+
+49. **Update Incrementally** — Adjust beliefs in proportion to evidence strength. WHY: all-or-nothing updating ignores evidence quality; Bayesian updating is optimal. EVIDENCE: A
+
+50. **Seek Natural Experiments** — When RCTs are impossible, find policy changes, geographic boundaries, or discontinuities. WHY: quasi-experimental designs provide causal evidence without randomization. EVIDENCE: B
+
+
 ## Cross-Domain Red Flags
 Universal patterns appearing in 3+ domains with independent evidence:
 - **Premature optimization** — Building complex systems before understanding actual needs
@@ -211,6 +242,13 @@ Universal patterns appearing in 3+ domains with independent evidence:
 - **Complexity bias** — Start simple; add complexity only when simplicity demonstrably fails
 - **Sunk cost escalation** — "If starting fresh today, would I choose this?" If no, cut losses now
 - **Authority over evidence** — Evaluate claims by data quality, not source prestige
+- **Narrative fallacy** — Coherent stories from random events; stories are not evidence
+- **Base rate neglect** — Always apply Bayes before interpreting evidence
+- **Planning fallacy** — Use reference class forecasting; buffer 50-100%
+- **Regression to mean confusion** — Do not attribute normal regression to interventions
+- **False dichotomy default** — Brainstorm 3+ options before deciding
+- **Anchoring on first data** — First information shapes all subsequent analysis
+- **Composition fallacy** — What is true of parts may not be true of the whole
 - **Feature bloat / scope creep** — For every addition, ask "what can I remove?"
 
 ## Common LLM Mistakes in This Domain

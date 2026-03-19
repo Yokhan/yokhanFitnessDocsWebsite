@@ -35,6 +35,17 @@ practices. This domain is SAFETY-CRITICAL. Bad advice can cause real harm.
 
 10. **Subliminal Self-Help** — Controlled study with swapped labels: participants believed whatever the label said, regardless of content. WHY: placebo/expectation effect only; no subliminal influence. EVIDENCE: A
 
+
+11. **Dopamine Detox Myth** — Dopamine is not a pleasure chemical that depletes. WHY: dopamine signals prediction error and motivation; it does not run out from screen time. INSTEAD: address behavioral habits with stimulus control. EVIDENCE: C
+
+12. **Brain Games Prevent Dementia** — FTC fined Lumosity $2M for false claims. Improvements do NOT transfer to general cognition. INSTEAD: exercise (BDNF), sleep, complex skill learning. EVIDENCE: A
+
+13. **Right-Brain/Left-Brain Dominance** — 1,011-subject fMRI found no lateralization. WHY: both hemispheres contribute to nearly all tasks. EVIDENCE: A
+
+14. **Multitasking Is Effective** — Humans cannot parallel-process cognitive tasks. WHY: task-switching with 20-40% loss per switch (APA). INSTEAD: single-tasking. EVIDENCE: A
+
+15. **Serotonin Hypothesis Oversimplified** — Depression is not simply serotonin deficiency. WHY: Moncrieff 2022 umbrella review found no consistent evidence. SSRIs work via more complex mechanisms. EVIDENCE: A
+
 ### Medical Misconceptions
 
 11. **"Natural = Safe"** — Arsenic, botulinum, and hemlock are natural. WHY: appeal to nature fallacy; dose makes the poison (Paracelsus). INSTEAD: evaluate by evidence, not origin. EVIDENCE: B
@@ -56,6 +67,11 @@ practices. This domain is SAFETY-CRITICAL. Bad advice can cause real harm.
 19. **Self-Diagnosing via Internet/AI** — Using symptom checkers or LLMs for medical diagnosis. WHY: systematic review found AI diagnostic accuracy only 51-73% for top diagnosis. INSTEAD: use as triage aid, not replacement for clinical evaluation. EVIDENCE: A
 
 20. **"Stretching Prevents Injury"** — Systematic review: static stretching before exercise does NOT reduce injury risk and may temporarily reduce power/strength. WHY: reduces muscle-tendon stiffness, decreasing force production. INSTEAD: dynamic warm-up. EVIDENCE: A
+
+
+21. **Antidepressants as Happy Pills** — Expecting immediate mood lift from SSRIs. WHY: takes 4-8 weeks; ~50% respond to first trial. INSTEAD: SSRIs + therapy combined most effective. EVIDENCE: A
+
+22. **Ignoring Dose-Response** — Assuming more medication = more benefit. WHY: many meds have therapeutic windows; above optimal = side effects. INSTEAD: evidence-based dosing. EVIDENCE: A
 
 ### Fitness & Exercise Myths
 
@@ -79,6 +95,11 @@ practices. This domain is SAFETY-CRITICAL. Bad advice can cause real harm.
 
 30. **"Muscle Confusion" Training** — Constantly changing exercises for progress. WHY: progressive overload on core movements drives adaptation, not novelty for novelty's sake. INSTEAD: periodized training with systematic progressive overload. EVIDENCE: B
 
+
+35. **Fasted Cardio for Fat Loss** — Exercising on empty stomach burns more fat. WHY: meta-analysis shows no body composition difference. Total daily calories matter. EVIDENCE: A
+
+36. **Cardio-Only for Body Composition** — No resistance training. WHY: resistance increases RMR, preserves muscle. INSTEAD: combined resistance + cardio + nutrition. EVIDENCE: A
+
 ### Mental Health & Productivity Misconceptions
 
 31. **"Depression Is Just Sadness"** — Clinical depression involves neurological, hormonal, and systemic changes. WHY: trivializing delays treatment; untreated MDD has 15% suicide mortality risk. INSTEAD: professional evaluation for symptoms persisting 2+ weeks. EVIDENCE: A
@@ -90,6 +111,11 @@ practices. This domain is SAFETY-CRITICAL. Bad advice can cause real harm.
 34. **"Mental Health Issues Are Rare"** — WHO: 1 in 4 people will experience mental health conditions in their lifetime. WHY: normalization reduces stigma and treatment barriers. EVIDENCE: A
 
 35. **"10,000 Hours Rule"** — Gladwell oversimplified Ericsson's deliberate practice research. WHY: domain matters enormously; practice explains only 26% of variance in games, 21% music, 1% in professions. INSTEAD: deliberate practice with quality feedback, not just time accumulation. EVIDENCE: B
+
+
+37. **Positive Thinking Cures Everything** — Optimism alone resolves mental illness. WHY: toxic positivity invalidates suffering; delays treatment. INSTEAD: acknowledge emotions; seek help. EVIDENCE: B
+
+38. **Social Media Self-Diagnosis** — Adopting diagnoses from TikTok/Instagram. WHY: content creators are not clinicians; confirmation bias drives self-identification. INSTEAD: professional evaluation. EVIDENCE: B
 
 ### Supplement & Nutrition Myths
 
@@ -112,6 +138,19 @@ practices. This domain is SAFETY-CRITICAL. Bad advice can cause real harm.
 44. **"Morning Routines of Successful People"** — Survivorship bias. WHY: millions follow identical routines without success; chronotype variation is real. INSTEAD: experiment with what works for YOUR biology and schedule. EVIDENCE: C
 
 45. **"Children Don't Get Depressed"** — Childhood depression is well-documented with distinct presentations. WHY: untreated childhood MDD predicts adult mental illness. INSTEAD: age-appropriate screening and treatment. EVIDENCE: B
+
+45. **Collagen Supplements for Skin** — Oral collagen as anti-aging. WHY: digested into amino acids like any protein; limited evidence for skin delivery. INSTEAD: adequate protein + sun protection + retinoids. EVIDENCE: B
+
+46. **BCAAs When Protein Is Adequate** — BCAA supplements with sufficient total protein. WHY: if 1.6-2.2g/kg met, BCAAs add nothing; complete proteins already contain them. EVIDENCE: A
+
+47. **Alkaline Water/Diets** — Alkaline water for health. WHY: body regulates blood pH 7.35-7.45; stomach acid neutralizes alkaline water immediately. No evidence. EVIDENCE: A
+
+48. **Essential Oils as Medicine** — Essential oils for medical treatment. WHY: no systematic review supports clinical efficacy. Aromatherapy for comfort is fine; not treatment. EVIDENCE: A
+
+49. **Testosterone Boosters Work** — OTC T-boosters showing no significant effect. WHY: marketed ingredients lack evidence at doses used. INSTEAD: optimize sleep, training, body composition, stress. EVIDENCE: A
+
+50. **Children Are Resilient Myth** — Children bounce back from adversity without support. WHY: ACE study shows dose-response between childhood trauma and adult health. INSTEAD: evidence-based early intervention. EVIDENCE: A
+
 
 ## Best Practices (ALWAYS consider)
 
@@ -136,6 +175,17 @@ practices. This domain is SAFETY-CRITICAL. Bad advice can cause real harm.
 9. **Deload/Recovery Weeks** — Planned reduced-intensity periods every 4-8 weeks. WHY: prevents overtraining syndrome, allows supercompensation. EVIDENCE: B
 
 10. **Track Progress Objectively** — Training logs, body measurements, performance metrics. WHY: subjective assessment is unreliable; objective data reveals trends invisible to perception. EVIDENCE: C
+
+
+11. **Rep Ranges for Goals** — Strength: 1-5 heavy; Hypertrophy: 6-12 moderate; Endurance: 15+ light. WHY: meta-analyses confirm differential adaptations. EVIDENCE: A
+
+12. **Periodization** — Systematic variation of volume/intensity/frequency. WHY: prevents plateaus; superior to non-periodized training. EVIDENCE: A
+
+13. **RPE-Based Training** — Rate of Perceived Exertion to autoregulate intensity. WHY: accounts for daily variation in recovery/sleep/stress. EVIDENCE: B
+
+14. **Minimum Effective Dose** — Even 75 min/week vigorous reduces mortality significantly. WHY: greatest benefit from zero to some; diminishing returns above 300min/week. EVIDENCE: A
+
+15. **Recovery as Training Variable** — Sleep, nutrition, stress as deliberate inputs. WHY: adaptation occurs during recovery; insufficient = regression. EVIDENCE: B
 
 ### Mental Health & Brain Health
 
@@ -182,6 +232,17 @@ practices. This domain is SAFETY-CRITICAL. Bad advice can cause real harm.
 29. **Medication Adherence** — Take prescribed medications as directed; discuss any changes with provider. WHY: non-adherence is a major cause of treatment failure across conditions. EVIDENCE: A
 
 30. **Evidence Hierarchy for Health Claims** — Cochrane > RCT > cohort > case study > anecdote. WHY: single studies mislead; systematic reviews aggregate evidence for reliable conclusions. EVIDENCE: A
+
+31. **Creatine Monohydrate (3-5g/day)** — Most researched supplement. WHY: hundreds of studies confirm 5-15% strength improvement; safe long-term. EVIDENCE: A
+
+32. **Caffeine for Performance** — 3-6mg/kg, 30-60 min pre-exercise. WHY: improved endurance, strength, power in meta-analyses. EVIDENCE: A
+
+33. **Omega-3 (250-500mg EPA+DHA)** — Daily from fish or supplements. WHY: reduces cardiovascular risk, supports brain; most Western diets deficient. EVIDENCE: A
+
+34. **Vitamin D in Northern Climates** — 1000-2000 IU/day with limited sun (>35 latitude). WHY: widespread deficiency; bone, immune, mood impacts. Exception to testing-first rule. EVIDENCE: A
+
+35. **Mediterranean Dietary Pattern** — Vegetables, fish, olive oil, nuts. WHY: meta-analyses show reduced CVD, cognitive decline, mortality. EVIDENCE: A
+
 
 ## Common LLM Mistakes in This Domain
 

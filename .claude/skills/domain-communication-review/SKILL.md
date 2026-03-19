@@ -44,6 +44,23 @@ strategy, and sales methodology.
 
 15. **Typography Crimes** — Poor kerning, inappropriate fonts, low contrast text, 4+ typefaces. WHY: undermines readability and professional credibility; readers judge quality by presentation. INSTEAD: max 2-3 fonts, adequate contrast (WCAG 4.5:1), professional typography hierarchy. EVIDENCE: B
 
+
+16. **Nominalizations (Zombie Nouns)** — Converting verbs to nouns: implementation instead of implement. WHY: adds syllables without info; forces weak verbs. INSTEAD: use the verb form. EVIDENCE: B
+
+17. **Throat-Clearing Introductions** — Starting with generic openings. WHY: wastes the opening; readers decide in first 2-3 sentences. INSTEAD: start with specific point; delete first draft paragraph. EVIDENCE: B
+
+18. **Hedging Everything** — Perhaps, it might be argued before every claim. WHY: excessive hedging dilutes authority. INSTEAD: direct claims with evidence; hedge only with genuine uncertainty. EVIDENCE: B
+
+19. **Vague Quantifiers** — Many, several, significant instead of specific numbers. WHY: unfalsifiable. Ilyakhov: specificity is credibility. INSTEAD: specific numbers or ranges. EVIDENCE: B
+
+20. **The Curse of Knowledge** — Writing as if reader has same background. WHY: Heath and Heath: once you know, you cannot imagine not knowing. INSTEAD: external review; explain from reader starting point. EVIDENCE: A
+
+21. **Weak Verbs + Adverbs** — Ran quickly instead of sprinted. WHY: adverbs modify weak verbs; more words, less impact. INSTEAD: find precise verb. EVIDENCE: B
+
+22. **Inconsistent Terminology** — Users then customers then clients for same concept. WHY: reader wonders if different thing meant. INSTEAD: one term per concept. EVIDENCE: B
+
+23. **Double Negatives** — Not uncommon instead of common. WHY: forces mental double negation. INSTEAD: positive form. EVIDENCE: B
+
 ### Marketing Anti-Patterns
 
 16. **Vanity Metric Obsession** — Optimizing for impressions, followers, likes as primary KPIs. WHY: Facebook organic reach is 1.37% (2024); impressions have near-zero correlation with revenue. INSTEAD: track CAC, CLV, conversion rate, ROAS. EVIDENCE: A
@@ -72,6 +89,23 @@ strategy, and sales methodology.
 
 28. **Email Spam / Over-Sending** — Daily promotional emails with minimal value to recipient. WHY: unsubscribe rates spike after 3+ emails/week; damages sender domain reputation irreversibly. INSTEAD: value-first email at respectful frequency; earn every send. EVIDENCE: B
 
+
+36. **Manipulation Disguised as Persuasion** — Hidden motives, manufactured evidence, exploiting vulnerability. WHY: detected = permanent trust destruction. INSTEAD: transparent persuasion. EVIDENCE: A
+
+37. **Overwriting / Purple Prose** — Elaborate language when simple suffices. WHY: Princeton study: higher reading level = LESS credible. INSTEAD: simplest word for meaning. EVIDENCE: A
+
+38. **Emotional Manipulation in Headlines** — Anger/fear/outrage as engagement mechanism. WHY: erodes trust; corrections removing emotion improve credibility. INSTEAD: curiosity + specificity. EVIDENCE: A
+
+39. **Reply-All Culture** — Replies to all when only sender needs it. WHY: 121 emails/day average; creates noise. INSTEAD: reply only to those who need info. EVIDENCE: B
+
+40. **Buried Action Items** — Requests hidden in narrative paragraphs. WHY: recipients skim; buried items missed. INSTEAD: action items at top; bold/bullets. EVIDENCE: B
+
+41. **Excessive Acronyms** — 4+ undefined per page. WHY: each is comprehension barrier. INSTEAD: define on first use. EVIDENCE: B
+
+42. **Assuming Reader Knowledge Level** — Writing for wrong expertise level. WHY: over-estimating = incomprehensible; under-estimating = patronizing. INSTEAD: define audience; explain terms. EVIDENCE: B
+
+43. **Academic Style in Business Context** — Formal academic conventions in business writing. WHY: slows comprehension; signals pompousness. INSTEAD: direct address, active voice, clear action items. EVIDENCE: B
+
 ### Sales Anti-Patterns
 
 29. **Feature Dumping** — Listing every product feature in sales conversations. WHY: overwhelms buyers; does not address their specific pain points or context. INSTEAD: SPIN Selling -- Situation, Problem, Implication, Need-Payoff questions first, then targeted features. EVIDENCE: A
@@ -87,6 +121,21 @@ strategy, and sales methodology.
 34. **No Follow-Up System** — Inconsistent or nonexistent follow-up after initial contact. WHY: 80% of sales require 5+ follow-up contacts; most reps quit after 2. INSTEAD: systematic multi-touch cadence with value at each touchpoint. EVIDENCE: B
 
 35. **Monologue Pitches** — Talking at the buyer without asking questions or listening. WHY: top performers ask 11-14 questions per call (Gong data); optimal talk/listen ratio is 40/60. INSTEAD: listen 60%, talk 40%; ask before telling. EVIDENCE: A
+
+44. **Selling to Wrong Person** — Pitching without decision authority or budget. WHY: 6.8 average B2B stakeholders (Gartner 2023). INSTEAD: map buying committee first. EVIDENCE: B
+
+45. **No Discovery Before Demo** — Jumping to product demo without understanding buyer needs. WHY: generic demos waste time; buyer disengages when irrelevant features shown. INSTEAD: discovery call first; tailor demo to stated needs. EVIDENCE: B
+
+46. **Ignoring Objections** — Glossing over buyer concerns. WHY: unaddressed objections become silent deal-killers. INSTEAD: acknowledge, explore root cause, resolve with evidence. EVIDENCE: B
+
+47. **Competing on Price Alone** — Leading with discounts. WHY: attracts low-loyalty customers; commoditizes offering; erodes margins. INSTEAD: sell value; discuss price after value established. EVIDENCE: B
+
+48. **No Follow-Up System** — Inconsistent follow-up after contact. WHY: 80% of sales need 5+ touches; most reps quit after 2. INSTEAD: systematic multi-touch cadence with value. EVIDENCE: B
+
+49. **Monologue Pitches** — Talking at buyer without questions. WHY: top performers ask 11-14 questions per call (Gong); optimal ratio is 40/60 talk/listen. INSTEAD: listen 60%, talk 40%. EVIDENCE: A
+
+50. **Feature Dumping** — Listing every feature in sales conversations. WHY: overwhelms; misses specific pain points. INSTEAD: SPIN Selling questions first, then targeted features. EVIDENCE: A
+
 
 ## Best Practices (ALWAYS consider)
 
@@ -165,6 +214,37 @@ strategy, and sales methodology.
 34. **Objection Handling Framework** — Acknowledge concern, explore root cause, resolve with specific evidence. WHY: unaddressed objections do not disappear; they become silent deal-killers in internal discussions. EVIDENCE: B
 
 35. **Challenger Sale Approach** — Teach the buyer something new about their business; reframe their thinking. WHY: Dixon & Adamson's research showed Challengers outperform all other sales profiles in complex, high-value sales. EVIDENCE: B
+
+36. **Persuasion Ethics Boundary** — Transparent motives + true evidence + respect autonomy = ethical. Hidden motives = manipulation. WHY: ethical persuasion builds long-term trust. EVIDENCE: A
+
+37. **Ilyakhov Specificity Principle** — Replace every vague claim with specific evidence. WHY: specificity is credibility. EVIDENCE: B
+
+38. **Inverted Pyramid for Email** — Key message in first 2 sentences. WHY: response rates drop when ask is buried. EVIDENCE: B
+
+39. **Content-Market Fit Before Scale** — Test resonance with small audience first. WHY: scaling mismatched content wastes budget. EVIDENCE: B
+
+40. **Category Entry Points** — Identify triggers where buyers enter category. WHY: Ehrenberg-Bass: linking to more entry points = faster growth. EVIDENCE: A
+
+41. **One CTA Per Piece** — Single clear call to action per content. WHY: multiple CTAs dilute response. EVIDENCE: B
+
+42. **Subject Line as Content** — Email subjects that deliver value independently. WHY: 35% open based on subject alone. EVIDENCE: B
+
+43. **Write at 8th Grade Level** — Flesch-Kincaid 6-8 for general audiences. WHY: even experts process simple text faster; 30-50% comprehension increase. EVIDENCE: A
+
+44. **Front-Load Every Paragraph** — Topic sentence first. WHY: scanning readers see only first words; front-loading ensures key message absorbed. EVIDENCE: A
+
+45. **Delete 20-30% Each Edit** — Cut ruthlessly. WHY: tighter writing is more impactful; every word must earn its place. EVIDENCE: C
+
+46. **Challenger Sale Approach** — Teach buyer something new about their business. WHY: Dixon and Adamson research: Challengers outperform all other profiles. EVIDENCE: B
+
+47. **Map Buying Committee** — Identify all stakeholders before deep engagement. WHY: 6.8 average B2B stakeholders; missing one silently blocks deal. EVIDENCE: B
+
+48. **Value-Based Selling** — Quantify specific value for THIS buyer. WHY: shifts from cost to investment framing; removes price objection. EVIDENCE: B
+
+49. **Systematic Follow-Up** — Structured multi-touch with value at each step. WHY: 80% of sales need 5+ touches; persistence + value wins. EVIDENCE: B
+
+50. **Objection Handling Framework** — Acknowledge, explore root cause, resolve with evidence. WHY: unaddressed objections become silent deal-killers. EVIDENCE: B
+
 
 ## Common LLM Mistakes in This Domain
 

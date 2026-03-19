@@ -79,6 +79,19 @@ check against these evidence-based practices. Covers business/startups and perso
 
 32. **"Passive Income" Schemes** — Courses, dropshipping, crypto bots promising easy money. WHY: survivorship bias; true passive income requires significant upfront capital or work. INSTEAD: build real skills and assets. EVIDENCE: C
 
+
+33. **Whole Life Insurance as Investment** — Using whole life as primary investment. WHY: fees eat 50-70% of first-year premium; returns lag index funds. INSTEAD: term life + invest difference. EVIDENCE: B
+
+34. **Ignoring Opportunity Cost** — Evaluating investments without comparing alternatives. WHY: 5% return looks good until compared to 10% foregone. INSTEAD: always compare next-best alternative. EVIDENCE: B
+
+35. **Emotional Investing (Herd Behavior)** — Buying/selling based on crowd behavior. WHY: Dalbar shows retail investors earn 3-4% less than market. INSTEAD: systematic plan; automate. EVIDENCE: A
+
+36. **No Estate Planning** — No will, beneficiaries, or POA. WHY: intestate succession creates family conflict and costly proceedings. INSTEAD: basic estate docs regardless of age. EVIDENCE: B
+
+37. **Day Trading as Income** — Active day trading as primary income source. WHY: 70-90% of day traders lose money; nearly all underperform buy-and-hold. INSTEAD: index funds + career skills. EVIDENCE: A
+
+38. **Ignoring Tax-Loss Harvesting** — Not realizing losses to offset gains. WHY: leaves 0.5-1.5% annual tax savings unused. INSTEAD: harvest during downturns. EVIDENCE: B
+
 ### Business Operations
 
 33. **No Written Agreements** — Handshake deals between co-founders/partners. WHY: 65% of startups fail due to co-founder conflict (Noam Wasserman). INSTEAD: written operating agreement covering equity, roles, vesting, exit. EVIDENCE: B
@@ -96,6 +109,27 @@ check against these evidence-based practices. Covers business/startups and perso
 39. **Sunk Cost Escalation** — Continuing investments because of what has already been spent. WHY: money spent is gone; future decisions should be based on future expected value. INSTEAD: "If starting fresh today, would I choose this?" If no, cut. EVIDENCE: A
 
 40. **Vanity Office/Perks** — Expensive offices and perks before profitability. WHY: cash burn that impresses nobody who matters; WeWork syndrome. INSTEAD: invest in people and product, not optics. EVIDENCE: C
+
+41. **Building Before Selling** — Full product without demand validation. WHY: 43% of startup failures = no market need. INSTEAD: landing pages, pre-sales, concierge MVP. EVIDENCE: A
+
+42. **Founder Does Everything** — Refusing to delegate. WHY: single point of failure; prevents scaling. INSTEAD: hire for weaknesses; delegate systematically. EVIDENCE: C
+
+43. **Ignoring Legal Structure Early** — No entity or IP protection. WHY: personal liability; IP disputes compound. INSTEAD: basic legal structure from day one. EVIDENCE: B
+
+44. **Overvaluing the Idea** — Believing the idea is the competitive advantage. WHY: ideas are cheap; execution is everything; VCs invest in teams. INSTEAD: focus on execution speed. EVIDENCE: C
+
+45. **Premature Process** — Heavy frameworks (Jira/SAFe/OKR) for 3-person team. WHY: process overhead kills speed at small scale. INSTEAD: lightweight; add at pain points. EVIDENCE: C
+
+46. **Raising Too Much Capital** — Taking more than needed. WHY: excess enables bad habits; dilution and expectations increase. INSTEAD: raise for 18-24 months runway. EVIDENCE: B
+
+47. **Ignoring Runway** — Not tracking months until cash runs out. WHY: median last-raise-to-death is 22 months. INSTEAD: 13-week rolling forecast; always know runway. EVIDENCE: B
+
+48. **Co-Founder 50/50 Equity Without Vesting** — Equal split, no cliff, no vesting. WHY: departed founders keep equity; ignores different contributions over time. INSTEAD: 4-year vesting with 1-year cliff. EVIDENCE: B
+
+49. **No Customer Advisory Board** — Building in isolation. WHY: assumptions drift; compounding ignorance. INSTEAD: 5-10 formal customer advisors; monthly check-ins. EVIDENCE: C
+
+50. **Scaling Org Chart Before Revenue** — VP of Sales before $1M ARR. WHY: premature management layers add cost and slow decisions. INSTEAD: hire ICs first; add management at inflection points. EVIDENCE: C
+
 
 ## Best Practices (ALWAYS consider)
 
@@ -162,6 +196,27 @@ check against these evidence-based practices. Covers business/startups and perso
 29. **Automate Bill Payments** — Prevent late fees and credit damage. WHY: late payments trigger 29%+ penalty APR and credit score hits. EVIDENCE: B
 
 30. **Separate Business and Personal Finances** — Distinct accounts, cards, and tracking. WHY: simplifies taxes, protects personal assets, enables accurate business tracking. EVIDENCE: B
+
+31. **50/30/20 Budget Framework** — 50% needs, 30% wants, 20% savings. WHY: simple, sustainable; prevents lifestyle inflation. EVIDENCE: B
+
+32. **Tax-Advantaged Account Priority** — Employer match > HSA > Roth IRA > 401k max > taxable. WHY: optimizes tax efficiency across accounts. EVIDENCE: B
+
+33. **Inflation-Adjusted Planning** — All projections in real terms. WHY: $1M in 30 years is ~$500K purchasing power at 2.5% inflation. EVIDENCE: B
+
+34. **Asset Allocation by Time Horizon** — More stocks young, more bonds near retirement. WHY: longer recovery time when young; classic (120-age)% stocks. EVIDENCE: B
+
+35. **Negotiate Salary at Every Opportunity** — Negotiate starting and raises. WHY: $5K more at start compounds to $600K+ over career (Carnegie Mellon). EVIDENCE: B
+
+36. **Multiple Income Streams** — Build toward 2-3 income sources. WHY: single income is fragile; diversification applies to income too. EVIDENCE: C
+
+37. **Understand Compound Interest** — Start investing early with small amounts. WHY: 40 years of 7% turns $200/month into $500K+. EVIDENCE: A
+
+38. **Track Net Worth Monthly** — Single number combining all assets minus liabilities. WHY: the ultimate financial health metric; reveals trajectory. EVIDENCE: C
+
+39. **Build Skills Before Portfolio** — Invest in income-earning capacity first. WHY: early-career ROI on skills exceeds investment returns on small portfolios. EVIDENCE: C
+
+40. **Founder-Led Sales Until Repeatable** — Founders close first 10-20 deals personally. WHY: builds deep customer understanding; creates playbook before hiring reps. EVIDENCE: B
+
 
 ## Common LLM Mistakes in This Domain
 

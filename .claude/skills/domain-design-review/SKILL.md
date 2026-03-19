@@ -45,6 +45,19 @@ Covers three disciplines: product/UX design, graphic/visual design, and game des
 
 16. **Launching Without Analytics** — No instrumentation to measure feature success. WHY: flying blind; product debates become HiPPO battles without data. INSTEAD: define success metrics, instrument key events before launch. EVIDENCE: C
 
+
+17. **Design Theater** — Creating polished mockups without validating with real users. WHY: pretty deliverables create false confidence. INSTEAD: test low-fidelity prototypes early. EVIDENCE: C
+
+18. **Building What Users Literally Request** — Taking feature requests at face value. WHY: users cannot articulate solutions. INSTEAD: Jobs-to-be-Done framework. EVIDENCE: B
+
+19. **Say-Do Gap Blindness** — Relying solely on surveys without observing behavior. WHY: users rate products highly while struggling. INSTEAD: behavioral analytics over attitudinal data. EVIDENCE: A
+
+20. **Confirmation Bias in Research** — Designing studies to confirm existing beliefs. WHY: cherry-picks favorable data. INSTEAD: pre-register hypotheses; include disconfirming questions. EVIDENCE: B
+
+21. **Notification Spam** — Over-notifying to boost engagement metrics. WHY: users disable notifications entirely or uninstall. INSTEAD: notify only for relevant triggers; granular controls. EVIDENCE: C
+
+22. **Infinite Scroll Without Context** — Infinite scroll for goal-directed search. WHY: users lose place; footer inaccessible. INSTEAD: pagination for search; infinite scroll for casual browsing. EVIDENCE: B
+
 ### Graphic & Visual Design Anti-Patterns
 
 17. **Using More Than 3 Fonts** — 4+ typefaces creating visual chaos. WHY: each new font resets cognitive processing, increasing load ~20%. INSTEAD: 2-3 fonts max (display, body, optional accent). EVIDENCE: B
@@ -58,6 +71,17 @@ Covers three disciplines: product/UX design, graphic/visual design, and game des
 21. **Decorative Over Functional** — Prioritizing visual beauty at expense of usability. WHY: users cannot find the checkout button if it is behind gradients and clever layouts. INSTEAD: functional clarity first, aesthetics layered on top. EVIDENCE: C
 
 22. **Inconsistent Visual Language** — Different styles, colors, iconography across same product. WHY: users cannot build reliable mental models; undermines trust. INSTEAD: design tokens, consistent systems. EVIDENCE: B
+
+
+23. **Ignoring Grid Systems** — No underlying grid structure. WHY: inconsistent alignment creates visual tension. INSTEAD: baseline grid + column grid. EVIDENCE: B
+
+24. **Pure Black on Pure White** — Maximum contrast for body text. WHY: excessive luminance causes halation and eye strain. INSTEAD: near-black on off-white. EVIDENCE: B
+
+25. **Ignoring Color Blindness** — Relying solely on color to convey info. WHY: 8% of men have color vision deficiency. INSTEAD: pair color with icons, patterns, text. EVIDENCE: A
+
+26. **Stock Photo Overuse** — Generic stock photos as primary visuals. WHY: 39% of marketers report stock photos are worst-performing assets. INSTEAD: custom photography. EVIDENCE: A
+
+27. **Complex Logo Myth** — Believing detailed logos are more professional. WHY: research shows simple logos enhance competence perception. INSTEAD: design for scalability. EVIDENCE: A
 
 ### Game Design Anti-Patterns
 
@@ -88,6 +112,27 @@ Covers three disciplines: product/UX design, graphic/visual design, and game des
 35. **No Game Juice** — Mechanically sound but no visual/audio/haptic feedback. WHY: correct actions feel empty without feedback; "juice" is the tactile connection sustaining engagement. INSTEAD: layer VFX, audio, haptics on every meaningful interaction. EVIDENCE: B
 
 36. **Shipping Without Polish** — Feature-complete but unpolished release. WHY: first impressions at launch determine commercial success; unpolished feels janky regardless of content. INSTEAD: cut features before cutting polish time; schedule polish sprints. EVIDENCE: C
+
+37. **Artificial Scarcity** — Restricting digital content for false exclusivity. WHY: digital goods have zero marginal cost; inherently deceptive. INSTEAD: earned exclusivity through skill/time. EVIDENCE: A
+
+38. **Monetization-First Design** — Systems built around monetization funnels. WHY: extractive designs kill long-term revenue. INSTEAD: player-first design. EVIDENCE: B
+
+39. **Intentional Grind Walls** — Free gameplay so tedious players pay to skip. WHY: deliberately degraded experience. INSTEAD: earn-or-buy parity. EVIDENCE: A
+
+40. **Rubber-Band AI Without Transparency** — Hidden dynamic difficulty. WHY: detected assistance feels patronizing. INSTEAD: transparent difficulty adjustment. EVIDENCE: C
+
+41. **Punishing Exploration** — Penalizing curiosity with traps/dead ends. WHY: exploration is intrinsically motivating. INSTEAD: reward curiosity; signal danger. EVIDENCE: C
+
+42. **Inconsistent Rules** — Systems breaking their own logic. WHY: destroys mental models and trust. INSTEAD: establish and follow rules. EVIDENCE: B
+
+43. **Balance by Spreadsheet Only** — Relying exclusively on math for balance. WHY: cannot predict real player behavior. INSTEAD: spreadsheets + playtesting. EVIDENCE: B
+
+44. **Burden of Knowledge (Zileas)** — Mechanics requiring outside knowledge. WHY: nothing communicates mechanics in-game. INSTEAD: visual/audio language for all mechanics. EVIDENCE: B
+
+45. **Cutscene-Gameplay Segregation** — Narrative only in non-interactive cutscenes. WHY: two disconnected experiences. INSTEAD: environmental storytelling. EVIDENCE: B
+
+46. **Save System Hostage-Taking** — Restrictive saves forcing long replays. WHY: disrespects player time. INSTEAD: generous autosave + checkpoints. EVIDENCE: B
+
 
 ## Best Practices (ALWAYS consider)
 
@@ -135,6 +180,23 @@ Covers three disciplines: product/UX design, graphic/visual design, and game des
 
 20. **Consistent Visual Language** — Uniform color coding, iconography, UI patterns. WHY: reduces cognitive load via pattern recognition; users learn the language once. EVIDENCE: B
 
+
+21. **Typography with Type Scale** — Mathematical ratio for heading/body sizes. WHY: creates natural proportional harmony. EVIDENCE: B
+
+22. **60-30-10 Color Rule** — 60% dominant, 30% secondary, 10% accent. WHY: natural visual balance. EVIDENCE: B
+
+23. **Grid System Foundation** — 12-column web, modular editorial. WHY: alignment, consistency, proportion. EVIDENCE: A
+
+24. **Limit Line Length (50-75 chars)** — Constrain body text width. WHY: fastest reading speed; 27% improvement for dyslexic readers. EVIDENCE: A
+
+25. **Generous Line Spacing (1.4-1.6x)** — Body text line-height. WHY: improves reading accuracy. EVIDENCE: A
+
+26. **Pair Fonts by Contrast** — Combine distinct typefaces. WHY: contrast creates hierarchy; similar fonts look like mistakes. EVIDENCE: B
+
+27. **Apply Gestalt Principles** — Proximity, similarity, continuity, closure. WHY: how humans perceive visual grouping. EVIDENCE: A
+
+28. **Optimize Images for Web** — Compress, use WebP/AVIF. WHY: images 50-80% of page weight. EVIDENCE: A
+
 ### Game Design Best Practices
 
 21. **Flow Channel Design** — Balance challenge to player skill (Csikszentmihalyi). WHY: decades of research confirm flow produces optimal engagement, focus, satisfaction. EVIDENCE: A
@@ -164,6 +226,27 @@ Covers three disciplines: product/UX design, graphic/visual design, and game des
 33. **Ethical Engagement Design** — Opt-in features, no exploitation of psychological vulnerabilities. WHY: regulatory scrutiny increasing; ethical design builds long-term brand trust. EVIDENCE: A
 
 34. **Community-Informed Iteration** — Player feedback + telemetry guide post-launch development. WHY: No Man's Sky and FFXIV recovered from poor launches through community-responsive iteration. EVIDENCE: A
+
+35. **Elegant Design** — Simple rules creating emergent complexity. WHY: Chess has 6 piece types but infinite depth. EVIDENCE: B
+
+36. **Failing Forward** — Failure teaches and motivates retry. WHY: Dark Souls succeeds because every death is a lesson. EVIDENCE: B
+
+37. **Intrinsic Motivation Design (SDT)** — Autonomy, competence, relatedness. WHY: sustained engagement without manipulation. EVIDENCE: A
+
+38. **Transparent Pricing** — Clear purchase info; no obfuscated currencies. WHY: builds trust; reduces refunds. EVIDENCE: B
+
+39. **Respect Non-Paying Players** — Full core experience without payment in F2P. WHY: non-payers drive word-of-mouth. EVIDENCE: B
+
+40. **Negative Feedback Loops** — Help losing players stay competitive. WHY: prevents snowball abandonment. EVIDENCE: B
+
+41. **Environmental Storytelling** — Narrative through the world itself. WHY: respects agency; rewards observation. EVIDENCE: B
+
+42. **Audio-First Design** — Sound as first-class citizen. WHY: processed faster than visual; most cost-effective improvement. EVIDENCE: B
+
+43. **Procgen Within Authored Constraints** — Procedural generation with frameworks. WHY: authorial vision + replayability. EVIDENCE: B
+
+44. **Modular Design for Expansion** — Extensible systems. WHY: reduces DLC/update cost. EVIDENCE: B
+
 
 ## Common LLM Mistakes in This Domain
 
