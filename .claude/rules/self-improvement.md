@@ -38,3 +38,47 @@ When `tasks/lessons.md` exceeds 50 entries:
 - Files growing > 375 lines → note which module and why
 - Tests skipped before commit → note the context
 - Deep imports bypassing index → note the offending path
+
+## Feedback Loop Speed
+- The faster the cycle Error -> Lesson -> Rule, the faster the entire system improves.
+- Ideal: mistake happens -> lesson recorded in same session -> rule applied from next action onward.
+- Never batch lessons for "later" — context decays rapidly. Write it while the pain is fresh.
+- Slow feedback loops cause the same mistake to repeat 3-5 times before correction. That's waste.
+- Measure: how many sessions between a mistake and the rule that prevents it? Target: zero.
+
+## Meta-Lessons: HOW the System Fails
+Track not just WHAT went wrong, but the PATTERN of failure:
+- **Knowledge gap**: didn't know the API/tool/pattern existed. Fix: add to domain knowledge.
+- **Attention failure**: knew the rule but didn't check. Fix: add to pre-commit hook or checklist.
+- **Wrong mental model**: understood the system incorrectly. Fix: update architecture docs, add test.
+- **Communication gap**: user meant X, agent understood Y. Fix: improve clarification protocol.
+- **Overconfidence**: was certain about something wrong. Fix: add verification step for that category.
+- Categorizing failure modes reveals which SYSTEM improvement has highest leverage.
+
+## Cross-Project vs Project-Specific Learning
+- **Universal lessons** (apply everywhere): naming conventions, error handling patterns, git workflow, testing strategy.
+  Promote to template rules (`.claude/rules/` without `project-` prefix, via `/update-template`).
+- **Project-specific lessons** (apply here only): this API's quirks, this DB's schema, this team's conventions.
+  Keep in `project-*.md` rules or `tasks/lessons.md`.
+- Before promoting: ask "would this help on a DIFFERENT project?" If yes -> universal. If no -> project-specific.
+- Universal rules are higher leverage — one lesson improves ALL future projects.
+
+## Quality Over Quantity
+- 5 precise, actionable rules beat 20 vague guidelines.
+- Each rule must be: specific (clear when it applies), actionable (clear what to do), testable (clear when violated).
+- Bad rule: "Write good error messages." Good rule: "Every error includes machine code + human message + correlation ID."
+- If a rule can't be violated, it's not a rule — it's a platitude. Delete it.
+- Periodically audit rules: can I give a concrete example of this rule preventing a mistake? If no -> sharpen or delete.
+
+## Retirement Protocol
+- Rules that no longer apply must be ARCHIVED, not left rotting in active rule files.
+- Signs a rule is stale: never triggered in 10+ sessions, references deprecated tech, contradicts newer rules.
+- Archive process: move to `brain/03-knowledge/retired-rules.md` with date and reason for retirement.
+- Never just delete — archived rules provide context for WHY things changed.
+- Review for retirement during `/weekly` retrospectives. Rule count should stay stable, not only grow.
+
+## Strategic Reference: Continuous Improvement
+- **Kaizen** (improvement): small, continuous improvements compound exponentially. 1% better each session = 37x better in a year.
+- **PDCA with Study, not Check** (Deming): Plan -> Do -> STUDY -> Act. "Study" means deeply understand WHY results differ from expectations. "Check" is just pass/fail — insufficient.
+- The goal is not perfection. The goal is a system that RELIABLY gets better over time.
+- If the system isn't improving, the feedback loops are broken. Fix the loops, not the symptoms.
