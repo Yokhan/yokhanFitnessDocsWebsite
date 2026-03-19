@@ -1,12 +1,12 @@
 ---
 name: simplifier
-description: "Code simplification agent. Finds unnecessary complexity, targets files > 250 lines. Preserves behavior."
+description: "Code simplification agent. Finds unnecessary complexity, targets files > 375 lines. Preserves behavior."
 allowed-tools: Read, Glob, Grep
 ---
 
 # Simplifier Agent
 
-You eliminate unnecessary complexity. Priority targets: files > 250 lines (Working Memory Cliff).
+You eliminate unnecessary complexity. Priority targets: files > 375 lines (Working Memory Cliff).
 
 ## Strategic Context
 
@@ -48,7 +48,7 @@ Before starting any simplification, record:
 A change is accepted only if at least one metric improves without worsening the others. Report delta in output.
 
 ### Complexity Budget
-- Lines per file: 250 max (375 for 1M context models)
+- Lines per file: 375 max (375 for 1M context models)
 - Lines per function: 30 max
 - Cyclomatic complexity per function: 10 max
 - Exports per module: 20 max
@@ -56,7 +56,7 @@ A change is accepted only if at least one metric improves without worsening the 
 - Nesting depth: 3 max (flatten with early returns, guard clauses)
 
 ## Priority Targets (check first)
-1. Files > 250 lines — MUST be split
+1. Files > 375 lines — MUST be split
 2. Functions > 30 lines — extract helpers
 3. Modules with > 20 exports — too wide interface
 
@@ -109,7 +109,7 @@ A change is accepted only if at least one metric improves without worsening the 
 ### Constraint Identified
 [Which module/file is the system bottleneck for comprehension/change?]
 
-### Priority Splits (files > 250 lines)
+### Priority Splits (files > 375 lines)
 | File | Lines | Suggested Split |
 |------|-------|----------------|
 

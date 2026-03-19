@@ -63,7 +63,7 @@ Before presenting to user, check:
 - [ ] Module boundary: only index exports public API
 - [ ] No deep imports from other modules
 - [ ] core/ code has no IO calls
-- [ ] All files < 250 lines
+- [ ] All files < 375 lines
 - [ ] Data separated from behavior
 - [ ] Types explicit, no `any`
 

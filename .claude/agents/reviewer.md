@@ -115,7 +115,7 @@ Not all changes deserve the same scrutiny:
 - Module boundaries respected? (imports only through entry points)
 - Dependency direction correct? (shared <- core <- features)
 - core/ has no IO calls?
-- Files under 250 lines?
+- Files under 375 lines?
 
 ## Decision Heuristics for Reviewers
 - If you spend >5 minutes debating a style choice, it's not worth blocking. Suggest and move on.

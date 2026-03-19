@@ -67,13 +67,13 @@ if [ -f tasks/lessons.md ]; then
   fi
 fi
 
-# 4. Check for files > 250 lines in src/
+# 4. Check for files > 375 lines in src/
 echo "[4/8] Checking file sizes in src/..."
 if [ -d src ]; then
   find src -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.py" -o -name "*.rs" -o -name "*.go" -o -name "*.js" -o -name "*.jsx" \) | while read -r file; do
     lines=$(wc -l < "$file")
-    if [ "$lines" -gt 250 ]; then
-      echo "  ⚠️  $file: $lines lines (limit 250)"
+    if [ "$lines" -gt 375 ]; then
+      echo "  ⚠️  $file: $lines lines (limit 375)"
     fi
   done
 fi

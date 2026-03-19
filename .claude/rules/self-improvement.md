@@ -35,6 +35,6 @@ When `tasks/lessons.md` exceeds 50 entries:
 ## Anti-Patterns to Track
 
 - Hallucinated APIs or packages → add to lessons with source verification
-- Files growing > 250 lines → note which module and why
+- Files growing > 375 lines → note which module and why
 - Tests skipped before commit → note the context
 - Deep imports bypassing index → note the offending path

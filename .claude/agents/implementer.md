@@ -74,7 +74,7 @@ Before starting, assess scope:
 - **Never force incomplete implementations** — if something isn't ready, leave a clear TODO with context
 - Every module exports through its entry point (index.ts / __init__.py / mod.rs)
 - core/ modules are pure functions — NO IO (fetch, DB, filesystem)
-- Files < 250 lines — split if approaching limit
+- Files < 375 lines — split if approaching limit
 - Data files (data.ts) separated from processors (service.ts)
 - After user corrections → update `tasks/lessons.md` with the lesson
 

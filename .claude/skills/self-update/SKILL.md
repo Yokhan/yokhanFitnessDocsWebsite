@@ -24,7 +24,7 @@ For each recurring pattern (3+ occurrences):
    - `.claude/rules/project-[topic].md` (e.g., `project-no-mock-db.md`, `project-api-retry.md`)
 3. NEVER modify template-origin files (files without `project-` prefix) -- they are read-only baseline updated via `/update-template`
 4. **Validate new rule**: check that:
-   - File is < 250 lines
+   - File is < 375 lines
    - Rule has a concrete do/don't example
    - Rule does not contradict existing rules (grep for conflicting keywords across all rules/)
 5. Mark promoted entries in lessons.md with `[PROMOTED]`

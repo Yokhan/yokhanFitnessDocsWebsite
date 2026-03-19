@@ -6,7 +6,7 @@ echo.
 echo  ========================================================
 echo    Agent Project Template v2 - Setup
 echo    Autonomous AI agents + persistent memory + self-improvement
-echo    16 rules, 9 agents, 21 skills, 12 commands
+echo    17 rules, 9 agents, 22 skills, 12 commands
 echo  ========================================================
 echo.
 
@@ -188,9 +188,9 @@ echo    2. Tell Claude: "Set up my project" or /setup-project
 echo    3. Claude asks about your stack and configures everything
 echo.
 echo    What's ready:
-echo    - 16 rules (7 core + 8 domain guards + critical-thinking)
+echo    - 17 rules (7 core + 9 domain guards + critical-thinking + strategic-thinking)
 echo    - 9 agents (reviewer, implementer, security, etc.)
-echo    - 21 skills (15 core + 6 domain review skills)
+echo    - 22 skills (15 core + 6 domain review + strategic-review)
 echo    - 12 commands (/implement, /sprint, /review, etc.)
 echo    - Obsidian brain vault (open brain/ in Obsidian)
 echo    - Self-improvement loop (tasks/lessons.md)
