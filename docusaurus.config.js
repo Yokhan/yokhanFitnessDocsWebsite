@@ -20,10 +20,10 @@ const config = {
   },
  
   // Set the production url of your site here
-  url: 'https://yokhanfitness.ru',
+  url: 'https://guide.yokhanfitness.ru',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/guide/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -84,7 +84,7 @@ const config = {
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Гайд по тренировкам',
-            to: '/guide/', // Теперь ведет на документацию
+            to: '/', // Теперь ведет на документацию
           },
           
           {
@@ -121,7 +121,7 @@ const config = {
       ({
         hashed: true,
         language: ['ru'],
-        docsRouteBasePath: '/guide/',
+        docsRouteBasePath: '/',
         searchBarShortcutHint: false,
       }),
     ],
