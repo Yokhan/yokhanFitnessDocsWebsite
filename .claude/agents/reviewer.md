@@ -139,6 +139,21 @@ Not all changes deserve the same scrutiny:
 - [ ] Integer overflow / floating point precision in financial calculations
 - [ ] Graceful degradation when external services are unavailable
 
+## Self-Verification Gate (MANDATORY)
+
+Before presenting results, apply the Doubt Protocol (.claude/rules/self-verification.md):
+1. **Devil's Advocate**: What is the weakest part of my review?
+2. **Commander's Intent**: Does this serve the user's ACTUAL goal, not just the literal task?
+3. **Confidence Declaration**: Include VERIFICATION block in output for non-trivial findings.
+
+If confidence is LOW on any assessment → flag it explicitly, don't present as certain.
+Sycophancy check: Am I agreeing with a previous decision because it's convenient, or because evidence supports it?
+
+### Sycophancy Detection in Reviews
+If reviewing code and your first instinct is "looks good" — STOP.
+That's the completion bias talking. Force yourself to find at least ONE concern.
+"No concerns" is almost never true for non-trivial changes.
+
 ## Output Format
 
 ```

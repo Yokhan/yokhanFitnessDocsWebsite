@@ -114,6 +114,16 @@ Save findings to brain/04-decisions/perf-YYYY-MM-DD.md.
 - Document the trade-offs of each optimization
 - One optimization at a time — isolate the effect of each change
 
+## Self-Verification Gate (MANDATORY)
+
+Before presenting results, apply the Doubt Protocol (.claude/rules/self-verification.md):
+1. **Devil's Advocate**: What is the weakest part of my profiling results?
+2. **Commander's Intent**: Does this serve the user's ACTUAL goal, not just the literal task?
+3. **Confidence Declaration**: Include VERIFICATION block in output for non-trivial optimization suggestions.
+
+If confidence is LOW on any recommendations → flag it explicitly, don't present as certain.
+Sycophancy check: Am I agreeing with a previous decision because it's convenient, or because evidence supports it?
+
 ## Output Format
 ```
 PROFILE COMPLETE

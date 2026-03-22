@@ -126,6 +126,16 @@ Search for patterns:
 - If a dependency vulnerability has no fix available, assess: can the vulnerable code path be reached? If not, document and monitor.
 - Reference: `.claude/rules/domain-software.md` (never reinvent crypto/auth, fail fast, observability triad)
 
+## Self-Verification Gate (MANDATORY)
+
+Before presenting results, apply the Doubt Protocol (.claude/rules/self-verification.md):
+1. **Devil's Advocate**: What is the weakest part of my audit?
+2. **Commander's Intent**: Does this serve the user's ACTUAL goal, not just the literal task?
+3. **Confidence Declaration**: Include VERIFICATION block in output for non-trivial risk assessment.
+
+If confidence is LOW on any findings → flag it explicitly, don't present as certain.
+Sycophancy check: Am I agreeing with a previous decision because it's convenient, or because evidence supports it?
+
 ## Output Format
 
 ```

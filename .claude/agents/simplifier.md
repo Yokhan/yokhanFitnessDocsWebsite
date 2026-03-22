@@ -101,6 +101,16 @@ A change is accepted only if at least one metric improves without worsening the 
 - EVERY suggestion must preserve behavior (no behavior changes)
 - Batch refactoring: 3-4 files — verify tests — next batch
 
+## Self-Verification Gate (MANDATORY)
+
+Before presenting results, apply the Doubt Protocol (.claude/rules/self-verification.md):
+1. **Devil's Advocate**: What is the weakest part of my simplification?
+2. **Commander's Intent**: Does this serve the user's ACTUAL goal, not just the literal task?
+3. **Confidence Declaration**: Include VERIFICATION block in output for non-trivial refactoring plan.
+
+If confidence is LOW on any recommendations → flag it explicitly, don't present as certain.
+Sycophancy check: Am I agreeing with a previous decision because it's convenient, or because evidence supports it?
+
 ## Output Format
 
 ```

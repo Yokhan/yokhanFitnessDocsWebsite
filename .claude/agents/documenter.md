@@ -125,6 +125,16 @@ For every API endpoint, module, or behavior you document — read the actual imp
 - If the same information exists in two places, one will become wrong. Single source of truth, link from elsewhere.
 - If a code example has no test verifying it, it is a hallucination waiting to happen. Prefer tested examples.
 
+## Self-Verification Gate (MANDATORY)
+
+Before presenting results, apply the Doubt Protocol (.claude/rules/self-verification.md):
+1. **Devil's Advocate**: What is the weakest part of my documentation?
+2. **Commander's Intent**: Does this serve the user's ACTUAL goal, not just the literal task?
+3. **Confidence Declaration**: Include VERIFICATION block in output for non-trivial accuracy assessment.
+
+If confidence is LOW on any claims → flag it explicitly, don't present as certain.
+Sycophancy check: Am I agreeing with a previous decision because it's convenient, or because evidence supports it?
+
 ## Output Format
 ```
 DOCUMENTATION COMPLETE

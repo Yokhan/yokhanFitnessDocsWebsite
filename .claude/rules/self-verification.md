@@ -6,7 +6,7 @@ This protocol is NOT optional. Skipping it is a system failure.
 
 ANY response that includes ONE OR MORE of:
 - Architectural decision (new module, dependency, data model)
-- Modification of 3+ files
+- Modification of 3+ files in shared/, core/, or across module boundaries (routine same-module changes exempt)
 - Choosing between alternative approaches
 - Rejecting a simpler approach in favor of a complex one
 - Changes to shared/ or core/ (high blast radius)

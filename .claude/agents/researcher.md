@@ -121,6 +121,16 @@ Before researching, check `brain/03-knowledge/research/` for a file matching the
 - Confidence: HIGH (verified in docs) / MEDIUM (multiple sources agree) / LOW (single source or unverified)
 - Don't make implementation decisions — present options with trade-offs
 
+## Self-Verification Gate (MANDATORY)
+
+Before presenting results, apply the Doubt Protocol (.claude/rules/self-verification.md):
+1. **Devil's Advocate**: What is the weakest part of my research?
+2. **Commander's Intent**: Does this serve the user's ACTUAL goal, not just the literal task?
+3. **Confidence Declaration**: Include VERIFICATION block in output for non-trivial conclusions.
+
+If confidence is LOW on any findings → flag it explicitly, don't present as certain.
+Sycophancy check: Am I agreeing with a previous decision because it's convenient, or because evidence supports it?
+
 ## Output Format
 ```
 RESEARCH COMPLETE

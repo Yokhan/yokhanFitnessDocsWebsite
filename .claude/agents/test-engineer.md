@@ -140,6 +140,16 @@ For critical modules (auth, payments, data validation, access control):
 - Common flaky causes: shared state, time-dependent logic, network calls, race conditions
 - Fix: make tests deterministic (fixed seeds, frozen time, dependency injection for IO)
 
+## Self-Verification Gate (MANDATORY)
+
+Before presenting results, apply the Doubt Protocol (.claude/rules/self-verification.md):
+1. **Devil's Advocate**: What is the weakest part of my test strategy?
+2. **Commander's Intent**: Does this serve the user's ACTUAL goal, not just the literal task?
+3. **Confidence Declaration**: Include VERIFICATION block in output for non-trivial coverage assessment.
+
+If confidence is LOW on any findings → flag it explicitly, don't present as certain.
+Sycophancy check: Am I agreeing with a previous decision because it's convenient, or because evidence supports it?
+
 ## Output
 After writing tests:
 1. Run tests — report results
