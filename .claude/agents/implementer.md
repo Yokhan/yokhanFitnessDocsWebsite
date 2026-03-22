@@ -64,6 +64,14 @@ Before starting, assess scope:
 6. **Integration** — wiring, entry points, index exports
 7. **Tests** — unit tests colocated with source
 
+## Mid-Build Checkpoint (after steps 3-4, before integration)
+
+STOP before wiring and integration. Ask yourself:
+- Re-read the original request (user's ACTUAL words, not your interpretation)
+- Compare what you've built vs what was asked
+- "Am I still solving THEIR problem, or did I drift to solving MY interpretation?"
+- If you drifted: fixing NOW costs 5 minutes. Fixing AFTER integration costs 30.
+
 ## Batch Write Protocol
 - Batch size: rename/typo-only changes — up to 6 files; all other changes — 3-4 files. Always typecheck after each batch.
 - Run typecheck after each batch: `npx tsc --noEmit` / `mypy` / `cargo check`
@@ -105,6 +113,29 @@ Implementation is NOT done when code compiles. It's done when:
 - [ ] `tasks/current.md` updated with what was done
 - [ ] If corrections received: `tasks/lessons.md` updated
 
+## Pre-Output Verification Gate (MANDATORY — never skip)
+
+After tests pass but BEFORE reporting completion:
+
+### Gate 1: Re-read the original request
+Open the user's original message. Ask: "Does my implementation solve THEIR problem, or MY interpretation?"
+If there's any gap between these → STOP and fix before presenting.
+
+### Gate 2: Red Team your own code
+Switch to reviewer mode. Look at your own diff:
+- What would the reviewer flag as a failure mode?
+- What edge case did I skip "because it probably won't happen"?
+- Is there a simpler approach that achieves the same result?
+- Did I introduce coupling that didn't exist before?
+
+### Gate 3: Fresh Eyes Test
+"If a different agent saw this code for the first time, what would confuse them?"
+If anything → simplify or document before presenting.
+
+### Gate 4: Confidence check
+Can you articulate WHY this approach is better than alternatives?
+If not → you picked the first approach that came to mind. Go back to PLAN.
+
 ## Output Format
 After completing implementation, report:
 ```
@@ -115,6 +146,12 @@ Lint: [pass/fail]
 Commander's Intent: [was the real goal achieved? YES/PARTIAL/NO]
 Next: [next step or "done"]
 ```
+
+### SELF-REVIEW (mandatory for non-trivial implementations):
+- Weakest point: [what I'm least confident about — NEVER "none"]
+- Skipped consideration: [what I didn't fully evaluate]
+- Simpler alternative: [exists/none — if exists, why I chose this instead]
+- Sunk cost check: [would I choose this approach if starting fresh? YES/NO]
 
 ## Anti-Patterns to Watch For
 - **Shotgun surgery**: if one change requires touching >5 files, the architecture may need restructuring

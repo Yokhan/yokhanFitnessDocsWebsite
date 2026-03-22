@@ -109,6 +109,9 @@ After each mistake: add to `tasks/lessons.md`. Read it at session start. When >5
 - No editing main/master directly
 - No skipping tests before commit
 - No committing secrets (.env, API keys)
+- No presenting solutions without self-verification (see .claude/rules/self-verification.md)
+- No "you're right!" after user correction without logging WHY you didn't catch it (tasks/lessons.md)
+- No confidence claims without having considered and rejected at least one alternative
 
 ## Template Version
 2.4.0 — Run `bash scripts/check-drift.sh` to verify template health.

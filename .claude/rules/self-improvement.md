@@ -55,6 +55,20 @@ Track not just WHAT went wrong, but the PATTERN of failure:
 - **Overconfidence**: was certain about something wrong. Fix: add verification step for that category.
 - Categorizing failure modes reveals which SYSTEM improvement has highest leverage.
 
+### Sycophancy Failure
+When the user points out a flaw the agent should have caught:
+- Log: what the flaw was, what verification step SHOULD have caught it
+- Fix: strengthen the self-verification gate for that category
+- Track frequency: if >3 sycophancy failures in same category → verification protocol for that category is insufficient, needs redesign
+- This is the HIGHEST PRIORITY failure type — it means the system is blind to its own errors
+
+### Commitment Bias Failure
+When the agent defended a wrong approach for 2+ iterations before correcting:
+- Log: what the wrong approach was, what the correct one was, when the pivot should have happened
+- Fix: add the specific scenario to the Sunk Cost Test examples
+- Root cause: almost always "completion bias" — the agent wanted to be DONE more than it wanted to be RIGHT
+- Prevention: the Mid-Build Checkpoint and Pre-Output Verification Gate in implementer.md
+
 ## Cross-Project vs Project-Specific Learning
 - **Universal lessons** (apply everywhere): naming conventions, error handling patterns, git workflow, testing strategy.
   Promote to template rules (`.claude/rules/` without `project-` prefix, via `/update-template`).

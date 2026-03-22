@@ -20,10 +20,31 @@ FOR each task in priority order:
   1. PLAN   -- evaluate scope, create mini-plan (< 30 changes)
   2. BUILD  -- implement in batches (3-4 files then typecheck)
   3. TEST   -- run relevant tests
-  4. COMMIT -- conventional commit if tests pass
-  5. LOG    -- update tasks/current.md, log to brain/01-daily/
-  6. NEXT   -- pick next task
+  4. VERIFY -- self-critique gate (see VERIFY Phase below)
+  5. COMMIT -- conventional commit if tests pass
+  6. LOG    -- update tasks/current.md, log to brain/01-daily/
+  7. NEXT   -- pick next task
 ```
+
+## VERIFY Phase (Mandatory between TEST and COMMIT)
+
+After tests pass, before committing — STOP and verify:
+
+1. **Re-read the task description** — the ORIGINAL task, not your plan or interpretation
+2. **Diff review** — read your own changes as if reviewing someone else's PR. What would you flag?
+3. **Devil's advocate** — name ONE thing that could be wrong with your approach. "Nothing" is not acceptable.
+4. **Simpler alternative** — is there a simpler way you dismissed? If yes, why?
+5. **Output verification block** in sprint log:
+   ```
+   VERIFY: [task name]
+   - Tests: PASS
+   - Matches original intent: YES / PARTIAL / NO
+   - Weakest point: [description]
+   - Confidence: HIGH / MEDIUM / LOW
+   ```
+6. **Gate**: If "Matches original intent" is NO or Confidence is LOW → do NOT commit. Re-enter PLAN phase for this task.
+
+This phase exists because the agent CAN find its own errors (proven by finding them immediately when asked). The problem is not capability but activation. This phase activates self-critique.
 
 ## Exit Conditions (BOTH required -- dual-condition gate)
 1. `completion_indicators >= 2`:
