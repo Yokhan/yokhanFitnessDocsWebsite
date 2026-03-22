@@ -36,7 +36,7 @@ check ">=7 agent files" bash -c '[ $(ls .claude/agents/*.md 2>/dev/null | wc -l)
 check ">=21 skill dirs" bash -c '[ $(ls -d .claude/skills/*/ 2>/dev/null | wc -l) -ge 21 ]'
 check ">=6 domain skill dirs" bash -c '[ $(ls -d .claude/skills/domain-*/ 2>/dev/null | wc -l) -ge 6 ]'
 check ">=12 command files" bash -c '[ $(ls .claude/commands/*.md 2>/dev/null | wc -l) -ge 8 ]'
-check ">=6 hook files" bash -c '[ $(ls .claude/hooks/*.sh 2>/dev/null | wc -l) -ge 6 ]'
+check ">=7 hook files" bash -c '[ $(ls .claude/hooks/*.sh 2>/dev/null | wc -l) -ge 7 ]'
 check "scripts/test-hooks.sh" test -f scripts/test-hooks.sh
 
 echo ""

@@ -66,6 +66,7 @@ Claude Code hooks live in `.claude/hooks/`. Each hook is a bash script called by
 | format.sh | After Edit/Write | Runs appropriate formatter |
 | post-edit.sh | After Edit/Write | Checks file size, validates syntax |
 | pre-edit-safety.sh | Before Edit/Write | Blocks main branch, detects secrets |
+| verify-gate.sh | After Bash (tests) | Reminds to run VERIFY phase |
 
 If a hook fails: check `.claude/hooks/` scripts manually with `bash .claude/hooks/<name>.sh`.
 Never put complex bash in settings.json "command" field — always use script files.
@@ -74,7 +75,7 @@ Never put complex bash in settings.json "command" field — always use script fi
 
 Evidence-based guard rails loaded via `.claude/rules/domain-*.md` (8 domains) + `.claude/rules/critical-thinking.md`.
 Detailed practices in `.claude/skills/domain-*-review/SKILL.md` (6 review skills).
-Full research in `brain/03-knowledge/domains/` (14 files, 22 professions).
+Full research in `brain/03-knowledge/domains/` (16 files, 22 professions).
 
 Rule: Never present blog/SEO-level evidence as best practice. Check evidence hierarchy (A>B>C>D) before recommending.
 
