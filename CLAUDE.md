@@ -79,3 +79,7 @@ free: true
 ## Compaction
 
 При `/compact` сохраняй: текущую задачу, изменённые файлы, результаты `npm run build`, найденные проблемы, контекст ветки.
+
+## Fitness Ecosystem
+
+This project is part of the YokhanFitness ecosystem: App, Docs (knowledge base), Website (guide), and Landing page. See `.claude/rules/project-fitness-ecosystem.md` for full project map, relationships, and cross-project commands.
