@@ -1,0 +1,79 @@
+/**
+ * Design Tokens — YokhanFitness Ecosystem
+ *
+ * Единая дизайн-система для App, Landing и Docs.
+ * Синхронизировано с YokhanFitnessAppMY.
+ * Бренд-цвет #C8EA6A — НЕ МЕНЯТЬ.
+ */
+
+:root {
+    /* === Палитра тёмной темы (основная) === */
+    --yk-bg-primary: #382d24;
+    --yk-bg-secondary: #2e2419;
+    --yk-text-primary: #f3ead7;
+    --yk-text-secondary: #c9bfb0;
+    --yk-text-muted: #a89880;
+    --yk-accent-green: #C8EA6A;
+    --yk-accent-cta: #7bd062;
+    --yk-border-subtle: rgba(243, 234, 215, 0.1);
+    --yk-border-hover: rgba(243, 234, 215, 0.2);
+
+    /* RGB-компоненты для rgba() с прозрачностью */
+    --yk-text-primary-rgb: 243, 234, 215;
+    --yk-accent-green-rgb: 200, 234, 106;
+
+    /* === Палитра светлой темы (синхронизировано с App) === */
+    --yk-light-bg-primary: #f3ead7;
+    --yk-light-bg-secondary: #ede6da;
+    --yk-light-text-primary: #453427;
+    --yk-light-text-secondary: #5a4d3d;
+    --yk-light-text-muted: #6b5a4a;
+    --yk-light-border: rgba(69, 52, 39, 0.12);
+    --yk-light-border-subtle: rgba(69, 52, 39, 0.08);
+
+    /* RGB-компоненты светлой темы */
+    --yk-light-text-rgb: 69, 52, 39;
+
+    /* === Навбар === */
+    --yk-navbar-bg: rgba(56, 45, 36, 0.9);
+    --yk-light-navbar-bg: rgba(237, 230, 218, 0.9);
+
+    /* === Код-блоки === */
+    --yk-code-bg: #2a2118;
+    --yk-light-code-bg: #e8e1d5;
+
+    /* === Glass-эффект === */
+    --yk-glass-blur: 16px;
+    --yk-glass-bg: rgba(56, 45, 36, 0.6);
+    --yk-glass-border: 1px solid rgba(243, 234, 215, 0.08);
+    --yk-glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    --yk-light-glass-bg: rgba(237, 230, 218, 0.7);
+    --yk-light-glass-border: rgba(69, 52, 39, 0.08);
+
+    /* === Spacing (сетка 8px) === */
+    --yk-space-xs: 4px;
+    --yk-space-sm: 8px;
+    --yk-space-md: 16px;
+    --yk-space-lg: 24px;
+    --yk-space-xl: 32px;
+    --yk-space-2xl: 48px;
+
+    /* === Скругления === */
+    --yk-radius-sm: 8px;
+    --yk-radius-md: 16px;
+    --yk-radius-lg: 24px;
+    --yk-radius-pill: 1000px;
+
+    /* === Типографика === */
+    --yk-font-heading: 'Unbounded', system-ui, sans-serif;
+    --yk-font-body: 'Golos Text', system-ui, sans-serif;
+    --yk-font-weight-heading: 250;
+    --yk-font-weight-body: 400;
+    --yk-font-weight-bold: 600;
+
+    /* === Анимации === */
+    --yk-transition-fast: 150ms;
+    --yk-transition-default: 250ms;
+    --yk-transition-slow: 400ms;
+    --yk-transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+}

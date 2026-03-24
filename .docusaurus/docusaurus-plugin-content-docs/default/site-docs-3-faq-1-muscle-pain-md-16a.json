@@ -1,0 +1,34 @@
+{
+  "id": "FAQ/MusclePain",
+  "title": "Боль в мышцах",
+  "description": "Что делать, если после тренировки сильно болят мышцы?",
+  "source": "@site/docs/3. FAQ/1. MusclePain.md",
+  "sourceDirName": "3. FAQ",
+  "slug": "/FAQ/muscle-pain",
+  "permalink": "/FAQ/muscle-pain",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/3. FAQ/1. MusclePain.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "muscle-pain",
+    "sidebar_position": 1,
+    "title": "Боль в мышцах",
+    "description": "Что делать, если после тренировки сильно болят мышцы?",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Часто задаваемые вопросы",
+    "permalink": "/category/часто-задаваемые-вопросы"
+  },
+  "next": {
+    "title": "Что-то хрустит во время движения",
+    "permalink": "/FAQ/cracks-sounds"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "WarmingUp/Introduction",
+  "title": "Как устроен этот гайд?",
+  "description": "Короткий гайд для новичков: Безопасные тренировки дома или на улице без сложностей",
+  "source": "@site/docs/0. WarmingUp/0. Introduction.md",
+  "sourceDirName": "0. WarmingUp",
+  "slug": "/WarmingUp/about-guide",
+  "permalink": "/WarmingUp/about-guide",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/0. WarmingUp/0. Introduction.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "slug": "about-guide",
+    "sidebar_position": 0,
+    "title": "Как устроен этот гайд?",
+    "description": "Короткий гайд для новичков: Безопасные тренировки дома или на улице без сложностей",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Введение в тренировки",
+    "permalink": "/category/введение-в-тренировки"
+  },
+  "next": {
+    "title": "Что могут дать тренировки?",
+    "permalink": "/WarmingUp/workouts-profit"
+  }
+}

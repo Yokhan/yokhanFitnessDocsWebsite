@@ -1,0 +1,34 @@
+{
+  "id": "Main Part/Target-Gain muscles",
+  "title": "Цель: Увеличить мышцы",
+  "description": "Базированный разбор того, как тренировать мышцы, чтобы они выросли",
+  "source": "@site/docs/1. Main Part/3. Target-Gain muscles.md",
+  "sourceDirName": "1. Main Part",
+  "slug": "/Main Part/gain-muscles",
+  "permalink": "/Main Part/gain-muscles",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Main Part/3. Target-Gain muscles.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "gain-muscles",
+    "sidebar_position": 3,
+    "title": "Цель: Увеличить мышцы",
+    "description": "Базированный разбор того, как тренировать мышцы, чтобы они выросли",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Цель: Начать тренироваться",
+    "permalink": "/Main Part/start-workout"
+  },
+  "next": {
+    "title": "Цель: Похудеть",
+    "permalink": "/category/цель-похудеть"
+  }
+}

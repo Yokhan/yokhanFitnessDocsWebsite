@@ -1,0 +1,34 @@
+{
+  "id": "Tools/Diet",
+  "title": "Контроль питания",
+  "description": "Гайд по управлению питанием и диетой для новичков",
+  "source": "@site/docs/2. Tools/5. Diet.md",
+  "sourceDirName": "2. Tools",
+  "slug": "/Tools/diet",
+  "permalink": "/Tools/diet",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/2. Tools/5. Diet.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "diet",
+    "sidebar_position": 5,
+    "title": "Контроль питания",
+    "description": "Гайд по управлению питанием и диетой для новичков",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Повседневная активность",
+    "permalink": "/Tools/everyday-activity"
+  },
+  "next": {
+    "title": "Самомассаж",
+    "permalink": "/Tools/self-massage"
+  }
+}

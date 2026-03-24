@@ -1,0 +1,34 @@
+{
+  "id": "Main Part/Target-Losewight/BonusPage-Easywaytoloseweight",
+  "title": "Бонус — Снижение веса без стресса",
+  "description": "Небольшая подсказка по тому, как можно худеть просто без заморочек",
+  "source": "@site/docs/1. Main Part/4. Target-Losewight/BonusPage-Easywaytoloseweight.md",
+  "sourceDirName": "1. Main Part/4. Target-Losewight",
+  "slug": "/Main Part/Target-Losewight/easy-lose-weight",
+  "permalink": "/Main Part/Target-Losewight/easy-lose-weight",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Main Part/4. Target-Losewight/BonusPage-Easywaytoloseweight.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "slug": "easy-lose-weight",
+    "sidebar_position": 7,
+    "title": "Бонус — Снижение веса без стресса",
+    "description": "Небольшая подсказка по тому, как можно худеть просто без заморочек",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Медленный метод",
+    "permalink": "/Main Part/Target-Losewight/slow-lose-weight"
+  },
+  "next": {
+    "title": "Цель: Больше энергии для жизни",
+    "permalink": "/Main Part/more-energy"
+  }
+}

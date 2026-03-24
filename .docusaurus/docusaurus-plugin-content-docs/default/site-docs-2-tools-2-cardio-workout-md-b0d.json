@@ -1,0 +1,34 @@
+{
+  "id": "Tools/Cardio workout",
+  "title": "Кардио-тренировка",
+  "description": "Гайд по кардио-тренировкам для новичков",
+  "source": "@site/docs/2. Tools/2. Cardio workout.md",
+  "sourceDirName": "2. Tools",
+  "slug": "/Tools/cardio-workout",
+  "permalink": "/Tools/cardio-workout",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/2. Tools/2. Cardio workout.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "cardio-workout",
+    "sidebar_position": 2,
+    "title": "Кардио-тренировка",
+    "description": "Гайд по кардио-тренировкам для новичков",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Силовая тренировка",
+    "permalink": "/Tools/power-workout"
+  },
+  "next": {
+    "title": "Растяжка",
+    "permalink": "/Tools/stretching"
+  }
+}

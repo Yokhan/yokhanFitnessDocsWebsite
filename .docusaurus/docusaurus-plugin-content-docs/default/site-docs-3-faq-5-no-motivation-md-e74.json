@@ -1,0 +1,34 @@
+{
+  "id": "FAQ/No motivation",
+  "title": "Нет мотивации тренироваться",
+  "description": "Рассказываю, что можно сделать, если нет мотивации тренироваться",
+  "source": "@site/docs/3. FAQ/5. No motivation.md",
+  "sourceDirName": "3. FAQ",
+  "slug": "/FAQ/no-motivation",
+  "permalink": "/FAQ/no-motivation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/3. FAQ/5. No motivation.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "no-motivation",
+    "sidebar_position": 5,
+    "title": "Нет мотивации тренироваться",
+    "description": "Рассказываю, что можно сделать, если нет мотивации тренироваться",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Не могу похудеть",
+    "permalink": "/FAQ/cant-lose-weight"
+  },
+  "next": {
+    "title": "Тяжело есть много",
+    "permalink": "/FAQ/cant-eat-more"
+  }
+}

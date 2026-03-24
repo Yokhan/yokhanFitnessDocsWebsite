@@ -1,0 +1,34 @@
+{
+  "id": "Main Part/Target-Losewight/Weight-loss targets",
+  "title": "Зачем худеть?",
+  "description": "Кратко посмотрим, чего мы на самом деле добиваемся, когда стараемся похудеть",
+  "source": "@site/docs/1. Main Part/4. Target-Losewight/1. Weight-loss targets.md",
+  "sourceDirName": "1. Main Part/4. Target-Losewight",
+  "slug": "/Main Part/Target-Losewight/lose-weight",
+  "permalink": "/Main Part/Target-Losewight/lose-weight",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Main Part/4. Target-Losewight/1. Weight-loss targets.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "lose-weight",
+    "sidebar_position": 1,
+    "title": "Зачем худеть?",
+    "description": "Кратко посмотрим, чего мы на самом деле добиваемся, когда стараемся похудеть",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Цель: Похудеть",
+    "permalink": "/category/цель-похудеть"
+  },
+  "next": {
+    "title": "Энергетический баланс",
+    "permalink": "/Main Part/Target-Losewight/energy-balance"
+  }
+}

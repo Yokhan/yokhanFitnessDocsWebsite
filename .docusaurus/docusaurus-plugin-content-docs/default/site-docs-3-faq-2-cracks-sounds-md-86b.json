@@ -1,0 +1,34 @@
+{
+  "id": "FAQ/Cracks-sounds",
+  "title": "Что-то хрустит во время движения",
+  "description": "Что делать, если во время упражнения вы слышите хруст и трение?",
+  "source": "@site/docs/3. FAQ/2. Cracks-sounds.md",
+  "sourceDirName": "3. FAQ",
+  "slug": "/FAQ/cracks-sounds",
+  "permalink": "/FAQ/cracks-sounds",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/3. FAQ/2. Cracks-sounds.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "cracks-sounds",
+    "sidebar_position": 2,
+    "title": "Что-то хрустит во время движения",
+    "description": "Что делать, если во время упражнения вы слышите хруст и трение?",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Боль в мышцах",
+    "permalink": "/FAQ/muscle-pain"
+  },
+  "next": {
+    "title": "БАДы и фармакология",
+    "permalink": "/FAQ/buds-farm"
+  }
+}

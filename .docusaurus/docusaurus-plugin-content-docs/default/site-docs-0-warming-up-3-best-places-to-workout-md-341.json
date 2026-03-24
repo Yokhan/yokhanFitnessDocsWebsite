@@ -1,0 +1,34 @@
+{
+  "id": "WarmingUp/Best places to workout",
+  "title": "Где тренироваться?",
+  "description": "Сравним и выберем лучшие места для тренировок",
+  "source": "@site/docs/0. WarmingUp/3. Best places to workout.md",
+  "sourceDirName": "0. WarmingUp",
+  "slug": "/WarmingUp/workout-places",
+  "permalink": "/WarmingUp/workout-places",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/0. WarmingUp/3. Best places to workout.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "workout-places",
+    "sidebar_position": 3,
+    "title": "Где тренироваться?",
+    "description": "Сравним и выберем лучшие места для тренировок",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Принципы тренировок",
+    "permalink": "/WarmingUp/workout-principles"
+  },
+  "next": {
+    "title": "Нужен ли тренер?",
+    "permalink": "/WarmingUp/coach-value"
+  }
+}

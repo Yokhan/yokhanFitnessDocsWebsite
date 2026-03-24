@@ -1,0 +1,30 @@
+{
+  "id": "Author",
+  "title": "Об Авторе",
+  "description": "Пара слов обо мне, чтобы было понятно в каком ключе будет гайд",
+  "source": "@site/docs/1. Author.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Author.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "slug": "/",
+    "sidebar_position": 0,
+    "title": "Об Авторе",
+    "description": "Пара слов обо мне, чтобы было понятно в каком ключе будет гайд",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Введение в тренировки",
+    "permalink": "/category/введение-в-тренировки"
+  }
+}

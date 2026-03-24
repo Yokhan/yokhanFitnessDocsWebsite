@@ -1,37 +1,23 @@
 {
   "mcpServers": {
     "engram": {
-      "command": "C:/Users/iohan/.local/bin/engram.exe",
-      "args": [
-        "mcp"
-      ]
-    },
-    "claude-memory": {
-      "command": "claude-memory-mcp",
-      "args": [],
-      "disabled": true
+      "command": "/c/Users/iohan/.local/bin/engram.exe",
+      "args": ["mcp"]
     },
     "codegraphcontext": {
-      "command": "C:/Users/iohan/AppData/Local/Python/pythoncore-3.14-64/Scripts/cgc.exe",
-      "args": [
-        "mcp",
-        "start"
-      ]
+      "command": "cgc",
+      "args": ["mcp", "start"]
+    },
+    "obsidian": {
+      "command": "obsidian-mcp-server",
+      "args": ["--vault", "./brain"],
+      "env": {
+        "OBSIDIAN_API_KEY": "placeholder"
+      }
     },
     "chrome-devtools": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "chrome-devtools-mcp@latest",
-        "--isolated"
-      ]
-    },
-    "memcp": {
-      "command": "memcp",
-      "args": [
-        "."
-      ],
-      "disabled": true
+      "command": "chrome-devtools-mcp",
+      "args": []
     }
   }
 }

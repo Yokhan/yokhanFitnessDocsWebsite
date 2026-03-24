@@ -1,0 +1,233 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "Author",
+          "docs": [
+            {
+              "id": "Author",
+              "path": "/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "FAQ/BADs & farm",
+              "path": "/FAQ/buds-farm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "FAQ/Cant eat more to gain muscles",
+              "path": "/FAQ/cant-eat-more",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "FAQ/Cant lose weight",
+              "path": "/FAQ/cant-lose-weight",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "FAQ/Cracks-sounds",
+              "path": "/FAQ/cracks-sounds",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "FAQ/MusclePain",
+              "path": "/FAQ/muscle-pain",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "FAQ/No motivation",
+              "path": "/FAQ/no-motivation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "FAQ/Save money on workouts",
+              "path": "/FAQ/save-money",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Keytoresult",
+              "path": "/Main Part/key-to-result",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Gain muscles",
+              "path": "/Main Part/gain-muscles",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Losewight/BonusPage-Easywaytoloseweight",
+              "path": "/Main Part/Target-Losewight/easy-lose-weight",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Losewight/Fast weight-loss",
+              "path": "/Main Part/Target-Losewight/fast-lose-weight",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Losewight/Slow weight-loss",
+              "path": "/Main Part/Target-Losewight/slow-lose-weight",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Losewight/Weight-loss targets",
+              "path": "/Main Part/Target-Losewight/lose-weight",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Losewight/Weight-loss tech",
+              "path": "/Main Part/Target-Losewight/energy-balance",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-More energy4life",
+              "path": "/Main Part/more-energy",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Save muscles",
+              "path": "/Main Part/save-muscles",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Main Part/Target-Startworkout",
+              "path": "/Main Part/start-workout",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tools/Cardio workout",
+              "path": "/Tools/cardio-workout",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tools/Diet",
+              "path": "/Tools/diet",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tools/Everyday activity",
+              "path": "/Tools/everyday-activity",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tools/Power workout",
+              "path": "/Tools/power-workout",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tools/SelfMassage",
+              "path": "/Tools/self-massage",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Tools/Stretching",
+              "path": "/Tools/stretching",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "WarmingUp/Best places to workout",
+              "path": "/WarmingUp/workout-places",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "WarmingUp/Coach value",
+              "path": "/WarmingUp/coach-value",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "WarmingUp/Home-Gear",
+              "path": "/WarmingUp/home-gear",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "WarmingUp/Introduction",
+              "path": "/WarmingUp/about-guide",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "WarmingUp/Newbie vs Pro",
+              "path": "/WarmingUp/newbie-pro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "WarmingUp/Workout Principles",
+              "path": "/WarmingUp/workout-principles",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "WarmingUp/WorkoutsProfit",
+              "path": "/WarmingUp/workouts-profit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Workouts with injuries/Back-pain",
+              "path": "/Workouts with injuries/back-pain",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Workouts with injuries/Coach & Doctor difference",
+              "path": "/Workouts with injuries/coach-doctor",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Workouts with injuries/Diabetes",
+              "path": "/Workouts with injuries/diabetes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Workouts with injuries/Hypertension injury",
+              "path": "/Workouts with injuries/hypertension-workout",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/введение-в-тренировки",
+              "path": "/category/введение-в-тренировки",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/основная-часть",
+              "path": "/category/основная-часть",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/цель-похудеть",
+              "path": "/category/цель-похудеть",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/инструменты",
+              "path": "/category/инструменты",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/часто-задаваемые-вопросы",
+              "path": "/category/часто-задаваемые-вопросы",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/тренировки-при-хронических-заболеваниях",
+              "path": "/category/тренировки-при-хронических-заболеваниях",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/",
+                "label": "Author"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

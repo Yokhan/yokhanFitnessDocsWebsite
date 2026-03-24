@@ -1,0 +1,34 @@
+{
+  "id": "Main Part/Target-More energy4life",
+  "title": "Цель: Больше энергии для жизни",
+  "description": "Гайд по тому, как тренироваться, чтобы было больше энергии",
+  "source": "@site/docs/1. Main Part/5. Target-More energy4life.md",
+  "sourceDirName": "1. Main Part",
+  "slug": "/Main Part/more-energy",
+  "permalink": "/Main Part/more-energy",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Main Part/5. Target-More energy4life.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "more-energy",
+    "sidebar_position": 5,
+    "title": "Цель: Больше энергии для жизни",
+    "description": "Гайд по тому, как тренироваться, чтобы было больше энергии",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Бонус — Снижение веса без стресса",
+    "permalink": "/Main Part/Target-Losewight/easy-lose-weight"
+  },
+  "next": {
+    "title": "Цель: Сохранить форму",
+    "permalink": "/Main Part/save-muscles"
+  }
+}

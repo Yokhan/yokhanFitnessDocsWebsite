@@ -1,0 +1,34 @@
+{
+  "id": "Main Part/Target-Save muscles",
+  "title": "Цель: Сохранить форму",
+  "description": "Гайд по тому, как сохранить форму",
+  "source": "@site/docs/1. Main Part/6. Target-Save muscles.md",
+  "sourceDirName": "1. Main Part",
+  "slug": "/Main Part/save-muscles",
+  "permalink": "/Main Part/save-muscles",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Main Part/6. Target-Save muscles.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "save-muscles",
+    "sidebar_position": 6,
+    "title": "Цель: Сохранить форму",
+    "description": "Гайд по тому, как сохранить форму",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Цель: Больше энергии для жизни",
+    "permalink": "/Main Part/more-energy"
+  },
+  "next": {
+    "title": "Инструменты",
+    "permalink": "/category/инструменты"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "Main Part/Target-Losewight/Weight-loss tech",
+  "title": "Энергетический баланс",
+  "description": "Подробный гайд по снижению веса",
+  "source": "@site/docs/1. Main Part/4. Target-Losewight/2. Weight-loss tech.md",
+  "sourceDirName": "1. Main Part/4. Target-Losewight",
+  "slug": "/Main Part/Target-Losewight/energy-balance",
+  "permalink": "/Main Part/Target-Losewight/energy-balance",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Main Part/4. Target-Losewight/2. Weight-loss tech.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "energy-balance",
+    "sidebar_position": 2,
+    "title": "Энергетический баланс",
+    "description": "Подробный гайд по снижению веса",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Зачем худеть?",
+    "permalink": "/Main Part/Target-Losewight/lose-weight"
+  },
+  "next": {
+    "title": "Быстрый метод",
+    "permalink": "/Main Part/Target-Losewight/fast-lose-weight"
+  }
+}

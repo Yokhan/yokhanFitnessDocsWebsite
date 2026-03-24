@@ -1,0 +1,34 @@
+{
+  "id": "FAQ/Save money on workouts",
+  "title": "Дорого тренироваться",
+  "description": "Несколько советов по тому, как можно сэкономить на тренировках",
+  "source": "@site/docs/3. FAQ/7. Save money on workouts.md",
+  "sourceDirName": "3. FAQ",
+  "slug": "/FAQ/save-money",
+  "permalink": "/FAQ/save-money",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/3. FAQ/7. Save money on workouts.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "slug": "save-money",
+    "sidebar_position": 7,
+    "title": "Дорого тренироваться",
+    "description": "Несколько советов по тому, как можно сэкономить на тренировках",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Тяжело есть много",
+    "permalink": "/FAQ/cant-eat-more"
+  },
+  "next": {
+    "title": "Тренировки при хронических заболеваниях",
+    "permalink": "/category/тренировки-при-хронических-заболеваниях"
+  }
+}
