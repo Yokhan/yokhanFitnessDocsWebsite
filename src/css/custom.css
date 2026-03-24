@@ -1,73 +1,174 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * YokhanFitness Docs — Global Styles
+ * Infima CSS overrides + ecosystem visual alignment.
+ * ВСЕ цвета через токены: ./design-tokens.css
+ * Бренд-цвет #C8EA6A — НЕ МЕНЯТЬ (но НЕ используется как текст/ссылки).
  */
 
-/* Объявление шрифтов */
+@import './design-tokens.css';
+
+/* === Шрифты === */
+
 @font-face {
-    font-family: 'nauriz';
-    src: url('/fonts/nauriz.woff2') format('woff2');
-    font-weight: 600;
+    font-family: 'Unbounded';
+    src: url('/fonts/Unbounded-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'IBMPlexSans-VariableFont_wdth,wght';
-    src: url('/fonts/IBMPlexSans-VariableFont_wdth,wght.woff2') format('woff2');
-    font-weight: 600;
+    font-family: 'Golos Text';
+    src: url('/fonts/GolosText-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'DelaGothicOne-Regular';
-    src: url('/fonts/DelaGothicOne-Regular.woff2') format('woff2');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
+/* === Infima variables — тёмная тема (базовая) === */
 
-/* Infima variables — палитра #C8EA6A с оттенками */
 :root {
-    --ifm-color-primary: #C8EA6A;
-    --ifm-color-primary-dark: #BCDF4F;
-    --ifm-color-primary-darker: #B5DA42;
-    --ifm-color-primary-darkest: #99C126;
-    --ifm-color-primary-light: #D1ED80;
-    --ifm-color-primary-lighter: #D5EF8D;
-    --ifm-color-primary-lightest: #E3F5B0;
+    /* Primary — тёплый золотой, НЕ зелёный */
+    --ifm-color-primary: #d4a054;
+    --ifm-color-primary-dark: #c99240;
+    --ifm-color-primary-darker: #c08a38;
+    --ifm-color-primary-darkest: #9e6f28;
+    --ifm-color-primary-light: #dab068;
+    --ifm-color-primary-lighter: #deb876;
+    --ifm-color-primary-lightest: #e8cc9c;
     --ifm-code-font-size: 95%;
-    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --docusaurus-highlighted-code-line-bg: rgba(212, 160, 84, 0.1);
 
-    /* Шрифт для заголовков h1-h6 */
-    --ifm-heading-font-family: 'nauriz', system-ui, -apple-system, sans-serif;
-    /* Основной шрифт для текста */
-    --ifm-font-family-base: 'IBMPlexSans-VariableFont_wdth,wght', system-ui, -apple-system, sans-serif;
-    /* Для всех заголовков */
-    --ifm-heading-font-weight: 400;
+    /* Типографика */
+    --ifm-heading-font-family: var(--yk-font-heading);
+    --ifm-font-family-base: var(--yk-font-body);
+    --ifm-heading-font-weight: var(--yk-font-weight-heading);
+
+    /* Фон и текст */
+    --ifm-background-color: var(--yk-bg-secondary);
+    --ifm-background-surface-color: var(--yk-bg-primary);
+    --ifm-color-content: var(--yk-text-primary);
+    --ifm-color-content-inverse: var(--yk-text-primary);
+    --ifm-color-content-secondary: var(--yk-text-secondary);
+    --ifm-font-color-base: var(--yk-text-primary);
+    --ifm-color-white: var(--yk-text-primary);
+
+    /* Бордеры */
+    --ifm-color-emphasis-300: rgba(var(--yk-text-primary-rgb), 0.15);
+    --ifm-color-emphasis-200: rgba(var(--yk-text-primary-rgb), 0.1);
+    --ifm-color-emphasis-100: rgba(var(--yk-text-primary-rgb), 0.06);
+    --ifm-hr-background-color: rgba(var(--yk-text-primary-rgb), 0.15);
+    --ifm-toc-border-color: rgba(var(--yk-text-primary-rgb), 0.1);
+    --ifm-table-border-color: rgba(var(--yk-text-primary-rgb), 0.12);
 
     /* Навбар */
-    --ifm-background-surface-color: #111111;
-    --ifm-color-content-inverse: #ffffff;
-    --ifm-navbar-link-color: var(--ifm-color-content-inverse);
-    --ifm-navbar-link-hover-color: #cccccc;
-    --ifm-menu-color-active: var(--ifm-color-primary);
-    --ifm-menu-color-background-active: rgba(200, 234, 106, 0.15);
+    --ifm-navbar-link-color: var(--yk-text-primary);
+    --ifm-navbar-link-hover-color: var(--yk-text-secondary);
+    --ifm-navbar-background-color: var(--yk-bg-primary);
+    --ifm-menu-color: var(--yk-text-secondary);
+    --ifm-menu-color-active: var(--yk-text-primary);
+    --ifm-menu-color-background-active: rgba(var(--yk-text-primary-rgb), 0.06);
+    --ifm-menu-color-background-hover: rgba(var(--yk-text-primary-rgb), 0.04);
+
+    /* Admonitions — тёплые тона */
+    --ifm-color-info-dark: #6ba3be;
+    --ifm-color-info-contrast-background: rgba(107, 163, 190, 0.12);
+    --ifm-color-warning-dark: #d4a054;
+    --ifm-color-warning-contrast-background: rgba(212, 160, 84, 0.12);
+    --ifm-color-danger-dark: #d46a6a;
+    --ifm-color-danger-contrast-background: rgba(212, 106, 106, 0.12);
+    --ifm-color-success-dark: var(--yk-accent-cta);
+    --ifm-color-success-contrast-background: rgba(123, 208, 98, 0.12);
+    --ifm-color-secondary-dark: var(--yk-text-muted);
+    --ifm-color-secondary-contrast-background: rgba(var(--yk-text-primary-rgb), 0.06);
+
+    /* Links */
+    --ifm-link-color: var(--ifm-color-primary);
+    --ifm-link-hover-color: var(--ifm-color-primary-light);
+
+    /* Breadcrumbs */
+    --ifm-breadcrumb-color-active: var(--yk-text-primary);
+    --ifm-breadcrumb-separator-color: var(--yk-text-muted);
+
+    /* Pagination */
+    --ifm-pagination-nav-color-hover: var(--ifm-color-primary);
 }
 
-/* Тёмная тема */
+/* === Тёмная тема === */
+
 [data-theme='dark'] {
-    --ifm-color-primary: #C8EA6A;
-    --ifm-color-primary-dark: #BCDF4F;
-    --ifm-color-primary-darker: #B5DA42;
-    --ifm-color-primary-darkest: #99C126;
-    --ifm-color-primary-light: #D1ED80;
-    --ifm-color-primary-lighter: #D5EF8D;
-    --ifm-color-primary-lightest: #E3F5B0;
-    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-    --ifm-menu-color-active: var(--ifm-color-primary);
+    --ifm-color-primary: #d4a054;
+    --ifm-color-primary-dark: #c99240;
+    --ifm-color-primary-darker: #c08a38;
+    --ifm-color-primary-darkest: #9e6f28;
+    --ifm-color-primary-light: #dab068;
+    --ifm-color-primary-lighter: #deb876;
+    --ifm-color-primary-lightest: #e8cc9c;
+    --docusaurus-highlighted-code-line-bg: rgba(212, 160, 84, 0.1);
+    --ifm-background-color: var(--yk-bg-secondary);
+    --ifm-background-surface-color: var(--yk-bg-primary);
+    --ifm-color-content: var(--yk-text-primary);
+    --ifm-color-content-secondary: var(--yk-text-secondary);
+    --ifm-menu-color-active: var(--yk-text-primary);
+    --ifm-color-emphasis-300: rgba(var(--yk-text-primary-rgb), 0.15);
+    --ifm-color-emphasis-200: rgba(var(--yk-text-primary-rgb), 0.1);
+    --ifm-color-emphasis-100: rgba(var(--yk-text-primary-rgb), 0.06);
+    --ifm-toc-border-color: rgba(var(--yk-text-primary-rgb), 0.1);
+}
+
+/* === Светлая тема === */
+
+[data-theme='light'] {
+    --ifm-background-color: var(--yk-light-bg-primary);
+    --ifm-background-surface-color: var(--yk-light-bg-secondary);
+    --ifm-color-content: var(--yk-light-text-primary);
+    --ifm-color-content-secondary: var(--yk-light-text-secondary);
+    --ifm-color-content-inverse: var(--yk-light-text-primary);
+    --ifm-color-white: #ffffff;
+    --ifm-font-color-base: var(--yk-light-text-primary);
+    --ifm-navbar-link-color: var(--yk-light-text-primary);
+    --ifm-navbar-link-hover-color: var(--yk-light-text-secondary);
+    --ifm-menu-color: var(--yk-light-text-secondary);
+    --ifm-menu-color-active: var(--yk-light-text-primary);
+    --ifm-menu-color-background-active: rgba(var(--yk-light-text-rgb), 0.06);
+    --ifm-menu-color-background-hover: rgba(var(--yk-light-text-rgb), 0.04);
+
+    /* Бордеры */
+    --ifm-color-emphasis-300: rgba(var(--yk-light-text-rgb), 0.15);
+    --ifm-color-emphasis-200: rgba(var(--yk-light-text-rgb), 0.1);
+    --ifm-color-emphasis-100: rgba(var(--yk-light-text-rgb), 0.06);
+    --ifm-hr-background-color: rgba(var(--yk-light-text-rgb), 0.15);
+    --ifm-toc-border-color: rgba(var(--yk-light-text-rgb), 0.1);
+    --ifm-table-border-color: rgba(var(--yk-light-text-rgb), 0.12);
+
+    /* Breadcrumbs */
+    --ifm-breadcrumb-color-active: var(--yk-light-text-primary);
+    --ifm-breadcrumb-separator-color: var(--yk-light-text-muted);
+
+    /* Primary — тёплый тёмный золотой (WCAG AA на светлом) */
+    --ifm-color-primary: #7a5c12;
+    --ifm-color-primary-dark: #6b4f0e;
+    --ifm-color-primary-darker: #5c430a;
+    --ifm-color-primary-darkest: #4a3608;
+    --ifm-color-primary-light: #8a6a1a;
+    --ifm-color-primary-lighter: #9a7822;
+    --ifm-color-primary-lightest: #b08e30;
+
+    /* Links */
+    --ifm-link-color: #7a5c12;
+    --ifm-link-hover-color: #6b4f0e;
+
+    /* Admonitions — насыщеннее для светлого */
+    --ifm-color-info-dark: #3a7d9e;
+    --ifm-color-info-contrast-background: rgba(58, 125, 158, 0.08);
+    --ifm-color-warning-dark: #b8832e;
+    --ifm-color-warning-contrast-background: rgba(184, 131, 46, 0.08);
+    --ifm-color-danger-dark: #c44e4e;
+    --ifm-color-danger-contrast-background: rgba(196, 78, 78, 0.08);
+    --ifm-color-success-dark: #4ba334;
+    --ifm-color-success-contrast-background: rgba(75, 163, 52, 0.08);
+    --ifm-color-secondary-dark: var(--yk-light-text-secondary);
+    --ifm-color-secondary-contrast-background: rgba(var(--yk-light-text-rgb), 0.06);
 }
 
 /* === Типографика === */
@@ -77,9 +178,9 @@ h1 {
 }
 
 h2, h3, h4, h5, h6 {
-    font-family: 'DelaGothicOne-Regular', sans-serif !important;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-family: var(--yk-font-heading) !important;
+    font-weight: var(--yk-font-weight-heading);
+    letter-spacing: -0.02em;
 }
 
 h2, h3 {
@@ -92,7 +193,7 @@ h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 0.02rem;
+    letter-spacing: -0.02em;
 }
 
 p {
@@ -100,7 +201,7 @@ p {
 }
 
 strong, b {
-    font-weight: 600;
+    font-weight: var(--yk-font-weight-bold);
 }
 
 /* === Списки === */
@@ -127,28 +228,43 @@ ul ul, ol ol, ul ol, ol ul {
     padding-left: 0.8rem;
 }
 
-/* === Навигация === */
+/* === Навигация — сайдбар === */
 
 .menu__link--active {
-    color: var(--ifm-color-primary) !important;
+    color: var(--yk-text-primary) !important;
+    border-radius: var(--yk-radius-sm);
+    font-weight: var(--yk-font-weight-bold);
 }
 
 .theme-doc-sidebar-menu .menu__link--active::before {
-    background-color: var(--ifm-color-primary) !important;
+    background-color: var(--yk-accent-green) !important;
 }
 
 .menu__link:hover {
-    color: #e3ffa0 !important;
+    color: var(--ifm-color-primary) !important;
 }
 
+[data-theme='light'] .menu__link--active {
+    color: var(--yk-light-text-primary) !important;
+}
+
+[data-theme='light'] .menu__link:hover {
+    color: #7a5c12 !important;
+}
+
+/* === Навбар === */
+
 .navbar {
-    background-color: var(--ifm-background-surface-color) !important;
-    color: var(--ifm-color-content-inverse) !important;
+    background: var(--yk-navbar-bg) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--yk-border-subtle);
+    color: var(--yk-text-primary) !important;
 }
 
 .navbar__brand,
 .navbar__link {
-    color: var(--ifm-color-content-inverse) !important;
+    color: var(--yk-text-primary) !important;
 }
 
 .navbar__link:hover {
@@ -159,28 +275,322 @@ ul ul, ol ol, ul ol, ol ul {
     display: none !important;
 }
 
-/* === Карточки категорий === */
+[data-theme='light'] .navbar {
+    background: var(--yk-light-navbar-bg) !important;
+    border-bottom: 1px solid var(--yk-light-border-subtle);
+}
+
+[data-theme='light'] .navbar__brand,
+[data-theme='light'] .navbar__link {
+    color: var(--yk-light-text-primary) !important;
+}
+
+@media (max-width: 768px) {
+    .navbar__title {
+        display: none;
+    }
+}
+
+/* === Search bar === */
+
+.navbar__search-input {
+    background-color: rgba(var(--yk-text-primary-rgb), 0.1);
+    border: 1px solid rgba(var(--yk-text-primary-rgb), 0.12);
+    color: var(--yk-text-primary);
+    border-radius: var(--yk-radius-pill);
+}
+
+.navbar__search-input::placeholder {
+    color: var(--yk-text-muted);
+}
+
+[data-theme='light'] .navbar__search-input {
+    background-color: rgba(var(--yk-light-text-rgb), 0.06);
+    border: 1px solid rgba(var(--yk-light-text-rgb), 0.1);
+    color: var(--yk-light-text-primary);
+}
+
+[data-theme='light'] .navbar__search-input::placeholder {
+    color: var(--yk-light-text-muted);
+}
+
+/* === Breadcrumbs === */
+
+.breadcrumbs__link {
+    color: var(--yk-text-muted);
+    border-radius: var(--yk-radius-sm);
+}
+
+.breadcrumbs__item--active .breadcrumbs__link {
+    color: var(--yk-text-primary);
+}
+
+.breadcrumbs__link:hover {
+    background-color: rgba(var(--yk-text-primary-rgb), 0.06);
+}
+
+[data-theme='light'] .breadcrumbs__link {
+    color: var(--yk-light-text-muted);
+}
+
+[data-theme='light'] .breadcrumbs__item--active .breadcrumbs__link {
+    color: var(--yk-light-text-primary);
+}
+
+[data-theme='light'] .breadcrumbs__link:hover {
+    background-color: rgba(var(--yk-light-text-rgb), 0.05);
+}
+
+/* === TOC === */
+
+.table-of-contents__link {
+    color: var(--yk-text-muted);
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link:hover {
+    color: var(--yk-text-primary);
+}
+
+.table-of-contents__left-border {
+    border-left-color: var(--ifm-toc-border-color);
+}
+
+/* === Pagination === */
+
+.pagination-nav__link {
+    background: var(--yk-glass-bg);
+    backdrop-filter: blur(var(--yk-glass-blur));
+    -webkit-backdrop-filter: blur(var(--yk-glass-blur));
+    border: var(--yk-glass-border) !important;
+    border-radius: var(--yk-radius-lg) !important;
+    transition: transform var(--yk-transition-default) var(--yk-transition-easing),
+                box-shadow var(--yk-transition-default) var(--yk-transition-easing);
+}
+
+.pagination-nav__link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--yk-glass-shadow);
+    border-color: var(--yk-border-hover) !important;
+}
+
+.pagination-nav__sublabel {
+    color: var(--yk-text-muted);
+}
+
+.pagination-nav__label {
+    color: var(--ifm-color-primary);
+}
+
+[data-theme='light'] .pagination-nav__link {
+    background: var(--yk-light-glass-bg);
+    border: 1px solid var(--yk-light-glass-border) !important;
+}
+
+[data-theme='light'] .pagination-nav__sublabel {
+    color: var(--yk-light-text-muted);
+}
+
+/* === Admonitions === */
+
+.admonition {
+    border-radius: var(--yk-radius-md) !important;
+    border-left-width: 4px;
+}
+
+/* === Код-блоки === */
+
+/* Контейнер код-блока — единый блок */
+[class*='codeBlockContainer'] {
+    border-radius: var(--yk-radius-md) !important;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Prism-code внутри контейнера — без собственных бордеров/скруглений */
+.prism-code {
+    background-color: var(--yk-code-bg) !important;
+    color: var(--yk-text-primary) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+/* Standalone код-блок (без контейнера) */
+.prism-code:not([class*='codeBlockContainer'] .prism-code) {
+    border-radius: var(--yk-radius-md) !important;
+}
+
+/* Title бар */
+[class*='codeBlockTitle'] {
+    background-color: rgba(var(--yk-text-primary-rgb), 0.08) !important;
+    border-bottom: 1px solid rgba(var(--yk-text-primary-rgb), 0.1) !important;
+    color: var(--yk-text-secondary) !important;
+    margin: 0 !important;
+    padding: 0.5rem 1rem !important;
+}
+
+/* Token lines — тёмная тема */
+.token-line {
+    color: var(--yk-text-primary) !important;
+}
+
+/* Светлая тема: код-блоки */
+[data-theme='light'] .prism-code {
+    background-color: var(--yk-light-code-bg) !important;
+    color: var(--yk-light-text-primary) !important;
+}
+
+[data-theme='light'] .token-line {
+    color: var(--yk-light-text-primary) !important;
+}
+
+[data-theme='light'] [class*='codeBlockTitle'] {
+    background-color: rgba(var(--yk-light-text-rgb), 0.06) !important;
+    border-bottom-color: rgba(var(--yk-light-text-rgb), 0.1) !important;
+    color: var(--yk-light-text-secondary) !important;
+}
+
+[data-theme='light'] [class*='codeBlockContainer'] {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* === Карточки категорий (glass) === */
 
 [class*='cardContainer'] {
-    background-color: #111111 !important;
-    color: #ffffff !important;
+    background: var(--yk-glass-bg) !important;
+    backdrop-filter: blur(var(--yk-glass-blur)) !important;
+    -webkit-backdrop-filter: blur(var(--yk-glass-blur)) !important;
+    border: var(--yk-glass-border) !important;
+    border-radius: var(--yk-radius-lg) !important;
+    box-shadow: var(--yk-glass-shadow);
+    transition: transform var(--yk-transition-default) var(--yk-transition-easing),
+                box-shadow var(--yk-transition-default) var(--yk-transition-easing),
+                border-color var(--yk-transition-default) var(--yk-transition-easing);
+    color: var(--yk-text-primary) !important;
+}
+
+[class*='cardContainer']:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border-color: rgba(212, 160, 84, 0.3) !important;
 }
 
 [class*='cardContainer'] [class*='cardTitle'] {
-    color: #ffffff !important;
+    color: var(--yk-text-primary) !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    display: block !important;
 }
 
 [class*='cardContainer'] [class*='cardDescription'] {
-    color: #dddddd !important;
+    color: var(--yk-text-secondary) !important;
 }
 
 [class*='cardContainer']:hover [class*='cardTitle'],
 [class*='cardContainer']:hover [class*='cardDescription'] {
-    color: #ffffff !important;
+    color: var(--yk-text-primary) !important;
 }
 
-/* === Прочее === */
+[data-theme='light'] [class*='cardContainer'] {
+    background: var(--yk-light-glass-bg) !important;
+    border: 1px solid var(--yk-light-glass-border) !important;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    color: var(--yk-light-text-primary) !important;
+}
 
-.token.tag.namespace {
-    color: #C8EA6A !important;
+[data-theme='light'] [class*='cardContainer']:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border-color: rgba(var(--yk-light-text-rgb), 0.15) !important;
+}
+
+[data-theme='light'] [class*='cardContainer'] [class*='cardTitle'] {
+    color: var(--yk-light-text-primary) !important;
+}
+
+[data-theme='light'] [class*='cardContainer'] [class*='cardDescription'] {
+    color: var(--yk-light-text-secondary) !important;
+}
+
+/* === Футер === */
+
+.footer--dark {
+    background-color: var(--yk-bg-secondary);
+    border-top: 1px solid var(--yk-border-subtle);
+}
+
+.footer__title {
+    color: var(--yk-text-primary);
+}
+
+.footer__link-item {
+    color: var(--yk-text-secondary);
+}
+
+.footer__link-item:hover {
+    color: var(--yk-text-primary);
+}
+
+.footer__copyright {
+    color: var(--yk-text-muted);
+}
+
+[data-theme='light'] .footer__copyright {
+    color: var(--yk-light-text-muted);
+}
+
+/* === Таблицы === */
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: rgba(var(--yk-text-primary-rgb), 0.06);
+    color: var(--yk-text-primary);
+}
+
+td {
+    color: var(--yk-text-primary);
+}
+
+[data-theme='light'] th {
+    background-color: rgba(var(--yk-light-text-rgb), 0.04);
+    color: var(--yk-light-text-primary);
+}
+
+[data-theme='light'] td {
+    color: var(--yk-light-text-primary);
+}
+
+/* === Blockquote === */
+
+blockquote {
+    border-left-color: var(--ifm-color-primary);
+    color: var(--yk-text-secondary);
+}
+
+[data-theme='light'] blockquote {
+    color: var(--yk-light-text-secondary);
+}
+
+/* === Sidebar мобильный === */
+
+.navbar-sidebar {
+    background-color: var(--yk-bg-primary);
+}
+
+[data-theme='light'] .navbar-sidebar {
+    background-color: var(--yk-light-bg-primary);
+}
+
+/* === HR === */
+
+hr {
+    border-color: rgba(var(--yk-text-primary-rgb), 0.12);
+}
+
+[data-theme='light'] hr {
+    border-color: rgba(var(--yk-light-text-rgb), 0.1);
 }
