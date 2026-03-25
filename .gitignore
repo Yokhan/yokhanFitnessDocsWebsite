@@ -11,6 +11,8 @@
 .engram/
 .memcp/
 .anima/
+ia-memory/
+tasks/.memory-fallback.md
 
 # Beads local DB
 .beads/beads.db

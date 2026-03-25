@@ -1,7 +1,7 @@
 {
   "template_version": "unknown",
   "created": "2026-03-22",
-  "updated": "2026-03-22",
+  "updated": "2026-03-25",
   "template_remote": "https://github.com/Yokhan/agent-project-template.git",
   "files": {
     ".claude/settings.json": {
@@ -18,7 +18,7 @@
     },
     ".claude/rules/conflict-resolution.md": {
       "category": "template",
-      "hash": "8809dd8f83976a48bcaa59c022c3b24e1b3f6361a9cd0b4c08dd61f14818bdfc"
+      "hash": "87a2f2825392ab1f634c4c991faa47c6624198493d0cb9a4d5fdcc1f664370cc"
     },
     ".claude/rules/content-style.md": {
       "category": "template",
@@ -42,7 +42,7 @@
     },
     ".claude/rules/domain-health.md": {
       "category": "template",
-      "hash": "89ccf5497846b2cd94fb80c4202d5cac6007add17b378a6f3ccec97dfdeab3f1"
+      "hash": "565aec7e0e8541c3fb6d6e82441de14b900b656a61912db1c87b94fad51e7b15"
     },
     ".claude/rules/domain-marketing-sales.md": {
       "category": "template",
@@ -58,7 +58,7 @@
     },
     ".claude/rules/domain-science.md": {
       "category": "template",
-      "hash": "0b4edcb27305544395d57e0e22d276e4b6a07624f6c6567c697e8c2dbb044d17"
+      "hash": "d86d69739ce72467504fd7b6cabc088de731214af099a9f65bedf16096628801"
     },
     ".claude/rules/domain-software.md": {
       "category": "template",
@@ -74,11 +74,11 @@
     },
     ".claude/rules/self-improvement.md": {
       "category": "template",
-      "hash": "6d5aa79a7908d8055c01e807ba3e05d8bb454532d4bd3901d01879b6014d1712"
+      "hash": "9a84c85503ed2c5e79366c855875dcb157c8a4388772b7c139e9a9d54db1446e"
     },
     ".claude/rules/self-verification.md": {
       "category": "template",
-      "hash": "ee9e9b7bbeb94cc3bbdab1e4776806be710dd63df975887632fe96de9045c8a4"
+      "hash": "9d847ae7da45691f328b37f6a7d8624a734720db902ea2e505ed33cca3443407"
     },
     ".claude/rules/strategic-thinking.md": {
       "category": "template",
@@ -98,39 +98,39 @@
     },
     ".claude/agents/devops.md": {
       "category": "template",
-      "hash": "f71d01ec7f5f44e0f9a5c381e5264c8bd1f7de13c9f0c59a46abafe5300bb8b6"
+      "hash": "53f53579461d79f88bdc2efb8acaf6c6a6a5712a183e22183bc291254a730df1"
     },
     ".claude/agents/documenter.md": {
       "category": "template",
-      "hash": "bd6b92d4bcc46b0285d8bdd7626404ee0c1caabc5347bcea5dd35cf457402108"
+      "hash": "304fb130c5adc1e8be470de201785c70ab3cf644130c49a6bd32244e019fc9a9"
     },
     ".claude/agents/implementer.md": {
       "category": "template",
-      "hash": "80f7a2a59662f7cb3d7dd0d8fa9dd976f82923b6b7dd6d5aaa253b3cd098c82a"
+      "hash": "33c3dd5c8dc3436c8edeb133e342e38785b1bafbabaaf801741eb99ce4b1165b"
     },
     ".claude/agents/profiler.md": {
       "category": "template",
-      "hash": "b25b5adefe685ff107cd5685ecda9ebc88a860db916a2cb9d0710ef69c1d4690"
+      "hash": "6d1a6d278bdcfb055c24622390d8dd2a13f9d1b0c59d7d7771317038d227d4b5"
     },
     ".claude/agents/researcher.md": {
       "category": "template",
-      "hash": "8f3ab8279e1564dd9fd96669a29eb4410237479d4e0f0c0e7453d9af03542952"
+      "hash": "6bbbba832b93397eb1d0eea9036e8c165111a512b8f1b9da9af4285b06884136"
     },
     ".claude/agents/reviewer.md": {
       "category": "template",
-      "hash": "a915c6b758fb91c93a421f225831abb8df5936976ef0c5fb59720a0c5a5427ae"
+      "hash": "77085c3cf8e4bdc9ef08d652469f8a5497f30ce36db564898aeb8aa48e509b28"
     },
     ".claude/agents/security-auditor.md": {
       "category": "template",
-      "hash": "e50f82c47dfb94d5ab89462b9d9317a0296a879e609b929d9eca20ed34e62f16"
+      "hash": "df6be2e365c9f0fa9d64e3556ae84c5630c35367051a9a9c5e725f93033c16ec"
     },
     ".claude/agents/simplifier.md": {
       "category": "template",
-      "hash": "11ca4bca4cdf4e97ea5850200b64328569e3e4b30680baba3de3211e8356ca67"
+      "hash": "833eb1124612dcf423ef12bfbaf53888c060d6b2f630a26759c04b53154d7d07"
     },
     ".claude/agents/test-engineer.md": {
       "category": "template",
-      "hash": "19a3b4aca959777aa12a05a44b7dde20d078d1d26177a7967f9b117d8b9c391b"
+      "hash": "a00b06246e0f3bbb44c32d9582ae2a51aceb4445b8e0b936a8c2ef19702d4c70"
     },
     ".claude/skills/add-feature/SKILL.md": {
       "category": "template",
@@ -150,7 +150,7 @@
     },
     ".claude/skills/debug/SKILL.md": {
       "category": "template",
-      "hash": "608d5557a93bd357f7d79b621aa39d4fec7e6264251528c3e9c04f57c8a0fe44"
+      "hash": "d2e4b40c168641cdf1057dae6b9feea766267afcef00391392f4ec58d005d588"
     },
     ".claude/skills/domain-business-review/SKILL.md": {
       "category": "template",
@@ -198,11 +198,11 @@
     },
     ".claude/skills/setup-integrations/SKILL.md": {
       "category": "template",
-      "hash": "41c3af37c240573c513963436bfc2aec07ae553b9ddffdf3c279d27d080406db"
+      "hash": "0b0e255b3813fb803ba7830c5a966dd69d1148dc0d1af613b26a4192e6a2eb61"
     },
     ".claude/skills/setup-project/SKILL.md": {
       "category": "template",
-      "hash": "509452bbd0cbde740ef6942ab6fbe1d9b29b8711d21acf6f7e5ce48298172fc4"
+      "hash": "d50a78208a4ecdb765aa8103805dc87b5bcf5796693c7829118191a005a6fff4"
     },
     ".claude/skills/setup-telegram/SKILL.md": {
       "category": "template",
@@ -210,7 +210,7 @@
     },
     ".claude/skills/sprint/SKILL.md": {
       "category": "template",
-      "hash": "84c4ccc971da24d0dd6746e0fbca9b92e2585d9cd72d85a2c1a278fc4955cb80"
+      "hash": "4a09f275211515e3897bcecf6633d545979b9ea43cdbaf469d3584201834c931"
     },
     ".claude/skills/strategic-review/SKILL.md": {
       "category": "template",
@@ -286,7 +286,7 @@
     },
     ".claude/hooks/pre-compact.sh": {
       "category": "template",
-      "hash": "6696ccab25425317c1c7c93aaa1e45ad262742e633bc8a9b990e43baabae61be"
+      "hash": "9433a45a8a8c26852cb9f8771585b91e0a65022d919d18d8c702a2fb9488b2ff"
     },
     ".claude/hooks/pre-edit-safety.sh": {
       "category": "template",
@@ -294,7 +294,7 @@
     },
     ".claude/hooks/session-start.sh": {
       "category": "template",
-      "hash": "98bb7a4277dee60d7432fbfad03f784b113999b2dfbd57bba4092ce3daf3ade5"
+      "hash": "2e81215b58bba93ebe16a1375c929dc4f44a9e05e93774ec54408239d9be9f99"
     },
     ".claude/hooks/session-stop.sh": {
       "category": "template",
@@ -310,7 +310,7 @@
     },
     "scripts/check-drift.sh": {
       "category": "template",
-      "hash": "7a4594367cf98def339080042864c3ed9cdd2b1dc16ac72f06aa748a41d06fa2"
+      "hash": "b31048891330a7b39840f2fa351e6661375fda8e339f5e1542a8bebdde70ee31"
     },
     "scripts/sync-template.sh": {
       "category": "template",
@@ -350,7 +350,7 @@
     },
     ".gitignore": {
       "category": "hybrid",
-      "hash": "94132443ead47fa5ef2b32a55fae79c081094c1be00d5334a57bf63c5e456f4c"
+      "hash": "4fa353b3d22677d6b6e97903826427dce2211eb76ea23569bfda484a8c766634"
     },
     ".vscode/extensions.json": {
       "category": "hybrid",
@@ -370,7 +370,7 @@
     },
     ".claude/rules\\conflict-resolution.md": {
       "category": "template",
-      "hash": "\\8809dd8f83976a48bcaa59c022c3b24e1b3f6361a9cd0b4c08dd61f14818bdfc"
+      "hash": "\\87a2f2825392ab1f634c4c991faa47c6624198493d0cb9a4d5fdcc1f664370cc"
     },
     ".claude/rules\\content-style.md": {
       "category": "template",
@@ -394,7 +394,7 @@
     },
     ".claude/rules\\domain-health.md": {
       "category": "template",
-      "hash": "\\89ccf5497846b2cd94fb80c4202d5cac6007add17b378a6f3ccec97dfdeab3f1"
+      "hash": "\\565aec7e0e8541c3fb6d6e82441de14b900b656a61912db1c87b94fad51e7b15"
     },
     ".claude/rules\\domain-marketing-sales.md": {
       "category": "template",
@@ -410,7 +410,7 @@
     },
     ".claude/rules\\domain-science.md": {
       "category": "template",
-      "hash": "\\0b4edcb27305544395d57e0e22d276e4b6a07624f6c6567c697e8c2dbb044d17"
+      "hash": "\\d86d69739ce72467504fd7b6cabc088de731214af099a9f65bedf16096628801"
     },
     ".claude/rules\\domain-software.md": {
       "category": "template",
@@ -426,11 +426,11 @@
     },
     ".claude/rules\\self-improvement.md": {
       "category": "template",
-      "hash": "\\6d5aa79a7908d8055c01e807ba3e05d8bb454532d4bd3901d01879b6014d1712"
+      "hash": "\\9a84c85503ed2c5e79366c855875dcb157c8a4388772b7c139e9a9d54db1446e"
     },
     ".claude/rules\\self-verification.md": {
       "category": "template",
-      "hash": "\\ee9e9b7bbeb94cc3bbdab1e4776806be710dd63df975887632fe96de9045c8a4"
+      "hash": "\\9d847ae7da45691f328b37f6a7d8624a734720db902ea2e505ed33cca3443407"
     },
     ".claude/rules\\strategic-thinking.md": {
       "category": "template",
@@ -450,39 +450,39 @@
     },
     ".claude/agents\\devops.md": {
       "category": "template",
-      "hash": "\\f71d01ec7f5f44e0f9a5c381e5264c8bd1f7de13c9f0c59a46abafe5300bb8b6"
+      "hash": "\\53f53579461d79f88bdc2efb8acaf6c6a6a5712a183e22183bc291254a730df1"
     },
     ".claude/agents\\documenter.md": {
       "category": "template",
-      "hash": "\\bd6b92d4bcc46b0285d8bdd7626404ee0c1caabc5347bcea5dd35cf457402108"
+      "hash": "\\304fb130c5adc1e8be470de201785c70ab3cf644130c49a6bd32244e019fc9a9"
     },
     ".claude/agents\\implementer.md": {
       "category": "template",
-      "hash": "\\80f7a2a59662f7cb3d7dd0d8fa9dd976f82923b6b7dd6d5aaa253b3cd098c82a"
+      "hash": "\\33c3dd5c8dc3436c8edeb133e342e38785b1bafbabaaf801741eb99ce4b1165b"
     },
     ".claude/agents\\profiler.md": {
       "category": "template",
-      "hash": "\\b25b5adefe685ff107cd5685ecda9ebc88a860db916a2cb9d0710ef69c1d4690"
+      "hash": "\\6d1a6d278bdcfb055c24622390d8dd2a13f9d1b0c59d7d7771317038d227d4b5"
     },
     ".claude/agents\\researcher.md": {
       "category": "template",
-      "hash": "\\8f3ab8279e1564dd9fd96669a29eb4410237479d4e0f0c0e7453d9af03542952"
+      "hash": "\\6bbbba832b93397eb1d0eea9036e8c165111a512b8f1b9da9af4285b06884136"
     },
     ".claude/agents\\reviewer.md": {
       "category": "template",
-      "hash": "\\a915c6b758fb91c93a421f225831abb8df5936976ef0c5fb59720a0c5a5427ae"
+      "hash": "\\77085c3cf8e4bdc9ef08d652469f8a5497f30ce36db564898aeb8aa48e509b28"
     },
     ".claude/agents\\security-auditor.md": {
       "category": "template",
-      "hash": "\\e50f82c47dfb94d5ab89462b9d9317a0296a879e609b929d9eca20ed34e62f16"
+      "hash": "\\df6be2e365c9f0fa9d64e3556ae84c5630c35367051a9a9c5e725f93033c16ec"
     },
     ".claude/agents\\simplifier.md": {
       "category": "template",
-      "hash": "\\11ca4bca4cdf4e97ea5850200b64328569e3e4b30680baba3de3211e8356ca67"
+      "hash": "\\833eb1124612dcf423ef12bfbaf53888c060d6b2f630a26759c04b53154d7d07"
     },
     ".claude/agents\\test-engineer.md": {
       "category": "template",
-      "hash": "\\19a3b4aca959777aa12a05a44b7dde20d078d1d26177a7967f9b117d8b9c391b"
+      "hash": "\\a00b06246e0f3bbb44c32d9582ae2a51aceb4445b8e0b936a8c2ef19702d4c70"
     },
     ".claude/commands\\add-page.md": {
       "category": "template",
@@ -550,7 +550,7 @@
     },
     ".claude/hooks\\pre-compact.sh": {
       "category": "template",
-      "hash": "\\6696ccab25425317c1c7c93aaa1e45ad262742e633bc8a9b990e43baabae61be"
+      "hash": "\\9433a45a8a8c26852cb9f8771585b91e0a65022d919d18d8c702a2fb9488b2ff"
     },
     ".claude/hooks\\pre-edit-safety.sh": {
       "category": "template",
@@ -558,7 +558,7 @@
     },
     ".claude/hooks\\session-start.sh": {
       "category": "template",
-      "hash": "\\98bb7a4277dee60d7432fbfad03f784b113999b2dfbd57bba4092ce3daf3ade5"
+      "hash": "\\2e81215b58bba93ebe16a1375c929dc4f44a9e05e93774ec54408239d9be9f99"
     },
     ".claude/hooks\\session-stop.sh": {
       "category": "template",
@@ -574,7 +574,7 @@
     },
     "scripts\\check-drift.sh": {
       "category": "template",
-      "hash": "\\7a4594367cf98def339080042864c3ed9cdd2b1dc16ac72f06aa748a41d06fa2"
+      "hash": "\\b31048891330a7b39840f2fa351e6661375fda8e339f5e1542a8bebdde70ee31"
     },
     "scripts\\sync-template.sh": {
       "category": "template",
@@ -610,7 +610,7 @@
     },
     ".claude/skills\\debug\\SKILL.md": {
       "category": "template",
-      "hash": "\\608d5557a93bd357f7d79b621aa39d4fec7e6264251528c3e9c04f57c8a0fe44"
+      "hash": "\\d2e4b40c168641cdf1057dae6b9feea766267afcef00391392f4ec58d005d588"
     },
     ".claude/skills\\domain-business-review\\SKILL.md": {
       "category": "template",
@@ -658,11 +658,11 @@
     },
     ".claude/skills\\setup-integrations\\SKILL.md": {
       "category": "template",
-      "hash": "\\41c3af37c240573c513963436bfc2aec07ae553b9ddffdf3c279d27d080406db"
+      "hash": "\\0b0e255b3813fb803ba7830c5a966dd69d1148dc0d1af613b26a4192e6a2eb61"
     },
     ".claude/skills\\setup-project\\SKILL.md": {
       "category": "template",
-      "hash": "\\509452bbd0cbde740ef6942ab6fbe1d9b29b8711d21acf6f7e5ce48298172fc4"
+      "hash": "\\d50a78208a4ecdb765aa8103805dc87b5bcf5796693c7829118191a005a6fff4"
     },
     ".claude/skills\\setup-telegram\\SKILL.md": {
       "category": "template",
@@ -670,7 +670,7 @@
     },
     ".claude/skills\\sprint\\SKILL.md": {
       "category": "template",
-      "hash": "\\84c4ccc971da24d0dd6746e0fbca9b92e2585d9cd72d85a2c1a278fc4955cb80"
+      "hash": "\\4a09f275211515e3897bcecf6633d545979b9ea43cdbaf469d3584201834c931"
     },
     ".claude/skills\\strategic-review\\SKILL.md": {
       "category": "template",
@@ -679,6 +679,58 @@
     ".claude/skills\\update-deps\\SKILL.md": {
       "category": "template",
       "hash": "\\9388b8c62afef280153d9d90942e43d1968da5c905439af5e35021a581af8d0e"
+    },
+    ".claude/agents\\writer.md": {
+      "category": "template",
+      "hash": "\\5ea1730fb4bad7be259bf7a03c8aa0e72dd8c6f639a13e5fd37c5a33c672127b"
+    },
+    ".claude/commands\\hotfix.md": {
+      "category": "template",
+      "hash": "\\f3e322ad8fcdcf1deaaf1c6cf8aaab0aab4b6d422debaf7a78df36f73d8c7365"
+    },
+    ".claude/commands\\retrospective.md": {
+      "category": "template",
+      "hash": "\\4d5f23ab7fa544daa63d19c15f16792d8b732ee762566cdc23e6c3fe4f26de00"
+    },
+    ".claude/commands\\sync-all.md": {
+      "category": "template",
+      "hash": "\\a9ea868fef8dcaa9f7f01fa58fd3455b6035a4c4bae26113dc618d86261678db"
+    },
+    "scripts\\bootstrap-mcp.sh": {
+      "category": "template",
+      "hash": "\\ba08145d0c2a2e43988600accc2857eee7a70534e52f6a621f352c7a1ab45c83"
+    },
+    "scripts\\sync-all.sh": {
+      "category": "template",
+      "hash": "\\2b6bc94e1cd39196fa96f305cc78da41c81a143871f0efba71b1edcc6af9a68b"
+    },
+    ".claude/skills\\agent-metrics\\SKILL.md": {
+      "category": "template",
+      "hash": "\\059d184a7a803973a8ec3ba66ad143d014b8b7f351d2a66645aeb7ba5631c5cc"
+    },
+    ".claude/skills\\agent-router\\SKILL.md": {
+      "category": "template",
+      "hash": "\\dd93edcb27c0b187d86081a76bfbc382c1a51576f4391391bf923412bac203e6"
+    },
+    ".claude/skills\\decompose\\SKILL.md": {
+      "category": "template",
+      "hash": "\\849cb62d00cb0932e98fa7bf826e832563d299b88fc0c1c08554023a44ef2bdc"
+    },
+    ".claude/skills\\memory-router\\SKILL.md": {
+      "category": "template",
+      "hash": "\\c331f17935437bd912f9197cdd96f9bf3919d976c703d23cd66047e52d770a48"
+    },
+    ".claude/skills\\pipeline\\SKILL.md": {
+      "category": "template",
+      "hash": "\\52b7b1e0afa9fe989c89476f7dcca23519d71223b1479cf8e0d225229782646d"
+    },
+    ".claude/skills\\task-queue\\SKILL.md": {
+      "category": "template",
+      "hash": "\\321258b138c59a7e3b590d140d7993c603c888deb34707e00360be2f8aa4182e"
+    },
+    ".claude/skills\\test-rules\\SKILL.md": {
+      "category": "template",
+      "hash": "\\430c3d3c6ec4fe7169b10951bbb71f4f15b5ccc17a97ae54ca48fa2dee6a20e1"
     }
   }
 }
