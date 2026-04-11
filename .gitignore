@@ -35,6 +35,14 @@ yarn-error.log*
 .npm
 .pnp.*
 
+# Docusaurus
+.docusaurus/
+build/
+
+# Session artifacts
+brain/01-daily/*.md
+tasks/.current.md.bak
+
 # Python
 __pycache__/
 *.py[cod]

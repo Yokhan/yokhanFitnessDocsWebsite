@@ -8,12 +8,119 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+// Yandex Metrica counter ID — set via env var to avoid hardcoding.
+// If not set at build time, analytics snippet is omitted.
+const YANDEX_METRICA_ID = process.env.YANDEX_METRICA_ID || '';
+
+const SITE_URL = 'https://guide.yokhanfitness.ru';
+
+// JSON-LD structured data — helps Google/Yandex understand site identity,
+// author credentials, and content type. Critical for YMYL (health) content.
+const jsonLdOrganization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE_URL}/#organization`,
+  name: 'Yokhan Gym',
+  url: SITE_URL,
+  logo: `${SITE_URL}/img/logoSVG.svg`,
+  founder: {
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#author`,
+    name: 'Игорь Назаров',
+    jobTitle: 'Фитнес-тренер',
+    description: 'Фитнес-тренер «Мастер-тренер», автор гайда «Новая физическая культура» для IT-специалистов.',
+    url: SITE_URL,
+    sameAs: ['https://t.me/YokhanGym_bot'],
+  },
+  sameAs: ['https://t.me/YokhanGym_bot'],
+};
+
+const jsonLdWebsite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: 'Новая физическая культура',
+  description: 'Гайд по фитнесу для IT-специалистов от Игоря Назарова (Yokhan Gym)',
+  inLanguage: 'ru',
+  publisher: {'@id': `${SITE_URL}/#organization`},
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${SITE_URL}/search?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+};
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Новая физическая культура',
   tagline: 'Гайд по фитнесу для IT-специалистов',
   favicon: 'img/logoSVG.ico',
   staticDirectories: ['static', 'docs/media/img','docs/media/video'],
+
+  // Head tags: JSON-LD + font preload + analytics (if enabled)
+  headTags: [
+    // Preconnect + preload for critical fonts (perf)
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/fonts/Unbounded-VariableFont_wght.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/fonts/GolosText-VariableFont_wght.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
+      },
+    },
+    // JSON-LD: Organization / Person / WebSite
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify(jsonLdOrganization),
+    },
+    {
+      tagName: 'script',
+      attributes: {type: 'application/ld+json'},
+      innerHTML: JSON.stringify(jsonLdWebsite),
+    },
+    // Yandex Metrica — loaded only if YANDEX_METRICA_ID is set at build time.
+    // No-op otherwise (no network calls, no cookies).
+    ...(YANDEX_METRICA_ID
+      ? [
+          {
+            tagName: 'script',
+            attributes: {type: 'text/javascript'},
+            innerHTML: `
+              (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+              m[i].l=1*new Date();
+              for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+              k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+              (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+              ym(${JSON.stringify(YANDEX_METRICA_ID)}, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
+              });
+            `,
+          },
+          {
+            tagName: 'noscript',
+            attributes: {},
+            innerHTML: `<div><img src="https://mc.yandex.ru/watch/${YANDEX_METRICA_ID}" style="position:absolute; left:-9999px;" alt="" /></div>`,
+          },
+        ]
+      : []),
+  ],
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -25,13 +132,20 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Yokhan', // Usually your GitHub org/user name.
-  projectName: 'yokhanFitnessDocsWebsite', // Usually your repo name.
+  // GitHub pages deployment config (used by editUrl below).
+  organizationName: 'Yokhan',
+  projectName: 'yokhanFitnessDocsWebsite',
+
+  // Комментарии на сайте СОЗНАТЕЛЬНО отсутствуют: система комментариев
+  // (Giscus, Disqus, Utterances и т.п.) делает владельца сайта
+  // «оператором персональных данных» по 152-ФЗ со всеми вытекающими
+  // обязательствами (уведомление Роскомнадзора, политика обработки ПДн,
+  // локализация данных граждан РФ на серверах в РФ).
+  // Обратная связь с читателями — через Telegram-бот автора.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -66,9 +180,12 @@ const config = {
     ({
       image: 'img/logoSVG.svg',
       metadata: [
-        {name: 'description', content: 'Гайд по фитнесу для IT-специалистов от Игоря Назарова (Yokhan Gym)'},
-        {property: 'og:description', content: 'Гайд по фитнесу для IT-специалистов'},
-        {name: 'twitter:card', content: 'summary'},
+        {name: 'description', content: 'Бесплатный гайд по тренировкам для программистов, дизайнеров и инженеров с сидячим образом жизни. Без фармы, героизма и пустых обещаний.'},
+        {name: 'keywords', content: 'фитнес, тренировки, IT, программисты, здоровье, силовые, кардио, похудение, набор мышц, Yokhan Gym'},
+        {property: 'og:type', content: 'website'},
+        {property: 'og:site_name', content: 'Новая физическая культура'},
+        {property: 'og:locale', content: 'ru_RU'},
+        {name: 'twitter:card', content: 'summary_large_image'},
       ],
       navbar: {
         title: 'Новая физическая культура',        
@@ -98,7 +215,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Автор',
+            title: 'Навигация',
+            items: [
+              {label: '🚀 Quick Start', to: '/WarmingUp/quick-start'},
+              {label: 'Об авторе', to: '/'},
+              {label: 'FAQ', to: '/FAQ/muscle-pain'},
+            ],
+          },
+          {
+            title: 'Связь с автором',
             items: [
               {
                 label: 'Telegram-бот',
@@ -106,8 +231,14 @@ const config = {
               },
             ],
           },
+          {
+            title: 'Материалы',
+            items: [
+              {label: 'Sitemap', href: 'https://guide.yokhanfitness.ru/sitemap.xml'},
+            ],
+          },
         ],
-        copyright: `© ${new Date().getFullYear()} Игорь Назаров (Yokhan Gym)`,
+        copyright: `© ${new Date().getFullYear()} Игорь Назаров (Yokhan Gym). Гайд распространяется бесплатно. Это не медицинский совет — при хронических заболеваниях проконсультируйтесь с врачом.`,
       },
       prism: {
         theme: prismThemes.oneLight,

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-docusaurus-site.example.com/sitemap.xml
+Sitemap: https://guide.yokhanfitness.ru/sitemap.xml
+

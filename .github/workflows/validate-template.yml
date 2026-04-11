@@ -1,4 +1,4 @@
-name: Validate Template
+name: CI
 
 on:
   push:
@@ -7,23 +7,30 @@ on:
     branches: [main, master]
 
 jobs:
-  smoke-test:
-    name: Template Smoke Test
+  build:
+    name: Docusaurus Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Make scripts executable
-        run: chmod +x agent-project-template/scripts/*.sh
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
-      - name: Run smoke test
-        run: cd agent-project-template && bash scripts/test-template.sh
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        # onBrokenLinks: 'throw' in docusaurus.config.js — build fails on broken links.
 
   validate-json:
-    name: Validate JSON
+    name: Validate .claude/settings.json
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - name: Validate settings.json
-        run: python -m json.tool agent-project-template/.claude/settings.json > /dev/null
+        run: python -m json.tool .claude/settings.json > /dev/null

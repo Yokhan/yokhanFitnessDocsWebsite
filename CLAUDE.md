@@ -26,8 +26,9 @@ docs/                         # Весь контент (Markdown/MDX)
   3. FAQ/                     # Частые вопросы
   4. Workouts with injuries/  # Тренировки при заболеваниях
   media/img/, media/video/    # Медиа-контент
-src/css/custom.css            # Стили, шрифты, брендовый цвет #C8EA6A
-static/fonts/                 # Шрифты: nauriz, IBMPlexSans, DelaGothicOne
+src/css/custom.css            # Стили, Infima overrides, @font-face
+src/css/design-tokens.css     # Токены: цвета, шрифты, радиусы, glass-blur
+static/fonts/                 # Шрифты: Unbounded (headings), Golos Text (body)
 static/img/                   # Логотипы, иконки
 docusaurus.config.js          # Конфиг сайта (docs на root, blog отключён)
 sidebars.js                   # Автогенерация сайдбара из файловой структуры
@@ -45,12 +46,12 @@ slug: english-kebab-case
 sidebar_position: N
 title: Заголовок на русском
 description: "Краткое описание для SEO"
-image: media/images/bendpress.jpg
-animation: media/videos/bendpress.mp4
 obsIMG: " "
 free: true
 ---
 ```
+
+Опционально: `image: img/some-real-file.svg` — если у страницы есть уникальная OG-картинка. По умолчанию используется глобальный `img/logoSVG.svg` из `themeConfig`.
 
 ### Именование файлов
 
@@ -62,19 +63,17 @@ free: true
 
 1. Не меняй слаги существующих страниц — ломает URL
 2. Не удаляй поля `obsIMG` и `free` из frontmatter
-3. Не меняй цвет `#C8EA6A` и шрифты без явного запроса
+3. Не меняй брендовый акцент `#C8EA6A` и шрифты (Unbounded + Golos Text) без явного запроса
 4. Не используй wiki-ссылки `[[link]]` — это наследие Obsidian, в Docusaurus не работает
 5. Не добавляй файлы IDE (`.vs/`, `.idea/`) в git
-6. Не правь `src/css/custom.css` без прямого запроса — это визуальная идентичность
+6. Не правь `src/css/custom.css` и `src/css/design-tokens.css` без прямого запроса — это визуальная идентичность
 
 ## Известный техдолг
 
-- `docusaurus.config.js`: плейсхолдер URL, дефолтные Facebook org/project, tagline "Dinosaurs are cool"
+- Некоторые страницы раздела «Workouts with injuries» помечены `draft: true` — требуют медицинского ревью и научных источников перед публикацией
 - `_category_.json`: английские плейсхолдер-описания
-- Wiki-ссылки `[[...]]` в нескольких файлах (не рендерятся)
 - `.vs/` закоммичен (артефакт Visual Studio)
-- `package.json` name = `my-website`
-- Некоторые страницы — заглушки (только title, без контента)
+- `package.json` name = `my-website` (legacy)
 
 ## Compaction
 
