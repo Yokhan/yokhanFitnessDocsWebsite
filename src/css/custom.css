@@ -594,3 +594,38 @@ hr {
 [data-theme='light'] hr {
     border-color: rgba(var(--yk-light-text-rgb), 0.1);
 }
+
+/* === Accessibility === */
+
+/* Видимый фокус для клавиатурной навигации (WCAG 2.4.7).
+   Сохраняем глас-стилистику через outline-offset и яркий цвет. */
+*:focus-visible {
+    outline: 2px solid var(--yk-accent-green, #C8EA6A);
+    outline-offset: 2px;
+    border-radius: var(--yk-radius-sm);
+}
+
+/* Не убирать outline у ссылок и кнопок при клике мышкой — только focus-visible. */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* === Reduced motion ===
+   ~35% людей 40+ страдают от вестибулярных расстройств (domain-design.md).
+   Для них — убираем все анимации и трансформы. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .pagination-nav__link:hover,
+    [class*='cardContainer']:hover {
+        transform: none !important;
+    }
+}

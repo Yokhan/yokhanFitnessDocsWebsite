@@ -1,0 +1,34 @@
+{
+  "id": "Workouts with injuries/Hypertension injury",
+  "title": "Гипертония и тренировки",
+  "description": "Рассказываю об особенностях тренировок у больных гипертонической болезнью",
+  "source": "@site/docs/4. Workouts with injuries/1. Hypertension injury.md",
+  "sourceDirName": "4. Workouts with injuries",
+  "slug": "/Workouts with injuries/hypertension-workout",
+  "permalink": "/Workouts with injuries/hypertension-workout",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/4. Workouts with injuries/1. Hypertension injury.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "hypertension-workout",
+    "sidebar_position": 2,
+    "title": "Гипертония и тренировки",
+    "description": "Рассказываю об особенностях тренировок у больных гипертонической болезнью",
+    "image": "media/images/bendpress.jpg",
+    "animation": "media/videos/bendpress.mp4",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Отличия тренера и врача",
+    "permalink": "/Workouts with injuries/coach-doctor"
+  },
+  "next": {
+    "title": "Диабет 2-го типа и тренировки",
+    "permalink": "/Workouts with injuries/diabetes"
+  }
+}

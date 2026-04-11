@@ -1,0 +1,28 @@
+{
+  "id": "Workouts with injuries/Coach & Doctor difference",
+  "title": "Отличия тренера и врача",
+  "description": "Разберемся, чем отличается тренер и врач, и что ожидать от каждого",
+  "source": "@site/docs/4. Workouts with injuries/0. Coach & Doctor difference.md",
+  "sourceDirName": "4. Workouts with injuries",
+  "slug": "/Workouts with injuries/coach-doctor",
+  "permalink": "/Workouts with injuries/coach-doctor",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/4. Workouts with injuries/0. Coach & Doctor difference.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "coach-doctor",
+    "sidebar_position": 1,
+    "title": "Отличия тренера и врача",
+    "description": "Разберемся, чем отличается тренер и врач, и что ожидать от каждого",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Тренировки при хронических заболеваниях",
+    "permalink": "/category/тренировки-при-хронических-заболеваниях"
+  }
+}

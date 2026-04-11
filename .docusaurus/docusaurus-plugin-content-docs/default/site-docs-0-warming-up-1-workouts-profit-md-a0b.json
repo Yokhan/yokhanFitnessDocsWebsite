@@ -1,0 +1,32 @@
+{
+  "id": "WarmingUp/WorkoutsProfit",
+  "title": "Что могут дать тренировки?",
+  "description": "Кратко рассказываю, какую пользу можно получить, регулярно занимаясь фитнесом.",
+  "source": "@site/docs/0. WarmingUp/1. WorkoutsProfit.md",
+  "sourceDirName": "0. WarmingUp",
+  "slug": "/WarmingUp/workouts-profit",
+  "permalink": "/WarmingUp/workouts-profit",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/0. WarmingUp/1. WorkoutsProfit.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "workouts-profit",
+    "sidebar_position": 1,
+    "title": "Что могут дать тренировки?",
+    "description": "Кратко рассказываю, какую пользу можно получить, регулярно занимаясь фитнесом.",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Как устроен этот гайд?",
+    "permalink": "/WarmingUp/about-guide"
+  },
+  "next": {
+    "title": "Принципы тренировок",
+    "permalink": "/WarmingUp/workout-principles"
+  }
+}

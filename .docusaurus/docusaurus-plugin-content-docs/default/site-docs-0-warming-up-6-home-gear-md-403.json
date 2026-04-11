@@ -1,0 +1,32 @@
+{
+  "id": "WarmingUp/Home-Gear",
+  "title": "Снаряжение для тренировок дома",
+  "description": "Оптимальный выбор снаряжения для дома за разумную цену",
+  "source": "@site/docs/0. WarmingUp/6.Home-Gear.md",
+  "sourceDirName": "0. WarmingUp",
+  "slug": "/WarmingUp/home-gear",
+  "permalink": "/WarmingUp/home-gear",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/0. WarmingUp/6.Home-Gear.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "home-gear",
+    "sidebar_position": 6,
+    "title": "Снаряжение для тренировок дома",
+    "description": "Оптимальный выбор снаряжения для дома за разумную цену",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Отличие новичка от продвинутого атлета",
+    "permalink": "/WarmingUp/newbie-pro"
+  },
+  "next": {
+    "title": "Основная часть",
+    "permalink": "/category/основная-часть"
+  }
+}

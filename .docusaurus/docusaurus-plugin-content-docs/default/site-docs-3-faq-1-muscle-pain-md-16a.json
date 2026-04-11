@@ -1,0 +1,38 @@
+{
+  "id": "FAQ/MusclePain",
+  "title": "Боль в мышцах после тренировки",
+  "description": "Почему болят мышцы после тренировки, как отличить крепатуру от травмы, что делать с DOMS. Связана ли боль с ростом мышц.",
+  "source": "@site/docs/3. FAQ/1. MusclePain.md",
+  "sourceDirName": "3. FAQ",
+  "slug": "/FAQ/muscle-pain",
+  "permalink": "/FAQ/muscle-pain",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/3. FAQ/1. MusclePain.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "muscle-pain",
+    "sidebar_position": 1,
+    "title": "Боль в мышцах после тренировки",
+    "description": "Почему болят мышцы после тренировки, как отличить крепатуру от травмы, что делать с DOMS. Связана ли боль с ростом мышц.",
+    "keywords": [
+      "крепатура",
+      "DOMS",
+      "болят мышцы после тренировки",
+      "что делать если болят мышцы"
+    ],
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Часто задаваемые вопросы",
+    "permalink": "/category/часто-задаваемые-вопросы"
+  },
+  "next": {
+    "title": "Что-то хрустит во время движения",
+    "permalink": "/FAQ/cracks-sounds"
+  }
+}

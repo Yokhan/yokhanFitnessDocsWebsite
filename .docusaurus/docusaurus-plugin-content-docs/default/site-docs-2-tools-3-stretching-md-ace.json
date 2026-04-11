@@ -1,0 +1,32 @@
+{
+  "id": "Tools/Stretching",
+  "title": "Растяжка",
+  "description": "Гайд по растяжке мышцы для новичков",
+  "source": "@site/docs/2. Tools/3. Stretching.md",
+  "sourceDirName": "2. Tools",
+  "slug": "/Tools/stretching",
+  "permalink": "/Tools/stretching",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/2. Tools/3. Stretching.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "stretching",
+    "sidebar_position": 3,
+    "title": "Растяжка",
+    "description": "Гайд по растяжке мышцы для новичков",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Кардио-тренировка",
+    "permalink": "/Tools/cardio-workout"
+  },
+  "next": {
+    "title": "Повседневная активность",
+    "permalink": "/Tools/everyday-activity"
+  }
+}

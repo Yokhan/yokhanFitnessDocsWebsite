@@ -1,0 +1,38 @@
+{
+  "id": "FAQ/Cant eat more to gain muscles",
+  "title": "Тяжело есть много",
+  "description": "Семь лайфхаков для худых ребят, которые не могут добрать калории и белок — как набрать массу без мучений.",
+  "source": "@site/docs/3. FAQ/6. Cant eat more to gain muscles.md",
+  "sourceDirName": "3. FAQ",
+  "slug": "/FAQ/cant-eat-more",
+  "permalink": "/FAQ/cant-eat-more",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/3. FAQ/6. Cant eat more to gain muscles.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "cant-eat-more",
+    "sidebar_position": 6,
+    "title": "Тяжело есть много",
+    "description": "Семь лайфхаков для худых ребят, которые не могут добрать калории и белок — как набрать массу без мучений.",
+    "keywords": [
+      "как набрать вес худому",
+      "не могу есть много",
+      "жидкие калории",
+      "калорийные продукты"
+    ],
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Нет мотивации тренироваться",
+    "permalink": "/FAQ/no-motivation"
+  },
+  "next": {
+    "title": "Дорого тренироваться",
+    "permalink": "/FAQ/save-money"
+  }
+}

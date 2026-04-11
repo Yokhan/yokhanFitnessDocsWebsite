@@ -1,0 +1,32 @@
+{
+  "id": "Tools/Power workout",
+  "title": "Силовая тренировка",
+  "description": "Гайд по силовым тренировкам для новичков",
+  "source": "@site/docs/2. Tools/1. Power workout.md",
+  "sourceDirName": "2. Tools",
+  "slug": "/Tools/power-workout",
+  "permalink": "/Tools/power-workout",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/2. Tools/1. Power workout.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "power-workout",
+    "sidebar_position": 1,
+    "title": "Силовая тренировка",
+    "description": "Гайд по силовым тренировкам для новичков",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Инструменты",
+    "permalink": "/category/инструменты"
+  },
+  "next": {
+    "title": "Кардио-тренировка",
+    "permalink": "/Tools/cardio-workout"
+  }
+}

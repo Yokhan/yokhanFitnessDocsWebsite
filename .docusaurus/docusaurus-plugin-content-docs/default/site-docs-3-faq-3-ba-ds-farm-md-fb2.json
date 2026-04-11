@@ -1,0 +1,32 @@
+{
+  "id": "FAQ/BADs & farm",
+  "title": "БАДы и фармакология",
+  "description": "Какие БАДы можно спокойно принимать? А что с фармой?",
+  "source": "@site/docs/3. FAQ/3. BADs & farm.md",
+  "sourceDirName": "3. FAQ",
+  "slug": "/FAQ/buds-farm",
+  "permalink": "/FAQ/buds-farm",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/3. FAQ/3. BADs & farm.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "buds-farm",
+    "sidebar_position": 3,
+    "title": "БАДы и фармакология",
+    "description": "Какие БАДы можно спокойно принимать? А что с фармой?",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Что-то хрустит во время движения",
+    "permalink": "/FAQ/cracks-sounds"
+  },
+  "next": {
+    "title": "Не могу похудеть",
+    "permalink": "/FAQ/cant-lose-weight"
+  }
+}

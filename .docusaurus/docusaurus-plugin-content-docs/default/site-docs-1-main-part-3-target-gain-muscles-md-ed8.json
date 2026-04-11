@@ -1,0 +1,38 @@
+{
+  "id": "Main Part/Target-Gain muscles",
+  "title": "Цель: Увеличить мышцы",
+  "description": "Как нарастить мышцы новичку — принципы силовых тренировок, тренировочный объём и питание для роста мышечной массы. Без фармы.",
+  "source": "@site/docs/1. Main Part/3.Target-Gain muscles.md",
+  "sourceDirName": "1. Main Part",
+  "slug": "/Main Part/gain-muscles",
+  "permalink": "/Main Part/gain-muscles",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/1. Main Part/3.Target-Gain muscles.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "gain-muscles",
+    "sidebar_position": 3,
+    "title": "Цель: Увеличить мышцы",
+    "description": "Как нарастить мышцы новичку — принципы силовых тренировок, тренировочный объём и питание для роста мышечной массы. Без фармы.",
+    "keywords": [
+      "как набрать мышцы",
+      "силовые тренировки для начинающих",
+      "гипертрофия мышц",
+      "белок для роста мышц"
+    ],
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Цель: Начать тренироваться",
+    "permalink": "/Main Part/start-workout"
+  },
+  "next": {
+    "title": "Цель: Похудеть",
+    "permalink": "/category/цель-похудеть"
+  }
+}

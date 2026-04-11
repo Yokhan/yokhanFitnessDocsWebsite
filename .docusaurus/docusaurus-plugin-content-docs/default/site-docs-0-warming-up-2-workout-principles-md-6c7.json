@@ -1,0 +1,32 @@
+{
+  "id": "WarmingUp/Workout Principles",
+  "title": "Принципы тренировок",
+  "description": "Основные принципы, на которых строится тренировочный процесс",
+  "source": "@site/docs/0. WarmingUp/2. Workout Principles.md",
+  "sourceDirName": "0. WarmingUp",
+  "slug": "/WarmingUp/workout-principles",
+  "permalink": "/WarmingUp/workout-principles",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/Yokhan/yokhanFitnessDocsWebsite/edit/main/docs/0. WarmingUp/2. Workout Principles.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "workout-principles",
+    "sidebar_position": 2,
+    "title": "Принципы тренировок",
+    "description": "Основные принципы, на которых строится тренировочный процесс",
+    "obsIMG": " ",
+    "free": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Что могут дать тренировки?",
+    "permalink": "/WarmingUp/workouts-profit"
+  },
+  "next": {
+    "title": "Где тренироваться?",
+    "permalink": "/WarmingUp/workout-places"
+  }
+}
