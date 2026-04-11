@@ -11,7 +11,6 @@ import TagsListInline from '@theme/TagsListInline';
 import EditMetaRow from '@theme/EditMetaRow';
 
 import ShareButtons from '@site/src/components/ShareButtons';
-import GiscusComments from '@site/src/components/GiscusComments';
 
 export default function DocItemFooter() {
   const {metadata} = useDoc();
@@ -46,8 +45,6 @@ export default function DocItemFooter() {
           lastUpdatedBy={lastUpdatedBy}
         />
       )}
-
-      <GiscusComments />
     </footer>
   );
 }

@@ -136,23 +136,12 @@ const config = {
   organizationName: 'Yokhan',
   projectName: 'yokhanFitnessDocsWebsite',
 
-  // Custom fields — доступны в compile time через siteConfig.customFields.
-  customFields: {
-    // Giscus (GitHub Discussions) комментарии.
-    // Чтобы включить:
-    //  1. Зайдите на https://giscus.app
-    //  2. Укажите репозиторий: Yokhan/yokhanFitnessDocsWebsite
-    //  3. Создайте категорию Discussions "Comments" (тип "Announcements")
-    //  4. Скопируйте repoId и categoryId со страницы giscus.app
-    //  5. Заполните поля ниже и пересоберите сайт
-    // Если хотя бы одно поле пустое — комментарии не отображаются.
-    giscus: {
-      repo: '',
-      repoId: '',
-      category: '',
-      categoryId: '',
-    },
-  },
+  // Комментарии на сайте СОЗНАТЕЛЬНО отсутствуют: система комментариев
+  // (Giscus, Disqus, Utterances и т.п.) делает владельца сайта
+  // «оператором персональных данных» по 152-ФЗ со всеми вытекающими
+  // обязательствами (уведомление Роскомнадзора, политика обработки ПДн,
+  // локализация данных граждан РФ на серверах в РФ).
+  // Обратная связь с читателями — через Telegram-бот автора.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
