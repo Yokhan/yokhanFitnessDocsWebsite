@@ -25,13 +25,13 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Yokhan', // Usually your GitHub org/user name.
-  projectName: 'yokhanFitnessDocsWebsite', // Usually your repo name.
+  // GitHub pages deployment config (used by editUrl below).
+  organizationName: 'Yokhan',
+  projectName: 'yokhanFitnessDocsWebsite',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you

@@ -24,11 +24,13 @@ paths:
 
 ## Стили
 
-- Брендовый цвет: `#C8EA6A` (лайм) — не менять
-- Шрифт H1: `nauriz`
-- Шрифт H2-H6: `DelaGothicOne-Regular`
-- Шрифт body: `IBMPlexSans-VariableFont`
-- Тёмная тема code: Dracula, светлая: GitHub
+- Брендовый акцент: `#C8EA6A` (лайм) — используется только как `--yk-accent-green` для акцентов (active sidebar marker, иконки). НЕ как primary text/link color из-за низкого контраста на белом.
+- Primary color (links/buttons): `#d4a054` (тёплый золотой) в тёмной теме, `#7a5c12` (тёмное золото) в светлой — соответствует WCAG AA.
+- Шрифт заголовков (H2-H6): `Unbounded` (variable, woff2)
+- Шрифт body: `Golos Text` (variable, woff2)
+- Оба шрифта подключены через `@font-face` в `src/css/custom.css`, лежат в `static/fonts/`
+- Дизайн-токены вынесены в `src/css/design-tokens.css`
+- Тёмная тема code: oneDark, светлая: oneLight (см. `prismThemes` в `docusaurus.config.js`)
 - Table of contents скрыт (`display: none`)
 
 ## Проверка
