@@ -14,20 +14,35 @@ export default function NotFound() {
         textAlign: 'center',
         padding: '2rem',
       }}>
-        <h1 style={{ fontSize: '4rem', marginBottom: '1rem' }}>404</h1>
-        <p style={{ fontSize: '1.4rem', marginBottom: '2rem' }}>
+        <h1 style={{
+          fontSize: 'clamp(3rem, 7vw, 4.5rem)',
+          fontFamily: 'var(--yk-font-heading)',
+          fontWeight: 600,
+          letterSpacing: '-0.03em',
+          color: 'var(--yk-ink)',
+          marginBottom: '0.75rem',
+        }}>
+          404
+        </h1>
+        <p style={{
+          fontSize: '1.15rem',
+          color: 'var(--yk-ink-muted)',
+          marginBottom: '2rem',
+          maxWidth: '42ch',
+        }}>
           Такой страницы не существует.
         </p>
         <Link
           to="/"
           style={{
             padding: '0.8rem 1.6rem',
-            backgroundColor: '#C8EA6A',
-            color: '#111111',
-            borderRadius: '6px',
+            backgroundColor: 'var(--yk-accent, #C8EA6A)',
+            color: 'var(--yk-accent-ink, #17181A)',
+            border: '1px solid rgba(23, 24, 26, 0.14)',
+            borderRadius: 'var(--yk-radius-pill, 999px)',
             textDecoration: 'none',
             fontWeight: 600,
-            fontSize: '1.1rem',
+            fontSize: '1rem',
           }}
         >
           На главную

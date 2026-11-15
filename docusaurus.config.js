@@ -179,6 +179,11 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       image: 'img/logoSVG.svg',
       metadata: [
         {name: 'description', content: 'Бесплатный гайд по тренировкам для программистов, дизайнеров и инженеров с сидячим образом жизни. Без фармы, героизма и пустых обещаний.'},
@@ -189,61 +194,74 @@ const config = {
         {name: 'twitter:card', content: 'summary_large_image'},
       ],
       navbar: {
-        title: 'Новая физическая культура',        
+        title: 'Новая физическая культура',
         logo: {
           alt: 'Новая физическая культура',
           src: 'img/logoSVG.svg',
-            width: 44,
-            height: 44,
+          width: 36,
+          height: 36,
         },
         items: [
+          {
+            href: 'https://yokhan.xyz/',
+            label: 'Главная',
+            position: 'left',
+            target: '_self',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Гайд по тренировкам',
-            to: '/', // Теперь ведет на документацию
-          },
-          
-          {
-            href: 'https://yokhan.xyz/',
-            label: 'На сайт YOKHAN',
-            position: 'right',
+            label: 'Гайд',
           },
           {
-            href: 'https://t.me/YokhanGym_bot',
-            label: 'Игорь Назаров',
+            href: 'https://fitness.yokhan.xyz/train',
+            label: 'Тренировки',
+            position: 'left',
+            target: '_self',
+          },
+          {
+            href: 'https://kitchen.yokhan.xyz/food/',
+            label: 'Еда',
+            position: 'left',
+            target: '_self',
+          },
+          {
+            href: 'https://fitness.yokhan.xyz/home',
+            label: 'Приложение',
             position: 'right',
+            target: '_self',
+            className: 'navbar__cta-pill',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Навигация',
             items: [
-              {label: '🚀 Quick Start', to: '/WarmingUp/quick-start'},
+              {label: 'Quick Start', to: '/WarmingUp/quick-start'},
               {label: 'Об авторе', to: '/'},
               {label: 'FAQ', to: '/FAQ/muscle-pain'},
             ],
           },
           {
-            title: 'Связь с автором',
+            title: 'Экосистема YOKHAN',
+            items: [
+              {label: 'Главная', href: 'https://yokhan.xyz/'},
+              {label: 'Тренировки', href: 'https://fitness.yokhan.xyz/train'},
+              {label: 'Еда', href: 'https://kitchen.yokhan.xyz/food/'},
+              {label: 'Приложение', href: 'https://fitness.yokhan.xyz/home'},
+            ],
+          },
+          {
+            title: 'Связь и материалы',
             items: [
               {
                 label: 'Telegram-бот',
                 href: 'https://t.me/YokhanGym_bot',
               },
-              {
-                label: 'Платформа YOKHAN',
-                href: 'https://yokhan.xyz/',
-              },
-            ],
-          },
-          {
-            title: 'Материалы',
-            items: [
               {label: 'Sitemap', href: `${GUIDE_URL}/sitemap.xml`},
             ],
           },

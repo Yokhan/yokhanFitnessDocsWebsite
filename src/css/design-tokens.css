@@ -1,79 +1,141 @@
 /**
- * Design Tokens — YokhanFitness Ecosystem
- *
- * Единая дизайн-система для App, Landing и Docs.
- * Синхронизировано с YokhanFitnessAppMY.
- * Бренд-цвет #C8EA6A — НЕ МЕНЯТЬ.
+ * BUFF IT Logik Design System Tokens — YOKHAN Guide (Docusaurus)
+ * Light canvas (default warm editorial) + Dark theme ([data-theme='dark']).
  */
 
-:root {
-    /* === Палитра тёмной темы (основная) === */
-    --yk-bg-primary: #382d24;
-    --yk-bg-secondary: #2e2419;
-    --yk-text-primary: #f3ead7;
-    --yk-text-secondary: #c9bfb0;
-    --yk-text-muted: #a89880;
-    --yk-accent-green: #C8EA6A;
-    --yk-accent-cta: #7bd062;
-    --yk-border-subtle: rgba(243, 234, 215, 0.1);
-    --yk-border-hover: rgba(243, 234, 215, 0.2);
+:root,
+[data-theme='light'] {
+  /* Color Palette — Light (Warm Editorial) */
+  --yk-canvas: #F5F3EE;
+  --yk-surface: #FFFFFF;
+  --yk-surface-glass: rgba(255, 255, 255, 0.82);
+  --yk-surface-muted: #ECEAE3;
+  --yk-surface-subtle: #EFEDE7;
+  --yk-navbar-bg: rgba(245, 243, 238, 0.82);
+  --yk-code-bg: #EBE8E0;
+  --yk-code-header-bg: #E4E0D6;
 
-    /* RGB-компоненты для rgba() с прозрачностью */
-    --yk-text-primary-rgb: 243, 234, 215;
-    --yk-accent-green-rgb: 200, 234, 106;
+  /* Borders (1px Hairline) */
+  --yk-border: rgba(23, 24, 26, 0.10);
+  --yk-border-strong: rgba(23, 24, 26, 0.18);
 
-    /* === Палитра светлой темы (синхронизировано с App) === */
-    --yk-light-bg-primary: #f3ead7;
-    --yk-light-bg-secondary: #ede6da;
-    --yk-light-text-primary: #453427;
-    --yk-light-text-secondary: #5a4d3d;
-    --yk-light-text-muted: #6b5a4a;
-    --yk-light-border: rgba(69, 52, 39, 0.12);
-    --yk-light-border-subtle: rgba(69, 52, 39, 0.08);
+  /* Ink */
+  --yk-ink: #17181A;
+  --yk-ink-secondary: #34383E;
+  --yk-ink-muted: #525860;
+  --yk-text: #17181A;
+  --yk-text-muted: #525860;
 
-    /* RGB-компоненты светлой темы */
-    --yk-light-text-rgb: 69, 52, 39;
+  /* Signature Lime-Sage Accent */
+  --yk-accent: #C8EA6A;
+  --yk-accent-hover: #D4F07D;
+  --yk-accent-ink: #17181A;
+  --yk-accent-soft: rgba(200, 234, 106, 0.28);
+  --yk-accent-soft-strong: rgba(200, 234, 106, 0.42);
+  --yk-accent-border: rgba(63, 98, 18, 0.22);
 
-    /* === Навбар === */
-    --yk-navbar-bg: rgba(56, 45, 36, 0.9);
-    --yk-light-navbar-bg: rgba(237, 230, 218, 0.9);
+  /* Accessible Links on Light Canvas */
+  --yk-link: #3F6212;
+  --yk-link-hover: #166534;
 
-    /* === Код-блоки === */
-    --yk-code-bg: #2a2118;
-    --yk-light-code-bg: #e8e1d5;
+  /* Semantic Callout Tokens (Light) */
+  --yk-callout-note-accent: #525860;
+  --yk-callout-note-bg: rgba(255, 255, 255, 0.86);
+  --yk-callout-tip-accent: #3F6212;
+  --yk-callout-tip-bg: rgba(200, 234, 106, 0.16);
+  --yk-callout-info-accent: #2563EB;
+  --yk-callout-info-bg: rgba(37, 99, 235, 0.06);
+  --yk-callout-warning-accent: #B45309;
+  --yk-callout-warning-bg: rgba(217, 119, 6, 0.07);
+  --yk-callout-danger-accent: #B91C1C;
+  --yk-callout-danger-bg: rgba(220, 38, 38, 0.06);
 
-    /* === Glass-эффект === */
-    --yk-glass-blur: 16px;
-    --yk-glass-bg: rgba(56, 45, 36, 0.6);
-    --yk-glass-border: 1px solid rgba(243, 234, 215, 0.08);
-    --yk-glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-    --yk-light-glass-bg: rgba(237, 230, 218, 0.7);
-    --yk-light-glass-border: rgba(69, 52, 39, 0.08);
+  /* Elevation & Blur */
+  --yk-shadow-sm: 0 1px 2px rgba(23, 24, 26, 0.04);
+  --yk-shadow-card: 0 10px 28px -10px rgba(23, 24, 26, 0.08), 0 1px 2px rgba(23, 24, 26, 0.04);
+  --yk-glass-blur: blur(16px);
 
-    /* === Spacing (сетка 8px) === */
-    --yk-space-xs: 4px;
-    --yk-space-sm: 8px;
-    --yk-space-md: 16px;
-    --yk-space-lg: 24px;
-    --yk-space-xl: 32px;
-    --yk-space-2xl: 48px;
+  /* Typography */
+  --yk-font-heading: 'Unbounded', system-ui, -apple-system, sans-serif;
+  --yk-font-body: 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --yk-font-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', Menlo, Consolas, monospace;
 
-    /* === Скругления === */
-    --yk-radius-sm: 8px;
-    --yk-radius-md: 16px;
-    --yk-radius-lg: 24px;
-    --yk-radius-pill: 1000px;
+  --yk-font-weight-heading: 500;
+  --yk-font-weight-heading-strong: 600;
+  --yk-font-weight-body: 400;
+  --yk-font-size-body: 17px;
+  --yk-line-height-body: 1.68;
+  --yk-measure: 70ch;
 
-    /* === Типографика === */
-    --yk-font-heading: 'Unbounded', system-ui, sans-serif;
-    --yk-font-body: 'Golos Text', system-ui, sans-serif;
-    --yk-font-weight-heading: 250;
-    --yk-font-weight-body: 400;
-    --yk-font-weight-bold: 600;
+  /* Radii (BUFF IT Logik) */
+  --yk-radius-xs: 8px;
+  --yk-radius-sm: 10px;
+  --yk-radius-nav: 14px;
+  --yk-radius-md: 16px;
+  --yk-radius-callout: 20px;
+  --yk-radius-lg: 20px;
+  --yk-radius-pill: 999px;
 
-    /* === Анимации === */
-    --yk-transition-fast: 150ms;
-    --yk-transition-default: 250ms;
-    --yk-transition-slow: 400ms;
-    --yk-transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Spacing & Layout */
+  --yk-navbar-height: 68px;
+  --yk-space-xs: 0.25rem;
+  --yk-space-sm: 0.5rem;
+  --yk-space-md: 1rem;
+  --yk-space-lg: 1.5rem;
+  --yk-space-xl: 2rem;
+
+  /* Motion */
+  --yk-transition-fast: 150ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  --yk-transition-base: 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+[data-theme='dark'] {
+  /* Color Palette — Dark (Logik Dark Slate) */
+  --yk-canvas: #111315;
+  --yk-surface: #181B1F;
+  --yk-surface-glass: rgba(24, 27, 31, 0.84);
+  --yk-surface-muted: #20242A;
+  --yk-surface-subtle: #1C2025;
+  --yk-navbar-bg: rgba(17, 19, 21, 0.82);
+  --yk-code-bg: #181B1F;
+  --yk-code-header-bg: #20242A;
+
+  /* Borders (1px Hairline) */
+  --yk-border: rgba(255, 255, 255, 0.10);
+  --yk-border-strong: rgba(255, 255, 255, 0.18);
+
+  /* Ink */
+  --yk-ink: #F3F4F6;
+  --yk-ink-secondary: #D1D5DB;
+  --yk-ink-muted: #A1A8B3;
+  --yk-text: #F3F4F6;
+  --yk-text-muted: #A1A8B3;
+
+  /* Signature Lime-Sage Accent */
+  --yk-accent: #C8EA6A;
+  --yk-accent-hover: #D9F28D;
+  --yk-accent-ink: #17181A;
+  --yk-accent-soft: rgba(200, 234, 106, 0.14);
+  --yk-accent-soft-strong: rgba(200, 234, 106, 0.24);
+  --yk-accent-border: rgba(200, 234, 106, 0.28);
+
+  /* Accessible Links on Dark Canvas */
+  --yk-link: #C8EA6A;
+  --yk-link-hover: #D9F28D;
+
+  /* Semantic Callout Tokens (Dark) */
+  --yk-callout-note-accent: #A1A8B3;
+  --yk-callout-note-bg: rgba(24, 27, 31, 0.92);
+  --yk-callout-tip-accent: #C8EA6A;
+  --yk-callout-tip-bg: rgba(200, 234, 106, 0.08);
+  --yk-callout-info-accent: #60A5FA;
+  --yk-callout-info-bg: rgba(96, 165, 250, 0.09);
+  --yk-callout-warning-accent: #FBBF24;
+  --yk-callout-warning-bg: rgba(251, 191, 36, 0.08);
+  --yk-callout-danger-accent: #F87171;
+  --yk-callout-danger-bg: rgba(248, 113, 113, 0.08);
+
+  /* Elevation */
+  --yk-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.28);
+  --yk-shadow-card: 0 12px 32px -12px rgba(0, 0, 0, 0.45), 0 1px 2px rgba(0, 0, 0, 0.25);
 }
