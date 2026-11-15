@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 
 export default function NotFound() {
@@ -17,8 +18,8 @@ export default function NotFound() {
         <p style={{ fontSize: '1.4rem', marginBottom: '2rem' }}>
           Такой страницы не существует.
         </p>
-        <a
-          href="/"
+        <Link
+          to="/"
           style={{
             padding: '0.8rem 1.6rem',
             backgroundColor: '#C8EA6A',
@@ -30,7 +31,7 @@ export default function NotFound() {
           }}
         >
           На главную
-        </a>
+        </Link>
       </main>
     </Layout>
   );

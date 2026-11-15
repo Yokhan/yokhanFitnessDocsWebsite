@@ -12,24 +12,25 @@ import {themes as prismThemes} from 'prism-react-renderer';
 // If not set at build time, analytics snippet is omitted.
 const YANDEX_METRICA_ID = process.env.YANDEX_METRICA_ID || '';
 
-const SITE_URL = 'https://guide.yokhanfitness.ru';
+const SITE_URL = 'https://yokhan.xyz';
+const GUIDE_URL = `${SITE_URL}/guide`;
 
 // JSON-LD structured data — helps Google/Yandex understand site identity,
 // author credentials, and content type. Critical for YMYL (health) content.
 const jsonLdOrganization = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  '@id': `${SITE_URL}/#organization`,
+  '@id': `${GUIDE_URL}/#organization`,
   name: 'Yokhan Gym',
   url: SITE_URL,
-  logo: `${SITE_URL}/img/logoSVG.svg`,
+  logo: `${GUIDE_URL}/img/logoSVG.svg`,
   founder: {
     '@type': 'Person',
-    '@id': `${SITE_URL}/#author`,
+    '@id': `${GUIDE_URL}/#author`,
     name: 'Игорь Назаров',
     jobTitle: 'Фитнес-тренер',
     description: 'Фитнес-тренер «Мастер-тренер», автор гайда «Новая физическая культура» для IT-специалистов.',
-    url: SITE_URL,
+    url: GUIDE_URL,
     sameAs: ['https://t.me/YokhanGym_bot'],
   },
   sameAs: ['https://t.me/YokhanGym_bot'],
@@ -38,15 +39,15 @@ const jsonLdOrganization = {
 const jsonLdWebsite = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  '@id': `${SITE_URL}/#website`,
-  url: SITE_URL,
+  '@id': `${GUIDE_URL}/#website`,
+  url: `${GUIDE_URL}/`,
   name: 'Новая физическая культура',
   description: 'Гайд по фитнесу для IT-специалистов от Игоря Назарова (Yokhan Gym)',
   inLanguage: 'ru',
-  publisher: {'@id': `${SITE_URL}/#organization`},
+  publisher: {'@id': `${GUIDE_URL}/#organization`},
   potentialAction: {
     '@type': 'SearchAction',
-    target: `${SITE_URL}/search?q={search_term_string}`,
+    target: `${GUIDE_URL}/search?q={search_term_string}`,
     'query-input': 'required name=search_term_string',
   },
 };
@@ -65,7 +66,7 @@ const config = {
       tagName: 'link',
       attributes: {
         rel: 'preload',
-        href: '/fonts/Unbounded-VariableFont_wght.woff2',
+        href: '/guide/fonts/Unbounded-VariableFont_wght.woff2',
         as: 'font',
         type: 'font/woff2',
         crossorigin: 'anonymous',
@@ -75,7 +76,7 @@ const config = {
       tagName: 'link',
       attributes: {
         rel: 'preload',
-        href: '/fonts/GolosText-VariableFont_wght.woff2',
+        href: '/guide/fonts/GolosText-VariableFont_wght.woff2',
         as: 'font',
         type: 'font/woff2',
         crossorigin: 'anonymous',
@@ -127,10 +128,10 @@ const config = {
   },
  
   // Set the production url of your site here
-  url: 'https://guide.yokhanfitness.ru',
+  url: SITE_URL,
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/guide/',
 
   // GitHub pages deployment config (used by editUrl below).
   organizationName: 'Yokhan',
@@ -205,6 +206,11 @@ const config = {
           },
           
           {
+            href: 'https://yokhan.xyz/',
+            label: 'На сайт YOKHAN',
+            position: 'right',
+          },
+          {
             href: 'https://t.me/YokhanGym_bot',
             label: 'Игорь Назаров',
             position: 'right',
@@ -229,12 +235,16 @@ const config = {
                 label: 'Telegram-бот',
                 href: 'https://t.me/YokhanGym_bot',
               },
+              {
+                label: 'Платформа YOKHAN',
+                href: 'https://yokhan.xyz/',
+              },
             ],
           },
           {
             title: 'Материалы',
             items: [
-              {label: 'Sitemap', href: 'https://guide.yokhanfitness.ru/sitemap.xml'},
+              {label: 'Sitemap', href: `${GUIDE_URL}/sitemap.xml`},
             ],
           },
         ],
